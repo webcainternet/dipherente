@@ -45,10 +45,6 @@ $(document).ready(function() {
 </script>
 
 
-<hr>
-Load Accordion...
-<hr>
-
 <div class="box_html top-banners">
 <div class="banners-html row">
 <div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-1b.jpg"><div class="s-desc">Trend update<br><span>New<br>elegance</span></div>
