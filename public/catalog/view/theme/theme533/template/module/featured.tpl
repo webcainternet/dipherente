@@ -58,9 +58,9 @@ $(document).ready(function() {
 </a></div>
 </div></div>
 
-<?php /*
+
 <iframe style="margin-top: -20px;" src="/acc.html" width="100%" height="465" frameborder="0"></iframe>
-/* ?>
+
 
 <div class="box featured">
 	<div class="box-heading"><h3><?php echo $heading_title; ?></h3></div>
