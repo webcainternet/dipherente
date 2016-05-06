@@ -437,10 +437,9 @@ input#input-coupon {
 #menu .nav > li {
 	padding: 0;
 	display:inline-block;
-	border-right:1px solid #363943;
 }
 #menu .nav > li:first-child {
-	border-left:1px solid #363943;
+
 }
 #menu .nav > li > a {
 	font-size:20px;
@@ -3153,14 +3152,14 @@ html[lang="ru"] a.addthis_button_tweet {
       position: absolute;
       left: 30px;
       bottom: 26px;
-      font: 300 19px/23px "Roboto", sans-serif;
+      font: 300 19px/23px 'Handlee', cursive;
       letter-spacing: 1.2px;
       color: #fff;
       text-transform: uppercase; }
       .box_html.top-banners .banners-html > div .s-desc span {
         display: inline-block;
         letter-spacing: 1.8px;
-        font: 400 36px/41px "Vidaloka", serif; }
+        font: 400 36px/41px 'Handlee', cursive; }
       .box_html.top-banners .banners-html > div .s-desc * + span {
         margin-top: 11px; }
     .box_html.top-banners .banners-html > div > a {
@@ -3207,7 +3206,7 @@ html[lang="ru"] a.addthis_button_tweet {
     width: 517px;
     height: 304px; }
     .box_html.bottom-banners .banner-1 .title, .box_html.bottom-banners .banner-6 .title {
-      font: 400 35px/42px "Vidaloka", serif;
+      font: 400 35px/42px 'Handlee', cursive;
       display: inline-block;
       color: #333;
       letter-spacing: -.1px;
@@ -3226,7 +3225,7 @@ html[lang="ru"] a.addthis_button_tweet {
       color: #888;
       text-transform: uppercase;
       text-decoration: underline;
-      font: 300 16px/19px "Roboto", sans-serif;
+      font: 300 16px/19px 'Handlee', cursive;
       letter-spacing: .7px; }
     .box_html.bottom-banners .banner-1 a, .box_html.bottom-banners .banner-6 a {
       display: block;
@@ -3559,3 +3558,13 @@ html[lang="ru"] a.addthis_button_tweet {
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
   .owl-controls .owl-page.active span {
     background: rgba(0, 0, 0, 0.9); }
+
+
+
+/* ---------------------- */
+/* WEBCA */
+/* ---------------------- */
+
+.quickview {
+	display: none;
+}

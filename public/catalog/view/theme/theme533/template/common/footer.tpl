@@ -49,6 +49,18 @@
 			</div>
 		</div>
 		<div class="col-sm-4">	
+
+			<h5>Formas de Pagamento</h5>
+			<ul class="list-unstyled">
+			<li><a>Cartões de Crédito</a></li>
+			<li><img src="/image/credito.png"></li>
+			<li><a>Cartões de Débito</a></li>
+			<li><img src="/image/debito.png"></li>
+			<li><a>Outros</a></li>
+			<li><img src="/image/boleto.png"></li>
+			</ul>
+
+<?php /*
 			<h5><?php echo $text_contact1; ?></h5>
 			<ul class="list-unstyled contact-block">
 				<li><?php echo $address; ?></li>
@@ -59,16 +71,25 @@
 				<li><a data-toggle="tooltip" title="<?php echo $text_fb; ?>" href="https://www.facebook.com/login/"><i class="fa fa-facebook"></i></a></li>	
 				<li><a data-toggle="tooltip" title="<?php echo $text_twi; ?>" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
 				<li><a data-toggle="tooltip" title="<?php echo $text_rss; ?>" href=""><i class="fa fa-rss"></i></a></li>
-				
 			</ul>
+*/ ?>
 		</div>
 	</div>
 	
   </div>
 	<div class="copyright">
 		<div class="container">
-			<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
+			<div style="width: 50%; float: left; padding-top: 5px;">
+				<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
+			</div>
+
+			<div style="width: 50%; float: left; text-align: right;">
+				<a href="https://ssl.comodo.com" target="_blank">
+					<img src="https://ssl.comodo.com/images/comodo_secure_seal_76x26_transp.png" alt="SSL" width="76" height="26" style="border: 0px;">
+				<span style="font-weight:bold; font-size:7pt">SSL</span></a>
+			</div>
 		</div> 
+
 	</div>
 </footer>
 <script src="catalog/view/theme/theme533/js/livesearch.js" type="text/javascript"></script>
