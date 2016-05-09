@@ -1180,6 +1180,7 @@
 		float:none;
 		width:100%;
 		margin:0 auto 10px;
+		min-width: 100%;
 	}
 	.product-list .product-thumb .rating
 	{
@@ -1315,6 +1316,7 @@
 	.product-thumb {
 		display:inline-block;
 		text-align:left;
+		min-width: 100%;
 	}
 	img.alignleft {
 		float:none;
