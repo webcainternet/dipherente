@@ -67,7 +67,7 @@ $(document).ready(function() {
 		<div class="">
 		<?php $f=0; foreach ($products as $product) { $f++ ?>
 		<div>
-			<div class="product-thumb transition" style="float: left; padding: 10px; width: 33%;">
+			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
 				
 			<?php if ($product['special']) { ?>
 				<div class="sale"><?php echo $text_sale; ?></div>
