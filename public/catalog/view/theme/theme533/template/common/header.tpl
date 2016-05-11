@@ -145,8 +145,8 @@
 		</div>
 		<div id="top-links" class="nav pull-left">
 		<ul class="list-inline">
-			<li class="first"><a href="<?php echo $home; ?>"><i class="fa fa-home"></i><span><?php echo $text_home; ?></span></a></li>
-			<li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishl; ?>"><i class="fa fa-heart"></i><span><?php echo $text_wishlist; ?></span></a></li>
+			<?php /* <li class="first"><a href="<?php echo $home; ?>"><i class="fa fa-home"></i><span><?php echo $text_home; ?></span></a></li> */ ?>
+			<?php /* <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishl; ?>"><i class="fa fa-heart"></i><span><?php echo $text_wishlist; ?></span></a></li> */ ?>
 			<li><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>"><i class="fa fa-user"></i><span><?php echo $text_account; ?></span></a></li>
 			<li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i><span><?php echo $text_shopping_cart; ?></span></a></li>
 			<li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i><span><?php echo $text_checkout; ?></span></a></li>
