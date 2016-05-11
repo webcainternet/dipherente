@@ -47,15 +47,15 @@ $(document).ready(function() {
 
 <div class="box_html top-banners">
 <div class="banners-html row">
-<div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-1b.jpg"><div class="s-desc">Trend update<br><span>New<br>elegance</span></div>
+<div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-1b.jpg"><div class="s-desc"><span>Bonés</span></div>
 </a></div>
-<div class="col-sm-4 banner-2"><a href="index.php?route=product/category&amp;path=32"><img src="image/catalog/banner-2b.jpg"><div class="s-desc">Ladies<br><span>Modern<br>essentials</span></div>
+<div class="col-sm-4 banner-2"><a href="index.php?route=product/category&amp;path=32"><img src="image/catalog/banner-2b.jpg"><div class="s-desc"><span>Masculino</span></div>
 </a></div>
-<div class="col-sm-5 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-3b.jpg"><div class="s-desc">Lingerie<br><span>Chic<br>comfort</span></div>
+<div class="col-sm-5 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-3b.jpg"><div class="s-desc"><span>Feminino</span></div>
 </a></div>
-<div class="col-sm-9 banner-3"><a href="index.php?route=product/category&amp;path=25"><img src="image/catalog/banner-4b.jpg"><div class="s-desc">Ladies<br><span>Light up<br>The night</span></div>
+<div class="col-sm-9 banner-3"><a href="index.php?route=product/category&amp;path=25"><img src="image/catalog/banner-4b.jpg"><div class="s-desc"><span>Novidades</span></div>
 </a></div>
-<div class="col-sm-3 banner-4"><a href="index.php?route=product/category&amp;path=30"><img src="image/catalog/banner-5b.jpg"><div class="s-desc">Office hours<br><span>Work<br>The look</span></div>
+<div class="col-sm-3 banner-4"><a href="index.php?route=product/category&amp;path=30"><img src="image/catalog/banner-5b.jpg"><div class="s-desc">Acessórios</div>
 </a></div>
 </div></div>
 
