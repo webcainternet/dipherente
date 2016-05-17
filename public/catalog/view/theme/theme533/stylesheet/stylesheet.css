@@ -316,7 +316,9 @@ ul.soc-icon li i {
 	background:none;
 	padding-left:58px;
 	text-align:left;	
-	background:url(../image/bg-cart.png) no-repeat left center;
+	background:url(/image/cart.svg) no-repeat;
+	background-size: 40px;
+    background-position-y: 0px;
 }
 #cart > button strong{
 	font-size:20px;

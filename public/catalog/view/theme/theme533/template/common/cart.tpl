@@ -2,8 +2,8 @@
 <div id="cart">
 	<button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">
 		<i class="fa fa-shopping-cart"></i> 
-		<strong><?php echo $text_shopping_cart; ?></strong>
-		<span id="cart-total"><?php echo $text_items; ?></span>
+		<strong>Meu Carrinho<br></strong>
+		<span id="cart-total">Itens: <?php echo $text_items; ?></span>
 		<?php if (isset($text_items2)) { ?><span id="cart-total2"><?php echo $text_items2; ?></span><?php } ?>
 	</button>
   <ul class="dropdown-menu pull-right">

@@ -84,9 +84,15 @@
 			</div>
 
 			<div style="width: 50%; float: left; text-align: right;">
+
+				<a href="http://pagseguro.uol.com.br" target="_blank">
+					<img src="/image/pagseguro.png" alt="PagSeguro" height="26" style="border: 0px; margin-right: 10px;">
+				</a>
+
 				<a href="https://ssl.comodo.com" target="_blank">
 					<img src="https://ssl.comodo.com/images/comodo_secure_seal_76x26_transp.png" alt="SSL" width="76" height="26" style="border: 0px;">
 				<span style="font-weight:bold; font-size:7pt">SSL</span></a>
+
 			</div>
 		</div> 
 
