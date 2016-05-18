@@ -48,6 +48,12 @@
 				</ul>
 			</div>
 		</div>
+
+
+		<div class="col-sm-4">	
+			<div class="fb-page" data-href="https://www.facebook.com/lojavirtual.digital/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lojavirtual.digital/"><a href="https://www.facebook.com/lojavirtual.digital/">LojaVirtual .digital</a></blockquote></div></div>
+
+<?php /*
 		<div class="col-sm-4">	
 
 			<h5>Formas de Pagamento</h5>
@@ -60,7 +66,7 @@
 			<li><img src="/image/boleto.png"></li>
 			</ul>
 
-<?php /*
+
 			<h5><?php echo $text_contact1; ?></h5>
 			<ul class="list-unstyled contact-block">
 				<li><?php echo $address; ?></li>
@@ -72,8 +78,14 @@
 				<li><a data-toggle="tooltip" title="<?php echo $text_twi; ?>" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
 				<li><a data-toggle="tooltip" title="<?php echo $text_rss; ?>" href=""><i class="fa fa-rss"></i></a></li>
 			</ul>
-*/ ?>
+
 		</div>
+*/ ?>
+	
+		</div>
+
+		<img src="/image/pagseguro-line.png">
+
 	</div>
 	
   </div>
