@@ -70,7 +70,7 @@ $(document).ready(function() {
 			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
 				
 			<?php if ($product['special']) { ?>
-				<div class="sale"><?php echo $text_sale; ?></div>
+				<div class="sale">Promoção</div>
 			<?php } ?>
 			<div class="image"><a href="<?php echo $product['href']; ?>"><img alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive lazy" data-src="<?php echo $product['thumb']; ?>" src="image/catalog/preload.gif"  /></a></div>
 			<div class="caption">

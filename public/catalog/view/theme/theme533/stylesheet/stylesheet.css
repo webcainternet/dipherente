@@ -1253,7 +1253,8 @@ td .price,
 }
 .sale,
 .new_pr  {
-	font-size:15px;
+	font-size:16px;
+    text-transform: uppercase;
 	line-height:29px;
 	height:29px;
 	overflow:hidden;
