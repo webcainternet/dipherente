@@ -709,7 +709,7 @@ footer .social li a:hover i{
 	color:#F7B04A;
 }
 .copyright {
-	margin-top:54px;
+	margin-top:15px;
 	padding:16px 0 17px;
 	font-size:13px;
 	line-height:16px;
@@ -3570,4 +3570,11 @@ html[lang="ru"] a.addthis_button_tweet {
 
 .quickview {
 	display: none;
+}
+
+.social1 .fa {
+    font-size: 50px;
+	margin: 15px;
+	text-align: center;
+	margin: auto;
 }

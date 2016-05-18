@@ -51,7 +51,9 @@
 
 
 		<div class="col-sm-4">	
-			<div class="fb-page" data-href="https://www.facebook.com/lojavirtual.digital/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lojavirtual.digital/"><a href="https://www.facebook.com/lojavirtual.digital/">LojaVirtual .digital</a></blockquote></div></div>
+			<h5>Siga-nos</h5>
+
+			<div class="fb-page" data-href="https://www.facebook.com/lojavirtual.digital/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lojavirtual.digital/"><a href="https://www.facebook.com/lojavirtual.digital/">LojaVirtual .digital</a></blockquote></div></div>
 
 <?php /*
 		<div class="col-sm-4">	
@@ -84,7 +86,25 @@
 	
 		</div>
 
-		<img src="/image/pagseguro-line.png">
+		<div style="float: left; width: 800px; margin-left: 15px;">
+			<h5 style="font-size: 16px;">Formas de pagamento</h5>
+			<img src="/image/pagseguro-line.png" style="width: 700px;" width="700">
+		</div>
+
+		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px;" class="social1">
+			<i class="fa fa-facebook-square" aria-hidden="true"></i>
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+			<i class="fa fa-pinterest-square" aria-hidden="true"></i>
+			<i class="fa fa-twitter-square" aria-hidden="true"></i>
+			<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+
+		</div>
+
+		<div style="float: left; width: 100%; text-align: center; margin-top: 30px; border-top: solid 1px #ddd; padding-top: 15px;">
+			USE K COMÉRCIO DE ROUPAS E ACESSÓRIOS LTDA / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados<br>
+			Rua Vilaça, 195, centro - São José dos Campos - SP - CEP: 12210-000
+		</div>
 
 	</div>
 	
@@ -98,7 +118,7 @@
 			<div style="width: 50%; float: left; text-align: right;">
 
 				<a href="http://pagseguro.uol.com.br" target="_blank">
-					<img src="/image/pagseguro.png" alt="PagSeguro" height="26" style="border: 0px; margin-right: 10px;">
+					<img src="/image/pagseguro.png" alt="PagSeguro" height="26" style="border: 0px; margin-right: 20px;">
 				</a>
 
 				<a href="https://ssl.comodo.com" target="_blank">
