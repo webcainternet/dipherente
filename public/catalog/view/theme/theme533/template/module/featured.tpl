@@ -67,7 +67,7 @@ $(document).ready(function() {
 		<div class="">
 		<?php $f=0; foreach ($products as $product) { $f++ ?>
 		<div>
-			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
+			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%; height: 650px;">
 				
 			<?php if ($product['special']) { ?>
 				<div class="sale">Promoção</div>
@@ -92,7 +92,7 @@ $(document).ready(function() {
 						<?php if (!$product['special']) { ?>
 							<?php echo $product['price']; ?>
 						<?php } else { ?>
-							<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+							<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
 						<?php } ?>
 						
 						<?php if ($product['tax']) { ?>
