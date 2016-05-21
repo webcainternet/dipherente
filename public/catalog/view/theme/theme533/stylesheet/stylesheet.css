@@ -1061,10 +1061,29 @@ td .price,
 .price-total {
 	font-weight:bold;
 }
-.green ,
-.product-info .product-section span.green {
-	color:#67c381;
+
+.green {
+	background-color: #67c381;
 }
+
+.product-info .product-section span.green {
+    color: #FFF;
+    padding: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nogreen {
+	background-color: #E26D6D;
+}
+
+.product-info .product-section span.green {
+    color: #FFF;
+    padding: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
 .price s {
 	font-size:14px;
 	color:#777;

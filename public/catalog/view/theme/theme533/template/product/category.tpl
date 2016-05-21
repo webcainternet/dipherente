@@ -24,9 +24,9 @@
 			</div>
 		</div>
 		<?php } ?>
-		<?php if ($description) { ?>
+		<?php /* if ($description) { ?>
 		<div class="col-sm-10"><?php echo $description; ?></div>
-		<?php } ?>
+		<?php } */ ?>
 	  </div>
 	  <br>
 	  <?php } ?>
@@ -117,7 +117,8 @@
 		</div>
 	  <div class="row">
 		<?php foreach ($products as $product) { ?>
-		<div class="product-layout product-list col-xs-12">
+		<?php /* <div class="product-layout product-list col-xs-12"> */ ?>
+		 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 		  <div class="product-thumb">
 			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
 			<div>

@@ -101,21 +101,21 @@
 
 		</div>
 
-		<div style="float: left; width: 100%; text-align: center; margin-top: 30px; border-top: solid 1px #ddd; padding-top: 15px;">
-			USE K COMÉRCIO DE ROUPAS E ACESSÓRIOS LTDA / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados<br>
-			Rua Vilaça, 195, centro - São José dos Campos - SP - CEP: 12210-000
-		</div>
-
 	</div>
 	
   </div>
-	<div class="copyright">
+	<div class="copyright" style="margin-top: 35px;">
 		<div class="container">
-			<div style="width: 50%; float: left; padding-top: 5px;">
-				<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
+			<div style="width: 60%; float: left; padding-top: 5px;">
+				<div>USE K COMÉRCIO DE ROUPAS E ACESSÓRIOS LTDA / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados</div>
+				<div>Rua Vilaça, 195, centro - São José dos Campos - SP - CEP: 12210-000</div>
 			</div>
 
-			<div style="width: 50%; float: left; text-align: right;">
+			<div style="width: 40%; float: left; text-align: right;">
+
+				<a href="https://lojavirtual.digital/" target="_blank">
+						<img style="background-color: #FFF; border: 0px; margin-right: 20px; padding: 5px; border: solid 1px #EFD6B3;" src="/image/LOGO-LOJAVIRTUAL-300px.png" alt="Loja Virtual .digital" height="40">
+				</a>
 
 				<a href="http://pagseguro.uol.com.br" target="_blank">
 					<img src="/image/pagseguro.png" alt="PagSeguro" height="26" style="border: 0px; margin-right: 20px;">
