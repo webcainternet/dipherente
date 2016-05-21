@@ -213,7 +213,13 @@
 						<?php if ($reward) { ?>
 						<li><?php echo $text_reward; ?> <span><?php echo $reward; ?></span></li>
 						<?php } ?>
-						<li><?php echo $text_stock; ?> <span class="green"><?php echo $stock; ?></span></li>
+						<li><?php echo $text_stock; ?> 
+							<?php if ($stock == 'Indisponível') { ?>
+								<span class="nogreen"><?php echo $stock; ?></span>
+							<?php } else { ?>
+								<span class="green"><?php echo $stock; ?></span>
+							<?php } ?>
+						</li>
 					</ul>
 				</div>
 				
