@@ -1,4 +1,11 @@
 <?php echo $header; ?>
+
+<style type="text/css">
+	.col-sm-3 {
+		display: none;
+	}
+</style>
+
 <div class="container">
   <ul class="breadcrumb">
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -13,7 +20,7 @@
 	<?php } else { ?>
 	<?php $class = 'col-sm-12'; ?>
 	<?php } ?>
-	<div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+	<div id="content" class="col-sm-12"><?php echo $content_top; ?>
 	  <h2><?php echo $heading_title; ?></h2>
 	  <?php if ($products) { ?>
 	  <div class="product-filter clearfix">
@@ -86,19 +93,21 @@
 			  </div>
 			  <?php } ?>
 			  <?php if ($product['price']) { ?>
-			  <p class="price">
-				<?php if (!$product['special']) { ?>
-				<?php echo $product['price']; ?>
-				<?php } else { ?>
-				<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+					<div class="price">
+						<?php if (!$product['special']) { ?>
+							<?php echo $product['price']; ?>
+						<?php } else { ?>
+							<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
+						<?php } ?>
+						
+						<?php if ($product['tax']) { ?>
+							<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+						<?php } ?>
+					</div>
 				<?php } ?>
-				<?php if ($product['tax']) { ?>
-				<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-				<?php } ?>
-			  </p>
-			  <?php } ?>
+				<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme533/parcelamento.php'; ?>
 			</div>
-				<div class="cart-button">					
+				<div style="display: none;" class="cart-button">					
 					<span class="block-icon block-icon">
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>

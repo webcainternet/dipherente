@@ -466,19 +466,21 @@
 
 							<!-- price -->
 							<?php if ($product['price']) { ?>
-								<p class="price">
-								<?php if (!$product['special']) { ?>
-								<?php echo $product['price']; ?>
-								<?php } else { ?>
-								<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-								<?php } ?>
-								<?php if ($product['tax']) { ?>
-								<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-								<?php } ?>
-							</p>
+								<div class="price">
+									<?php if (!$product['special']) { ?>
+										<?php echo $product['price']; ?>
+									<?php } else { ?>
+										<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
+									<?php } ?>
+									
+									<?php if ($product['tax']) { ?>
+										<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+									<?php } ?>
+								</div>
 							<?php } ?>
+							<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme533/parcelamento.php'; ?>
 						</div>
-						<div>
+						<div style="display: none;">
 							<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button> 
 							<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
 							<button class="btn btn-icon" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></button>
