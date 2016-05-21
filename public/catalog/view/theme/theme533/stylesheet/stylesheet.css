@@ -1077,7 +1077,7 @@ td .price,
 	background-color: #E26D6D;
 }
 
-.product-info .product-section span.green {
+.product-info .product-section span.nogreen {
     color: #FFF;
     padding: 5px;
     font-size: 18px;
