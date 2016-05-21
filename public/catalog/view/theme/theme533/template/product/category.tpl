@@ -1,4 +1,11 @@
 <?php echo $header; ?>
+
+<style type="text/css">
+	.description1 {
+		display: none;
+	}
+</style>
+
 <div class="container">
   <ul class="breadcrumb">
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
