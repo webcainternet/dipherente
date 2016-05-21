@@ -32,8 +32,14 @@
 				<!-- product image -->
 				<div id="default_gallery" class="product-gallery">
 					<?php if ($thumb || $images) { ?>
+							<?php if ($thumb) { ?>
+								<div class="image">
+									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" /> 
+								</div>
+							<?php } ?>
+
 							<?php if ($images|| $thumb) { ?>
-							<div class="image-thumb"> 
+							<div class="image-thumb" style="margin-left: 10px !important; margin-right: -13px !important;">
 								<ul id="image-additional"> 
 								
 									<?php if (!empty($thumb)) { ?>
@@ -52,11 +58,7 @@
 								</ul>
 							</div>
 							<?php } ?>
-							<?php if ($thumb) { ?>
-								<div class="image">
-									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" /> 
-								</div>
-							<?php } ?>
+							
 					<?php } ?>
 				</div>
 		
@@ -105,6 +107,8 @@
 
 					<?php if ($price) { ?>
 					<div class="price-section">
+
+					<?php /*
 						<span class="price-new"><?php echo $special; ?></span>
 						<?php if (!$special) { ?>
 						<span class="price-new"><?php echo $price; ?></span>
@@ -114,6 +118,7 @@
 						<?php if ($tax) { ?>
 						<span class="tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
 						<?php } ?>
+
 						<div class="reward-block">
 							<?php if ($points) { ?>
 							<span	class="reward"><?php echo $text_points; ?> <?php echo $points; ?></span>
@@ -124,6 +129,79 @@
 							<?php } ?>
 							<?php } ?>
 						</div>
+					*/ ?>
+
+
+
+					<div class="price" style="margin-top: 15px;">
+						<?php if (!$special) { ?>
+							<?php echo $price; ?>
+						<?php } else { ?>
+							<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $price; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $special; ?></span>
+						<?php } ?>
+					</div>
+
+					<style type="text/css">
+					.product-thumb .price, .fancybox-inner .price {
+					    margin-bottom: 0px;
+					}
+					.price {
+					    font-size: 18px;
+					}
+					</style>
+
+					<?php
+					 /*
+					   Configuracoes do sistema de parcelamento
+					   ----------------------------------------
+					   $qtd_parcelas = Define a quantidade de parcelas a ser exibida para os produtos
+					   $juros = Taxa de juros mensal (deixe em 0 para parcelamento sem juros)
+					   $moeda_da_loja = Permite especificar a moeda utilizada na loja
+					 
+					   $tipo_de_calculo = Permite escolher o tipo de calculo a ser utilizado
+					   0 = Juros simples (Pagamento Digital)
+					   1 = Tabela Price (PagSeguro e outros)
+					 */
+					 
+					 $qtd_parcelas = 5;
+					 $juros = 0;
+					 $moeda_da_loja = 'R$ ';
+					 $tipo_de_calculo = 0;
+					 $parcela_minima = 5.00;
+					 
+					 if (!$special) {
+					   $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($price))));
+					 } else {
+					   $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($special))));
+					 }
+					 
+					 // Calcula o valor da parcela de acordo com o tipo de calculo utilizado
+					 if ($tipo_de_calculo == 0) {
+					   $valor_total = ($preco_numero * pow(1+($juros/100), $qtd_parcelas));
+					   $max_parcelas = intval($valor_total/$parcela_minima);
+					   if ($max_parcelas < $qtd_parcelas) { $qtd_parcelas = $max_parcelas; }
+					   $valor_parcela = $valor_total/$qtd_parcelas;
+					 }
+					 if ($tipo_de_calculo == 1) {
+					   $valor_total = ($preco_numero * ($juros/100));
+					   $max_parcelas = intval($valor_total/$parcela_minima);
+					   if ($max_parcelas < $qtd_parcelas) { $qtd_parcelas = $max_parcelas; }
+					   $valor_parcela = $valor_total/(1-(1/(pow(1+($juros/100), $qtd_parcelas))));
+					 }
+					 
+					 // Exibe as frases de parcelamento
+					 echo 'ou <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $qtd_parcelas . 'x</span> de <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $moeda_da_loja . number_format($valor_parcela/100, 2, ',', '.');
+					 if ($juros == 0) { echo '</span> s/ juros'; } else { echo '</span> com juros de ' . $juros . '% ao m&ecirc;s'; }
+					 
+					 ?>
+
+
+
+
+
+
+
+
 					</div>
 					<?php } ?>
 
