@@ -107,7 +107,7 @@
 		<div class="container">
 			<div style="width: 60%; float: left; padding-top: 5px;">
 				<div>USE K COMÉRCIO DE ROUPAS E ACESSÓRIOS LTDA / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados</div>
-				<div>Rua Vilaça, 195, centro - São José dos Campos - SP - CEP: 12210-000</div>
+				<div>Rua Sirimbura, 294 Vila Ema - São José dos Campos - SP - CEP: 12210-000</div>
 			</div>
 
 			<div style="width: 40%; float: left; text-align: right;">

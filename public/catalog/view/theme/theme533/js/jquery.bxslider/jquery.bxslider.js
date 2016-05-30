@@ -392,7 +392,7 @@
 					width = slider.settings.slideWidth;
 				}
 			}
-			return width;
+			// return width;
 		}
 
 		/**

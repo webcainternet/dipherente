@@ -1,4 +1,24 @@
 <?php echo $header; ?>
+
+<style type="text/css">
+	
+.form-group  .col-sm-8 {
+    width: 75%;
+}
+
+.form-group  .col-sm-4 {
+    width: 25%;
+}
+
+.form-group  .img-thumbnail {
+    border: solid 1px #DDD;
+}
+
+.form-group  .img-thumbnail:hover {
+    border: solid 1px #F7B04A;
+}
+</style>
+
 <div class="container">
 	<ul class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -33,25 +53,25 @@
 				<div id="default_gallery" class="product-gallery">
 					<?php if ($thumb || $images) { ?>
 							<?php if ($thumb) { ?>
-								<div class="image">
+								<div class="image" style="max-width: 500px; border: 1px solid #dddddd;">
 									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" /> 
 								</div>
 							<?php } ?>
 
 							<?php if ($images|| $thumb) { ?>
-							<div class="image-thumb" style="margin-left: 10px !important; margin-right: -13px !important;">
+							<div class="image-thumb" style="width: 128px; margin-left: 10px !important; ">
 								<ul id="image-additional"> 
 								
 									<?php if (!empty($thumb)) { ?>
-									<li>
+									<li style="width: 130px !important; max-width: 130px !important;" >
 										<a class="active" href="#" data-image="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>">
-											<img src="<?php echo $thumb; ?>" alt="" />
+											<img style="width: 130px;" src="<?php echo $thumb; ?>" alt="" />
 										</a>
 									</li>
 									<?php } ?>
 									<?php foreach ($images as $image) { ?>
-									<li>
-										<a href="#" data-image="<?php echo $image['popup']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"> <img src="<?php echo $image['thumb']; ?>" alt="" /> </a>
+									<li style="width: 130px !important; max-width: 130px !important;" >
+										<a href="#" data-image="<?php echo $image['popup']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"> <img style="width: 130px;" src="<?php echo $image['thumb']; ?>" alt="" /> </a>
 									</li>
 									<?php } ?>
 								
@@ -288,10 +308,11 @@
 										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
 										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
 											<?php foreach ($option['product_option_value'] as $option_value) { ?>
-											<div class="radio">
+											<div class="radio" style="display: inline-block; margin: 0px; margin-right: 2px; padding-left: 0px;">
 												<label>
-												<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-												<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> <?php echo $option_value['name']; ?>
+												<input style="display: none;" type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
+
+												<img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> <?php //echo $option_value['name']; ?>
 												<?php if ($option_value['price']) { ?>
 												(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 												<?php } ?>
@@ -643,6 +664,18 @@ function getChar(event) {
 	//-->
 </script> 
 
+
+<script type="text/javascript"><!--
+$(document).ready(function() {
+    $(".form-group input:radio").click(function() {
+      $('#button-cart').trigger("click");
+    });
+
+});
+//-->
+</script> 
+
+
 <script type="text/javascript"><!--
 	$('#button-cart').on('click', function() {
 		$.ajax({
@@ -689,7 +722,9 @@ function getChar(event) {
 					<!--$('html, body').animate({ scrollTop: 0 }, 'slow');-->
 					
 					$('#cart').load('index.php?route=common/cart/info #cart');
-					setTimeout(function() {$('.alert').fadeOut(1000)},3000)
+					setTimeout(function() {$('.alert').fadeOut(1000)},3000);
+
+					window.location.href = "/index.php?route=checkout/cart";
 				}
 			}
 		});

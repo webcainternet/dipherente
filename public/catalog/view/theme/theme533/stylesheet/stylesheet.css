@@ -3597,3 +3597,7 @@ html[lang="ru"] a.addthis_button_tweet {
 	text-align: center;
 	margin: auto;
 }
+
+.zoomContainer {
+	display: none;
+}
