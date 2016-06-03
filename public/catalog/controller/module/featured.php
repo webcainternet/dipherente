@@ -26,12 +26,21 @@ class ControllerModuleFeatured extends Controller {
 		foreach ($products as $product_id) {
 			$product_info = $this->model_catalog_product->getProduct($product_id);
 
+			//add Fernando
+			$mmos_thumb = $this->model_catalog_product->getProductImages($product_id);
+
 			if ($product_info) {
 				if ($product_info['image']) {
 					$image = $this->model_tool_image->resize($product_info['image'], $setting['width'], $setting['height']);
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
 				}
+
+				if ($mmos_thumb[0]['image']) {
+                    $mmos_image_thumb = $this->model_tool_image->resize($mmos_thumb[0]['image'], $setting['width'], $setting['height']);
+                } else {
+                    $mmos_image_thumb = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
+                }
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
@@ -59,6 +68,7 @@ class ControllerModuleFeatured extends Controller {
 
 				$data['products'][] = array(
 					'product_id'  => $product_info['product_id'],
+					'mmos_thumb' => $mmos_image_thumb,
 					'thumb'       => $image,
 					'name'        => $product_info['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',

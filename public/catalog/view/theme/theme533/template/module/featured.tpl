@@ -72,7 +72,12 @@ $(document).ready(function() {
 			<?php if ($product['special']) { ?>
 				<div class="sale">Promoção</div>
 			<?php } ?>
-			<div class="image"><a href="<?php echo $product['href']; ?>"><img alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive lazy" data-src="<?php echo $product['thumb']; ?>" src="image/catalog/preload.gif"  /></a></div>
+			<div class="image" style="position: relative;">
+                        <a href="<?php echo $product['href']; ?>">
+                            <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive thumb-module" style="position: absolute; left: 11%;" />
+                            <img src="<?php echo $product['mmos_thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                        </a>
+                    </div>
 			<div class="caption">
 				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 				<!--<div class="description"><?php echo $product['description']; ?></div>-->
