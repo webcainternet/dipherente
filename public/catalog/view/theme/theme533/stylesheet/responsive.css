@@ -279,9 +279,9 @@
 	
 	.product-thumb .image:hover a img,
 	.box-subcat .image a:hover img {
-		-moz-transform:scale(1.1,1.1);
-		-webkit-transform:scale(1.1,1.1);
-		transform: scale(1.1,1.1);
+		-moz-transform:scale(1,1);
+		-webkit-transform:scale(1,1);
+		transform: scale(1,1);
 	}
 	#menu li i{
 		pointer-events: none;
