@@ -76,7 +76,12 @@
 		<?php foreach ($products as $product) { ?>
 		<div class="product-layout product-list col-xs-12">
 		  <div class="product-thumb">
-			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+			<div class="image" style="position: relative;">
+                        <a href="<?php echo $product['href']; ?>">
+                            <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive thumb-cmss" style="position: absolute; left: 6%;" />
+                            <img src="<?php echo $product['mmos_thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                        </a>
+                    </div>
 			<div class="caption">
 			<div class="name name-product"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 			<div class="description1"><?php echo $product['description']; ?></div>

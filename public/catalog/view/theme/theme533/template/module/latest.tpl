@@ -107,11 +107,14 @@ jQuery(document).ready(function(){
 					</div>
 				</div>
 					<div class="new_pr"><?php echo $text_new; ?></div>
-					<div class="image">
-						<a href="<?php echo $product['href']; ?>">
-							<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
-						</a>
-					</div>
+
+					<div class="image" style="position: relative;">
+                        <a href="<?php echo $product['href']; ?>">
+                            <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive thumb-module" style="position: absolute; left: 0%;" />
+                            <img src="<?php echo $product['mmos_thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                        </a>
+                    </div>
+
 					<div class="caption">
 						<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 						<?php if ($product['rating']) { ?>

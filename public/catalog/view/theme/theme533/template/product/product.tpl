@@ -92,7 +92,20 @@
 				</script>
 				<div id="full_gallery">
 					<ul id="gallery">
-						<?php if (!empty($thumb)) { ?><li><a href="<?php echo $popup; ?>" data-something="something" data-another-thing="anotherthing"><img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li><?php } ?>
+						<?php if (!empty($thumb)) { ?>
+
+						<?php /* FEERNANDO <li><a href="<?php echo $popup; ?>" data-something="something" data-another-thing="anotherthing"><img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li> */ ?>
+
+						<li>
+	                        <div class="image" style="position: relative;">
+	                            <a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>">
+	                                <img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" class="img-responsive thumb-pd" style="position: absolute; left: 0%;" />
+	                                <img src="<?php echo $mmos_image_thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+	                            </a>
+	                        </div>
+	                    </li>
+
+						<?php } ?>
 						<?php foreach ($images as $image) { ?>
 						<li><a href="<?php echo $image['popup']; ?>" data-something="something<?php echo $i?>" data-another-thing="anotherthing<?php echo $i?>"><img src="<?php echo $image['popup']; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
 							<?php } ?>
@@ -551,8 +564,12 @@
 				
 				<div>
 					<div class="product-thumb transition">
-						<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
-						</div>
+						<div class="image" style="position: relative;">
+	                        <a href="<?php echo $product['href']; ?>">
+	                            <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive thumb-pd" style="position: absolute; left: 0%;" />
+	                            <img src="<?php echo $product['mmos_thumb_related']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+	                        </a>
+	                    </div>
 						<div class="caption">
 							<div class="name name-product"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 							<div class="description"><?php echo mb_substr($product['description'],0,26,'UTF-8').'...'; ?></div>

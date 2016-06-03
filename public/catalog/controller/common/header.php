@@ -80,7 +80,37 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		// Menu
-		$this->load->model('catalog/category');
+		$mmos_image_effect = $this->config->get('mmos_image_effect');
+                if($mmos_image_effect['effect'] == 'slide'){
+                    $data['inhover'] = 'slideUp()';
+                    $data['outhover'] = 'slideDown()';
+                }elseif ($mmos_image_effect['effect'] == 'animate'){
+                    $data['inhover'] = "animate({top:'-'+height+'px'})";
+                    $data['outhover'] = 'animate({top:0})';
+                }elseif ($mmos_image_effect['effect'] == 'fade'){
+                    $data['inhover'] = 'fadeOut("slow")';
+                    $data['outhover'] = 'fadeIn("slow")';
+                }elseif ($mmos_image_effect['effect'] == 'bounce'){
+                    $data['inhover'] = 'toggle( "bounce", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "bounce", { times: 1 }, "slow" )'; 
+                }elseif ($mmos_image_effect['effect'] == 'clip'){
+                    $data['inhover'] = 'toggle( "clip", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "clip", { times: 1 }, "slow" )';   
+                }elseif ($mmos_image_effect['effect'] == 'drop'){
+                    $data['inhover'] = 'toggle( "drop", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "drop", { times: 1 }, "slow" )';
+                }elseif ($mmos_image_effect['effect'] == 'explode'){
+                    $data['inhover'] = 'toggle( "explode", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "explode", { times: 1 }, "slow" )';
+                }elseif ($mmos_image_effect['effect'] == 'fold'){
+                    $data['inhover'] = 'toggle( "fold", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "fold", { times: 1 }, "slow" )';
+                }elseif ($mmos_image_effect['effect'] == 'puff'){
+                    $data['inhover'] = 'toggle( "puff", { times: 1 }, "slow" )';
+                    $data['outhover'] = 'toggle( "puff", { times: 1 }, "slow" )';
+                }   
+
+        $this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
 

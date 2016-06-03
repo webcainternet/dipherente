@@ -63,6 +63,7 @@
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script src="catalog/view/theme/theme533/js/common.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 <script src="catalog/view/theme/theme533/js/tm-stick-up.js" type="text/javascript"></script>
 <script src="catalog/view/theme/theme533/js/jquery.unveil.js" type="text/javascript"></script>
 <script src="catalog/view/theme/theme533/js/jquery.bxslider/jquery.bxslider.js" type="text/javascript"></script>
@@ -97,6 +98,7 @@
 <?php } ?>
 <!--[if lt IE 9]><div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]--> 
 
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -107,6 +109,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <?php echo $google_analytics; ?>
+
 </head>
 <body class="<?php echo $class; ?>">
 <!-- swipe menu -->

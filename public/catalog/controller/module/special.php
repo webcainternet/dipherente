@@ -28,6 +28,13 @@ class ControllerModuleSpecial extends Controller {
 
 		if ($results) {
 			foreach ($results as $result) {
+				$mmos_thumb = $this->model_catalog_product->getProductImages($result['product_id']);
+                if (($mmos_thumb) && ($mmos_thumb[0]) && ($mmos_thumb[0]['image'])) {
+                    $mmos_image_thumb = $this->model_tool_image->resize($mmos_thumb[0]['image'], $setting['width'], $setting['height']);
+                } else {
+                    $mmos_image_thumb = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
+                }
+
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height']);
 				} else {
@@ -59,6 +66,7 @@ class ControllerModuleSpecial extends Controller {
 				}
 
 				$data['products'][] = array(
+					'mmos_thumb' => $mmos_image_thumb,
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],

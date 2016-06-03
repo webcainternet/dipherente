@@ -280,6 +280,13 @@ class ControllerProductProduct extends Controller {
 
 			$this->load->model('tool/image');
 
+			$mmos_thumb = $this->model_catalog_product->getProductImages($product_id);
+                        if (($mmos_thumb) && ($mmos_thumb[0]) && ($mmos_thumb[0]['image'])) {
+                            $data['mmos_image_thumb'] = $this->model_tool_image->resize($mmos_thumb[0]['image'],  $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
+                        } else {
+                            $data['mmos_image_thumb'] = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
+                        }
+
 			if ($product_info['image']) {
 				$data['popup'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
 			} else {
@@ -397,6 +404,13 @@ class ControllerProductProduct extends Controller {
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
 			foreach ($results as $result) {
+				$mmos_thumb_related = $this->model_catalog_product->getProductImages($result['product_id']);
+                        if (($mmos_thumb_related) && ($mmos_thumb_related[0]) && ($mmos_thumb_related[0]['image'])) {
+                            $mmos_image_thumb_related = $this->model_tool_image->resize($mmos_thumb_related[0]['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+                        } else {
+                            $mmos_image_thumb_related = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+                        }
+
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
 				} else {
@@ -429,6 +443,7 @@ class ControllerProductProduct extends Controller {
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
+					'mmos_thumb_related' => $mmos_image_thumb_related,
 					'thumb'       => $image,
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',

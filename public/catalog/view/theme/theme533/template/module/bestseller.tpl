@@ -51,7 +51,12 @@ jQuery(document).ready(function() {
 		<?php $z=0; foreach ($products as $product) { $z++ ?>
 			<div>
 				<div class="product-thumb transition" >
-				<div class="image"><a href="<?php echo $product['href']; ?>"><img alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive lazy" data-src="<?php echo $product['thumb']; ?>" src="image/catalog/preload.gif" /></a>
+				<div class="image" style="position: relative;">
+                        <a href="<?php echo $product['href']; ?>">
+                            <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive thumb-module" style="position: absolute; left: 0%;" />
+                            <img src="<?php echo $product['mmos_thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                        </a>
+                    </div>
 				
 				<a class="quickview quickview-bestsellers" data-rel="details" href="#quickview_bestsellers_<?php echo $z?>">
 					<?php echo $text_quick; ?>
