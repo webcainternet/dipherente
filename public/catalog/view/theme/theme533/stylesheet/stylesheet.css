@@ -3151,7 +3151,7 @@ html[lang="ru"] a.addthis_button_tweet {
 	font-size:100%;
 	font-size:16px;
 }
-.product_page #default_gallery .image {padding-right:1px}
+.product_page #default_gallery .image {padding-right:1px;   min-height: 559px; background-color: rgb(247, 247, 247);}
 .addthis_toolbox a.at300b, .addthis_toolbox a.at300m {
 	max-width:96px
 }
