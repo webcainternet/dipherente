@@ -413,7 +413,10 @@
 				
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
-						<div class="form-group">
+						<div class="form-group" style="padding-left: 15px;">
+							<a href="/medidas">Ver medidas</a>
+						</div>
+						<div class="form-group" style="display: none;">
 							<label class="control-label col-sm-4" for="input-quantity"><?php echo $entry_qty; ?></label>
 							<div class="col-sm-2">
 								<input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
