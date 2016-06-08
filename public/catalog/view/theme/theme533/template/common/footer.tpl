@@ -106,7 +106,7 @@
 	<div class="copyright" style="margin-top: 35px;">
 		<div class="container">
 			<div style="width: 60%; float: left; padding-top: 5px;">
-				<div>USE K COMÉRCIO DE ROUPAS E ACESSÓRIOS LTDA / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados</div>
+				<div>USE K comercio de roupas e acessórios Eireli - ME / CNPJ: 99.999.999/0001-99 © 2016 Todos os direitos reservados</div>
 				<div>Alameda Chopin, 159 - Jardim Aquarius I - São José dos Campos - SP - CEP: 12242-030</div>
 			</div>
 
