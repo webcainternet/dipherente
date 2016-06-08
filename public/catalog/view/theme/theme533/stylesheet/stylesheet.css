@@ -3601,3 +3601,10 @@ html[lang="ru"] a.addthis_button_tweet {
 .zoomContainer {
 	display: none;
 }
+
+#list-view {
+	display: none;
+}
+.product-buttons {
+	display: none;
+}

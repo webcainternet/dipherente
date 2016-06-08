@@ -112,7 +112,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="nav-cat clearfix">
+		<?php /* <div class="nav-cat clearfix">
 			<div class="pull-left"><?php echo $pagination; ?></div>
 			<div class="pull-left nam-page"><?php echo $results; ?></div>
 			<div class="pull-right">
@@ -121,7 +121,7 @@
 					<i class="fa fa-chevron-right"></i>
 				</a>
 			</div>
-		</div>
+		</div> */ ?>
 	  <div class="row">
 		<?php foreach ($products as $product) { ?>
 		<?php /* <div class="product-layout product-list col-xs-12"> */ ?>
