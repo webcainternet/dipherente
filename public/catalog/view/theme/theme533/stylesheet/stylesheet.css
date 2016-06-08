@@ -3608,3 +3608,14 @@ html[lang="ru"] a.addthis_button_tweet {
 .product-buttons {
 	display: none;
 }
+.btn-add-finish {
+	width: 100%;
+	margin-top: 10px;
+	color: #FFF;
+	background-color: #2b2e39;
+}
+
+.btn-add-finish:hover {
+	color: #2b2e39;
+	background-color: #FFF;
+}

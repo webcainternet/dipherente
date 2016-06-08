@@ -424,7 +424,8 @@
 						</div>
 						
 						<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add"><?php echo $button_cart; ?></button>
+						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add">Adicionar ao carrinho</button>
+						<button type="button" id="button-cart-finish" data-loading-text="Comprar agora" class="btn btn-add-finish">Comprar agora</button>
 					</div>
 
 					<ul class="product-buttons">
@@ -684,7 +685,7 @@ function getChar(event) {
 	//-->
 </script> 
 
-
+<?php /* Redirect ao selecionar a opcao
 <script type="text/javascript"><!--
 $(document).ready(function() {
     $(".form-group input:radio").click(function() {
@@ -694,7 +695,7 @@ $(document).ready(function() {
 });
 //-->
 </script> 
-
+*/ ?>
 
 <script type="text/javascript"><!--
 	$('#button-cart').on('click', function() {
@@ -744,10 +745,14 @@ $(document).ready(function() {
 					$('#cart').load('index.php?route=common/cart/info #cart');
 					setTimeout(function() {$('.alert').fadeOut(1000)},3000);
 
-					window.location.href = "/index.php?route=checkout/cart";
+					<?php /* Nao redirecionar window.location.href = "/index.php?route=checkout/cart"; */ ?>
 				}
 			}
 		});
+	});
+
+	$('#button-cart-finish').on('click', function() {
+		window.location.href = "/index.php?route=checkout/cart";
 	});
 	//-->
 </script> 
