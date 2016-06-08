@@ -47,7 +47,7 @@
  }
  
  // Exibe as frases de parcelamento
- echo 'ou <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $qtd_parcelas . 'x</span> de <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $moeda_da_loja . number_format($valor_parcela/100, 2, ',', '.');
+ echo 'ou <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $qtd_parcelas . 'x</span> de <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $moeda_da_loja . number_format($valor_parcela, 2, ',', '.');
  if ($juros == 0) { echo '</span> s/ juros'; } else { echo '</span> com juros de ' . $juros . '% ao m&ecirc;s'; }
  
  ?>
