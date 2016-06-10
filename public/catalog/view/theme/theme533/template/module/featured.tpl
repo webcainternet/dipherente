@@ -92,6 +92,7 @@ $(document).ready(function() {
 				<?php } ?>
 				</div>
 				<?php } ?>
+				<?php /*
 				<?php if ($product['price']) { ?>
 					<div class="price">
 						<?php if (!$product['special']) { ?>
@@ -106,6 +107,18 @@ $(document).ready(function() {
 					</div>
 				<?php } ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme533/parcelamento.php'; ?>
+				*/ ?>
+
+				<div class="price price-product">
+				  <?php if (!$product['special']) { ?>
+				  <?php echo $product['price']; ?>
+				  <?php } else { ?>
+				  <span class="price-old">De: <?php echo $product['price']; ?></span> Por: <span class="price-new"><?php echo $product['special']; ?></span> 
+				  <?php } ?>
+				  <?php if ($product['tax']) { ?>
+				  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+				  <?php } ?>
+				</div>
 			</div>
 			<?php /* 
 			<div class="cart-button">
