@@ -17,6 +17,40 @@
 .form-group  .img-thumbnail:hover {
     border: solid 1px #F7B04A;
 }
+
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding: 10px 15px;
+    font-size:16px;
+    float: left;
+    margin-right: 3px;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: #f7b04a;
+    color: #FFF;
+}
+
+
+
+.naotem {
+    float: left;
+    margin-right: 3px;
+    text-align: center;
+}
+.naotemlabel {
+	background-color: #f1bcbc;
+    padding: 10px 15px;
+}
+
+.naotemtext {
+	text-decoration: underline; 
+}
 </style>
 
 <div class="container">
@@ -284,17 +318,25 @@
 									<div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
 										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
 										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
-											<?php foreach ($option['product_option_value'] as $option_value) { ?>
-												<div class="radio">
-													<label class="optwca">
-													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
-													<?php echo $option_value['name']; ?>
+											<div class="radio-toolbar">
+												<?php foreach ($option['product_option_value'] as $option_value) { ?>
+													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
+													<label for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
-													</label>
-												</div>
-											<?php } ?>
+												<?php } ?>
+
+													<div class="naotem">
+														<div class="naotemlabel">PP</div>
+														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
+													</div>
+
+													<div class="naotem">
+														<div class="naotemlabel">GG</div>
+														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
+													</div>
+											</div>
 										</div>
 									</div>
 								<?php } ?>

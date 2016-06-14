@@ -3619,21 +3619,3 @@ html[lang="ru"] a.addthis_button_tweet {
 	color: #2b2e39;
 	background-color: #FFF;
 }
-
-/* Opcoes no produto */
-.form-horizontal .radio, .form-horizontal .checkbox {
-    min-height: 27px;
-    float: left;
-    background-color: #EEE;
-    margin-right: 5px;
-    border: solid 1px #CCC;
-    padding: 10px 10px 5px;
-    min-width: 45px;
-    text-align: center;
-}
-
-input[type="radio"]:checked {
-    visibility:hidden; 
-    color: red;
-
-}
