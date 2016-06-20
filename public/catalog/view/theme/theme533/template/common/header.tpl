@@ -287,6 +287,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 			</li>
 			<?php } ?>
 			<?php } ?>	
+			<li>
+				<a href="/index.php?route=information/static">Be Dipherente</a>
+			</li>
+
 		  </ul>
 		</div>
 		</div>
