@@ -145,9 +145,28 @@ function moletomalterabg(selecao) {
     background-position: center;
     background-repeat: no-repeat;
   }
-  .customimage1 { background-image: url('/image/masculino-branco.png'); background-size: 300px; }
-  .customimage2 { background-image: url('/image/feminino-branco.png'); background-size: 350px; }
-  .customimage3 { background-image: url('/image/moletom-branco.png'); background-size: 300px; }
+  .customimage1 { 
+    background-image: url('/image/masculino-branco.png'); 
+    background-size: 300px; 
+  }
+  .customimage1:hover { 
+    background-size: 350px; 
+  }
+  .customimage2 { 
+    background-image: url('/image/feminino-branco.png'); 
+    background-size: 350px; 
+  }
+  .customimage2:hover { 
+    background-size: 410px; 
+  }
+  .customimage3 { 
+    background-image: url('/image/moletom-branco.png'); 
+    background-size: 300px; 
+  }
+  .customimage3:hover { 
+    background-size: 360px; 
+
+  }
 
 </style>
 
