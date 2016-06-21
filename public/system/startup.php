@@ -90,5 +90,6 @@ require_once(modification(DIR_SYSTEM . 'engine/model.php'));
 require_once(modification(DIR_SYSTEM . 'engine/registry.php'));
 
 // Helper
+require_once(DIR_SYSTEM . 'helper/copu.php');
 require_once(DIR_SYSTEM . 'helper/json.php');
 require_once(DIR_SYSTEM . 'helper/utf8.php');

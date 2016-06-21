@@ -143,6 +143,26 @@ class Cart {
 										);
 									}
 								}
+							} elseif ($option_query->row['type'] == 'file' && (is_array($value) || is_object($value))) {
+								foreach ($value as $upload) {
+									$option_data[] = array(
+										'product_option_id'       => $product_option_id,
+										'product_option_value_id' => '',
+										'option_id'               => $option_query->row['option_id'],
+										'option_value_id'         => '',
+										'name'                    => $option_query->row['name'],
+										'value'                   => $upload,
+										'type'                    => $option_query->row['type'],
+										'quantity'                => '',
+										'subtract'                => '',
+										'price'                   => '',
+										'price_prefix'            => '',
+										'points'                  => '',
+										'points_prefix'           => '',								
+										'weight'                  => '',
+										'weight_prefix'           => ''
+									);		
+								}
 							} elseif ($option_query->row['type'] == 'text' || $option_query->row['type'] == 'textarea' || $option_query->row['type'] == 'file' || $option_query->row['type'] == 'date' || $option_query->row['type'] == 'datetime' || $option_query->row['type'] == 'time') {
 								$option_data[] = array(
 									'product_option_id'       => $product_option_id,

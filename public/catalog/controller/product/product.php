@@ -471,6 +471,22 @@ class ControllerProductProduct extends Controller {
 			$data['text_payment_recurring'] = $this->language->get('text_payment_recurring');
 			$data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
 
+			$data['copu_product'] = array();
+			$data['copu_force_qty'] = false;
+			$copu_products = $this->config->get('copu_products');
+			if($copu_products) {
+				foreach($copu_products as $copu_product) {
+					if(isset($copu_product['options']) && !empty($copu_product['options'])) {
+						foreach($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
+							if($option['type'] == 'file' && isset($copu_product['options']) && !empty($copu_product['options']) && in_array($option['option_id'], $copu_product['options'])) {
+								$data['copu_product'][$option['product_option_id']] = $this->load->controller('myoc/copu', array('type' => 'product', 'copu_product_id' => $copu_product['copu_product_id'], 'product_option_id' => $option['product_option_id']));
+								$data['copu_force_qty'] = $copu_product['force_qty'];
+							}
+						}
+					}
+				}
+			}
+			
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
@@ -480,10 +496,25 @@ class ControllerProductProduct extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
+			/*
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
+				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data)); 
 			} else {
 				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
+			} */
+
+			if($this->request->get['product_id'] == '28') {  // If ID matches this, use this new template
+			   if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product_custom.tpl')) {
+					$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product_custom.tpl', $data)); 
+				} else {
+					$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
+				}
+			} else {  // If not, use standard
+			   if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
+				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data)); 
+			} else {
+				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
+			}
 			}
 		} else {
 			$url = '';

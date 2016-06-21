@@ -1,0 +1,21 @@
+table.copu-tbl tbody tr.error-msg td {
+	padding: 0px;
+}
+table.copu-tbl tbody tr.error-msg td .warning {
+	margin: 0px;
+}
+table.copu-tbl tbody td.upload-ctrl {
+	padding: 5px;
+	text-align: center;
+}
+table.copu-tbl tbody td .drop-zone {
+	margin: 0px;
+	padding: 30px;
+	border: 4px dashed #ccc;
+}
+table.copu-tbl tbody td .drop-zone .bg-text {
+	margin: 20px;
+	font-size: 2em;
+	font-weight: bold;
+	color: #bbb;
+}
