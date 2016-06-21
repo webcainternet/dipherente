@@ -236,7 +236,7 @@ Selecione a cor:
         <div class="price price-product">
                     R$ 99,00                           </div>
 
-                    <button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
       </div>
 </div>
 
@@ -279,7 +279,7 @@ Selecione a cor:
         <div class="price price-product">
                     R$ 99,00                           </div>
 
-                    <button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
       </div>
 </div>
 
@@ -322,7 +322,7 @@ Selecione a cor:
         <div class="price price-product">
                     R$ 180,00                           </div>
 
-                    <button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
       </div>
 </div>
 

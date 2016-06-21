@@ -88,8 +88,8 @@
     top: 160px;
     left: 250px;
     border: dashed 3px #555;
-    /* background-size: 100% auto; */
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
