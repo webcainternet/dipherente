@@ -43,7 +43,7 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
 
-      <div style="margin-bottom: 30px;">
+      <div style="margin-bottom: 30px; height: 120px;">
         Você é ilustrador e quer ver sua arte estampada nas camisetas da DIPHERENTE? Mande seu portifolio pra gente, pois aqui não trabalhamos com concurso, se seu trabalho for show com ideias criativas com certeza você poderá ser convidado a participar do projeto PONTO DE VISTA ou ainda poder vender suas estampas e ganhar porcentagens por pecas vendidas. Esta esperando o que? Vem com a gente, venha ser DIPHERENTE.
         <button type="button" id="button1" data-loading-text="Carregando..." class="btn btn-add">QUERO SER DIPHERENTE</button>
       </div>
