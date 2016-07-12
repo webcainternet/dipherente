@@ -44,7 +44,7 @@
       <h1><?php echo $heading_title; ?></h1>
 
       <div style="margin-bottom: 30px;">
-        Texto explicativo aqui nesta area superior, ou utilizar um banner com uma imagem grande, Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a.
+        Você é ilustrador e quer ver sua arte estampada nas camisetas da DIPHERENTE? Mande seu portifolio pra gente, pois aqui não trabalhamos com concurso, se seu trabalho for show com ideias criativas com certeza você poderá ser convidado a participar do projeto PONTO DE VISTA ou ainda poder vender suas estampas e ganhar porcentagens por pecas vendidas. Esta esperando o que? Vem com a gente, venha ser DIPHERENTE.
       </div>
 
 
