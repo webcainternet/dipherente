@@ -96,7 +96,7 @@
 <?php foreach ($scripts as $script) { ?>
 <script src="<?php echo $script; ?>" type="text/javascript"></script>
 <?php } ?>
-<!--[if lt IE 9]><div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]--> 
+<!--[if lt IE 9]><div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
 
 
 <div id="fb-root"></div>
@@ -137,7 +137,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <div class="swipe">
 	<div class="swipe-menu">
 		<ul>
-			
+
 			<li><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>"><i class="fa fa-user"></i> <span><?php echo $text_account; ?></span></a></li>
 			<?php if ($logged) { ?>
 			<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
@@ -166,7 +166,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 			<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
 			<li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
 		</ul>
-		
+
 		<ul class="foot foot-2">
 			<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
 			<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
@@ -225,20 +225,20 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 			<?php echo $search; ?>
 		</div>
 		<div class="box-right2">
-			
+
 		</div>
-		
+
 	</div>
 </header>
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-		if ($('body').width() > 990) { 
+		if ($('body').width() > 990) {
 			$('.nav__primary').tmStickUp({correctionSelector: $('#menu_stick')});
 		};
 	});
 </script>
-<?php if ($categories) { ?>	
+<?php if ($categories) { ?>
 	<nav id="menu" class="navbar nav__primary">
 	  <div class="container">
 		<div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
@@ -246,7 +246,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 		</div>
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 		  <ul class="nav navbar-nav">
-			<?php foreach ($categories as $category) { ?>			
+			<?php foreach ($categories as $category) { ?>
 			<?php if ($category['children']) { ?>
 			<li class="dropdown">
 			<?php if ($category['id'] == $category['path']) { ?>
@@ -254,8 +254,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 			<?php } else { ?>
 			<a href="<?php echo $category['href']; ?>" class="dropdown-toggle" ><?php echo $category['name']; ?></a>
 			<?php } ?>
-			  <div class="dropdown-menu">			  
-				<div class="dropdown-inner">				
+			  <div class="dropdown-menu">
+				<div class="dropdown-inner">
 				  <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
 				  <ul class="list-unstyled">
 					<?php foreach ($children as $child) { ?>
@@ -266,7 +266,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 					<a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
 					<?php } ?>
 					</li>
-					<?php } ?>					
+					<?php } ?>
 				  </ul>
 				  <?php } ?>
 				  <span class="image-cat">
@@ -280,21 +280,24 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 			<?php } else { ?>
 			<li>
 			<?php if ($category['id'] === $category['path']) { ?>
-				<a href="<?php echo $category['href']; ?>" class="active"><?php echo $category['name']; ?></a> 
+				<a href="<?php echo $category['href']; ?>" class="active"><?php echo $category['name']; ?></a>
 			<?php } else { ?>
 				<a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
 			<?php } ?>
 			</li>
 			<?php } ?>
-			<?php } ?>	
-			<li>
+			<?php } ?>
+      <li>
+				<a href="/index.php?route=information/artista">Artistas</a>
+			</li>
+      <li>
 				<a href="/index.php?route=information/static">Be Dipherente</a>
 			</li>
 
 		  </ul>
 		</div>
 		</div>
-	  </nav>	
-	
+	  </nav>
+
 <?php } ?>
 <p id="back-top"><a href="#top"><i class="fa fa-chevron-up"></i></a></p>
