@@ -486,7 +486,7 @@ class ControllerProductProduct extends Controller {
 					}
 				}
 			}
-			
+
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
@@ -498,20 +498,41 @@ class ControllerProductProduct extends Controller {
 
 			/*
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data)); 
+				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
 			} else {
 				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
 			} */
 
-			if($this->request->get['product_id'] == '28') {  // If ID matches this, use this new template
+			if($this->request->get['product_id'] == '28' ||
+				 $this->request->get['product_id'] == '52' ||
+				 $this->request->get['product_id'] == '53' ||
+				 $this->request->get['product_id'] == '54' ||
+				 $this->request->get['product_id'] == '55' ||
+				 $this->request->get['product_id'] == '56' ||
+				 $this->request->get['product_id'] == '57' ||
+				 $this->request->get['product_id'] == '58' ||
+				 $this->request->get['product_id'] == '59' ||
+				 $this->request->get['product_id'] == '60' ||
+				 $this->request->get['product_id'] == '61' ||
+				 $this->request->get['product_id'] == '62' ||
+				 $this->request->get['product_id'] == '63' ||
+				 $this->request->get['product_id'] == '64' ||
+				 $this->request->get['product_id'] == '65' ||
+				 $this->request->get['product_id'] == '66' ||
+				 $this->request->get['product_id'] == '67' ||
+				 $this->request->get['product_id'] == '68' ||
+				 $this->request->get['product_id'] == '69' ||
+				 $this->request->get['product_id'] == '70' ||
+				 $this->request->get['product_id'] == '71' ||
+				 $this->request->get['product_id'] == '_') {  // If ID matches this, use this new template
 			   if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product_custom.tpl')) {
-					$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product_custom.tpl', $data)); 
+					$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product_custom.tpl', $data));
 				} else {
 					$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
 				}
 			} else {  // If not, use standard
 			   if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data)); 
+				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
 			} else {
 				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
 			}

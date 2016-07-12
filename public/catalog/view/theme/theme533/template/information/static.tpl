@@ -1,41 +1,64 @@
 <?php echo $header; ?>
 <style type="text/css">
-  #button-cart {
+  #button-masculino,#button-feminino,#button-moletom {
     background: #F7B04A;
     color: #FFF;
     border-color: #FFF;
     margin: 10px 0px 50px;
   }
-  #button-cart:hover {
+  #button-masculino:hover,#button-feminino:hover,#button-moletom:hover {
     background: #131622;
   }
 </style>
+
+<div style="display: none;">
+<img src="/image/masculino-branco-600.png">
+<img src="/image/masculino-preto-600.png">
+<img src="/image/masculino-azul-600.png">
+<img src="/image/masculino-amarelo-600.png">
+<img src="/image/masculino-vermelho-600.png">
+<img src="/image/masculino-verde-600.png">
+
+<img src="/image/feminino-branco-600.png">
+<img src="/image/feminino-preto-600.png">
+<img src="/image/feminino-azul-600.png">
+<img src="/image/feminino-amarelo-600.png">
+<img src="/image/feminino-vermelho-600.png">
+<img src="/image/feminino-verde-600.png">
+
+<img src="/image/moletom-branco-600.png">
+<img src="/image/moletom-preto-600.png">
+<img src="/image/moletom-azul-600.png">
+<img src="/image/moletom-amarelo-600.png">
+<img src="/image/moletom-vermelho-600.png">
+<img src="/image/moletom-verde-600.png">
+</div>
 
 <script type="text/javascript">
 function masculinoalterabg(selecao) {
   switch(selecao) {
     case '1':
-      $('#customimage1').css('background-image', "url('/image/masculino-branco.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-branco-600.png')");
       break;
 
     case '2':
-      $('#customimage1').css('background-image', "url('/image/masculino-preto.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-preto-600.png')");
       break;
 
     case '3':
-      $('#customimage1').css('background-image', "url('/image/masculino-azul.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-azul-600.png')");
       break;
 
     case '4':
-      $('#customimage1').css('background-image', "url('/image/masculino-amarelo.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-amarelo-600.png')");
       break;
 
     case '5':
-      $('#customimage1').css('background-image', "url('/image/masculino-vermelho.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-vermelho-600.png')");
       break;
 
     case '6':
-      $('#customimage1').css('background-image', "url('/image/masculino-verde.png')");
+      $('#customimage1').css('background-image', "url('/image/masculino-verde-600.png')");
       break;
 
     default:
@@ -46,27 +69,27 @@ function masculinoalterabg(selecao) {
 function femininoalterabg(selecao) {
   switch(selecao) {
     case '1':
-      $('#customimage2').css('background-image', "url('/image/feminino-branco.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-branco-600.png')");
       break;
 
     case '2':
-      $('#customimage2').css('background-image', "url('/image/feminino-preto.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-preto-600.png')");
       break;
 
     case '3':
-      $('#customimage2').css('background-image', "url('/image/feminino-azul.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-azul-600.png')");
       break;
 
     case '4':
-      $('#customimage2').css('background-image', "url('/image/feminino-amarelo.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-amarelo-600.png')");
       break;
 
     case '5':
-      $('#customimage2').css('background-image', "url('/image/feminino-vermelho.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-vermelho-600.png')");
       break;
 
     case '6':
-      $('#customimage2').css('background-image', "url('/image/feminino-verde.png')");
+      $('#customimage2').css('background-image', "url('/image/feminino-verde-600.png')");
       break;
 
     default:
@@ -77,27 +100,27 @@ function femininoalterabg(selecao) {
 function moletomalterabg(selecao) {
   switch(selecao) {
     case '1':
-      $('#customimage3').css('background-image', "url('/image/moletom-branco.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-branco-600.png')");
       break;
 
     case '2':
-      $('#customimage3').css('background-image', "url('/image/moletom-preto.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-preto-600.png')");
       break;
 
     case '3':
-      $('#customimage3').css('background-image', "url('/image/moletom-azul.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-azul-600.png')");
       break;
 
     case '4':
-      $('#customimage3').css('background-image', "url('/image/moletom-amarelo.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-amarelo-600.png')");
       break;
 
     case '5':
-      $('#customimage3').css('background-image', "url('/image/moletom-vermelho.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-vermelho-600.png')");
       break;
 
     case '6':
-      $('#customimage3').css('background-image', "url('/image/moletom-verde.png')");
+      $('#customimage3').css('background-image', "url('/image/moletom-verde-600.png')");
       break;
 
     default:
@@ -105,6 +128,43 @@ function moletomalterabg(selecao) {
       break;
   }
 }
+
+
+//Cliques
+$(document).ready(function(){
+  //Masculino
+  $("#button-masculino").click(function(){
+    var optmasculino = $('input[name="radios-masculino"]:checked').val();
+    if (optmasculino == 1) { window.location="/index.php?route=product/product&product_id=28"; }
+    if (optmasculino == 2) { window.location="/index.php?route=product/product&product_id=55"; }
+    if (optmasculino == 3) { window.location="/index.php?route=product/product&product_id=52"; }
+    if (optmasculino == 4) { window.location="/index.php?route=product/product&product_id=56"; }
+    if (optmasculino == 5) { window.location="/index.php?route=product/product&product_id=54"; }
+    if (optmasculino == 6) { window.location="/index.php?route=product/product&product_id=53"; }
+  });
+
+  //Feminino
+  $("#button-feminino").click(function(){
+    var optfeminino = $('input[name="radios-feminino"]:checked').val();
+    if (optfeminino == 1) { window.location="/index.php?route=product/product&product_id=58"; }
+    if (optfeminino == 2) { window.location="/index.php?route=product/product&product_id=62"; }
+    if (optfeminino == 3) { window.location="/index.php?route=product/product&product_id=59"; }
+    if (optfeminino == 4) { window.location="/index.php?route=product/product&product_id=63"; }
+    if (optfeminino == 5) { window.location="/index.php?route=product/product&product_id=61"; }
+    if (optfeminino == 6) { window.location="/index.php?route=product/product&product_id=60"; }
+  });
+
+  //Moletom
+  $("#button-moletom").click(function(){
+    var optmoletom = $('input[name="radios-moletom"]:checked').val();
+    if (optmoletom == 1) { window.location="/index.php?route=product/product&product_id=68"; }
+    if (optmoletom == 2) { window.location="/index.php?route=product/product&product_id=66"; }
+    if (optmoletom == 3) { window.location="/index.php?route=product/product&product_id=69"; }
+    if (optmoletom == 4) { window.location="/index.php?route=product/product&product_id=70"; }
+    if (optmoletom == 5) { window.location="/index.php?route=product/product&product_id=65"; }
+    if (optmoletom == 6) { window.location="/index.php?route=product/product&product_id=67"; }
+  });
+});
 </script>
 
 <div class="container">
@@ -123,7 +183,7 @@ function moletomalterabg(selecao) {
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
-      
+
       <div style="margin-bottom: 30px;">
         Texto explicativo aqui nesta area superior, ou utilizar um banner com uma imagem grande, Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a.
       </div>
@@ -145,26 +205,26 @@ function moletomalterabg(selecao) {
     background-position: center;
     background-repeat: no-repeat;
   }
-  .customimage1 { 
-    background-image: url('/image/masculino-branco.png'); 
-    background-size: 300px; 
+  .customimage1 {
+    background-image: url('/image/masculino-branco-600.png');
+    background-size: 300px;
   }
-  .customimage1:hover { 
-    background-size: 350px; 
+  .customimage1:hover {
+    background-color: #EEE;
   }
-  .customimage2 { 
-    background-image: url('/image/feminino-branco.png'); 
-    background-size: 350px; 
+  .customimage2 {
+    background-image: url('/image/feminino-branco-600.png');
+    background-size: 300px;
   }
-  .customimage2:hover { 
-    background-size: 410px; 
+  .customimage2:hover {
+    background-color: #EEE;
   }
-  .customimage3 { 
-    background-image: url('/image/moletom-branco.png'); 
-    background-size: 300px; 
+  .customimage3 {
+    background-image: url('/image/moletom-branco-600.png');
+    background-size: 300px;
   }
-  .customimage3:hover { 
-    background-size: 360px; 
+  .customimage3:hover {
+    background-color: #EEE;
 
   }
 
@@ -202,7 +262,7 @@ function moletomalterabg(selecao) {
   </div>
 
 Selecione a cor:
-    <div class="radio-toolbar">  
+    <div class="radio-toolbar">
         <input onclick="masculinoalterabg('1');" type="radio" id="radio-masculino1" name="radios-masculino" value="1" checked>
         <label class="radio-masculino1" for="radio-masculino1">&nbsp;</label>
 
@@ -232,11 +292,11 @@ Selecione a cor:
                                 <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                         </div>
-                
+
         <div class="price price-product">
                     R$ 99,00                           </div>
 
-                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
+                    <button type="button" id="button-masculino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
       </div>
 </div>
 
@@ -245,7 +305,7 @@ Selecione a cor:
     &nbsp;
   </div>
 Selecione a cor:
-    <div class="radio-toolbar">  
+    <div class="radio-toolbar">
         <input onclick="femininoalterabg('1');" type="radio" id="radio-feminino1" name="radios-feminino" value="1" checked>
         <label class="radio-feminino1" for="radio-feminino1">&nbsp;</label>
 
@@ -275,11 +335,11 @@ Selecione a cor:
                                 <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                         </div>
-                
+
         <div class="price price-product">
                     R$ 99,00                           </div>
 
-                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
+                    <button type="button" id="button-feminino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
       </div>
 </div>
 
@@ -288,7 +348,7 @@ Selecione a cor:
     &nbsp;
   </div>
 Selecione a cor:
-    <div class="radio-toolbar">  
+    <div class="radio-toolbar">
         <input onclick="moletomalterabg('1');" type="radio" id="radio-moletom1" name="radios-moletom" value="1" checked>
         <label class="radio-moletom1" for="radio-moletom1">&nbsp;</label>
 
@@ -318,11 +378,11 @@ Selecione a cor:
                                 <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                         </div>
-                
+
         <div class="price price-product">
                     R$ 180,00                           </div>
 
-                    <a href="/index.php?route=product/product&product_id=28"><button type="button" id="button-cart" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button></a>
+                    <button type="button" id="button-moletom" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
       </div>
 </div>
 

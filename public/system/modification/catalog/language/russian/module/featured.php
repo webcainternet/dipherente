@@ -19,20 +19,6 @@
 				$_['text_price']        = 'Цена: ';
 				$_['text_tax']          = 'налог:';
 				$_['text_quick']          = 'Просмотр'; 
-		
-				$_['button_details']          = 'Подробнее';
-				$_['text_category'] = 'Категория';
-				$_['text_manufacturer'] = 'Брэнд';
-				$_['text_model'] = 'Модель:';
-				$_['text_availability'] = 'Наличие:';
-				$_['text_instock'] = 'Доступно';
-				$_['text_outstock'] = 'нет в наличии ';
-				$_['text_price']        = 'Цена: ';
-				$_['text_tax']          = 'налог:';
-				$_['text_quick']          = 'Просмотр'; 
-				$_['text_product']          = 'Продукт {current} из {total} ';
-				$_['text_sale']      = 'Скидка!';
-				
 				$_['text_product']          = 'Продукт {current} из {total} ';
 				$_['text_sale']      = 'Скидка!';
 				
@@ -47,5 +33,19 @@ $_['heading_title'] = 'Рекомендуемые';
 
 			$_['text_sale']      = 'Скидка!';
 			
+		
+				$_['button_details']          = 'Подробнее';
+				$_['text_category'] = 'Категория';
+				$_['text_manufacturer'] = 'Брэнд';
+				$_['text_model'] = 'Модель:';
+				$_['text_availability'] = 'Наличие:';
+				$_['text_instock'] = 'Доступно';
+				$_['text_outstock'] = 'нет в наличии ';
+				$_['text_price']        = 'Цена: ';
+				$_['text_tax']          = 'налог:';
+				$_['text_quick']          = 'Просмотр'; 
+				$_['text_product']          = 'Продукт {current} из {total} ';
+				$_['text_sale']      = 'Скидка!';
+				
 $_['text_tax']      = 'Без НДС:';
 

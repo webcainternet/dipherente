@@ -1,6 +1,7 @@
 <?php echo $header; ?>
+
 <style type="text/css">
-	
+
 .form-group  .col-sm-8 {
     width: 75%;
 }
@@ -48,7 +49,7 @@
 }
 
 .naotemtext {
-	text-decoration: underline; 
+	text-decoration: underline;
 }
 </style>
 
@@ -62,7 +63,7 @@
 	<div class="row">
 	<?php echo $column_left; ?>
 
-	<?php 
+	<?php
 	if ($column_left && $column_right) {
 		$content_width = 'col-sm-6';
 		$content_left  = 'col-sm-6';
@@ -80,13 +81,13 @@
 
 <style type="text/css">
 .mascara {
-    position: absolute;
+position: absolute;
     background-color: rgba(255,255,255,0.4);
-    width: 200px;
-    height: 266px;
+    width: 240px;
+    height: 300px;
     z-index: 1;
-    top: 160px;
-    left: 250px;
+    top: 155px;
+    left: 227px;
     border: dashed 3px #555;
     background-size: cover;
     background-position: center;
@@ -96,13 +97,46 @@
 .product_page #default_gallery .image {
     width: 100%;
 }
+
+.copu-tbl {
+	display: none;
+}
 </style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#btnupload1").click(function(){
+			idprod = document.getElementById('product_id').value;
+			if (idprod == 58) { document.getElementById('copu-button-upload290').click(); }
+			if (idprod == 57) { document.getElementById('copu-button-upload289').click(); }
+			if (idprod == 56) { document.getElementById('copu-button-upload287').click(); }
+			if (idprod == 55) { document.getElementById('copu-button-upload285').click(); }
+			if (idprod == 28) { document.getElementById('copu-button-upload273').click(); }
+			if (idprod == 59) { document.getElementById('copu-button-upload293').click(); }
+			if (idprod == 52) { document.getElementById('copu-button-upload279').click(); }
+			if (idprod == 53) { document.getElementById('copu-button-upload281').click(); }
+			if (idprod == 54) { document.getElementById('copu-button-upload283').click(); }
+			if (idprod == 60) { document.getElementById('copu-button-upload294').click(); }
+			if (idprod == 61) { document.getElementById('copu-button-upload296').click(); }
+			if (idprod == 62) { document.getElementById('copu-button-upload298').click(); }
+			if (idprod == 63) { document.getElementById('copu-button-upload300').click(); }
+			if (idprod == 64) { document.getElementById('copu-button-upload303').click(); }
+			if (idprod == 65) { document.getElementById('copu-button-upload304').click(); }
+			if (idprod == 66) { document.getElementById('copu-button-upload306').click(); }
+			if (idprod == 67) { document.getElementById('copu-button-upload308').click(); }
+			if (idprod == 68) { document.getElementById('copu-button-upload310').click(); }
+			if (idprod == 69) { document.getElementById('copu-button-upload313').click(); }
+			if (idprod == 70) { document.getElementById('copu-button-upload314').click(); }
+			if (idprod == 71) { document.getElementById('copu-button-upload317').click(); }
+	});
+});
+</script>
 
 	<div id="content" class="<?php echo $content_width; ?> product_page"><?php echo $content_top; ?>
 		<div class="row product-content-columns">
-			
+
 			<!-- Content left -->
-			<div class="<?php echo $content_left; ?> product_page-left">				
+			<div class="<?php echo $content_left; ?> product_page-left">
 				<!-- product image -->
 				<div id="default_gallery" class="product-gallery">
 					<?php if ($thumb || $images) { ?>
@@ -111,18 +145,20 @@
 									<div class="mascara" id="mascara">
 										<table>
 											<tr>
-												<td class="preview2" id="previewimg2"/></td>
+												<td class="preview2" id="previewimg2"/>
+													<div style="position: absolute; bottom: 10%; width: 100%; text-align: center; cursor: pointer; background-color: rgba(255,255,255,0.7);" id="btnupload1"><i class="fa fa-camera" aria-hidden="true"></i> Envie sua imagem</div>
+												</td>
 											</tr>
 										</table>
 									</div>
-									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" /> 
+									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" />
 								</div>
-							<?php } ?>							
+							<?php } ?>
 					<?php } ?>
 				</div>
-		
-				
-		
+
+
+
 				<?php $i=0; if ($thumb || $images) { $i++?>
 				<script type="text/javascript">
 					jQuery(document).ready(function(){
@@ -148,9 +184,9 @@
 						<?php foreach ($images as $image) { ?>
 						<li><a href="<?php echo $image['popup']; ?>" data-something="something<?php echo $i?>" data-another-thing="anotherthing<?php echo $i?>"><img src="<?php echo $image['popup']; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
 							<?php } ?>
-					</ul>			
+					</ul>
 				</div>
-				<?php } ?>				
+				<?php } ?>
 			</div>
 
 			<!-- Content right -->
@@ -158,7 +194,7 @@
 				<div class="general_info product-info">
 
 					<h1 class="product-title"><?php echo $heading_title; ?></h1>
-					
+
 					<!-- Prodyuct rating status -->
 					<div class="rating-section product-rating-status">
 						<?php if ($review_status) { ?>
@@ -229,24 +265,24 @@
 					   $qtd_parcelas = Define a quantidade de parcelas a ser exibida para os produtos
 					   $juros = Taxa de juros mensal (deixe em 0 para parcelamento sem juros)
 					   $moeda_da_loja = Permite especificar a moeda utilizada na loja
-					 
+
 					   $tipo_de_calculo = Permite escolher o tipo de calculo a ser utilizado
 					   0 = Juros simples (Pagamento Digital)
 					   1 = Tabela Price (PagSeguro e outros)
 					 */
-					 
+
 					 $qtd_parcelas = 5;
 					 $juros = 0;
 					 $moeda_da_loja = 'R$ ';
 					 $tipo_de_calculo = 0;
 					 $parcela_minima = 5.00;
-					 
+
 					 if (!$special) {
 					   $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($price))));
 					 } else {
 					   $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($special))));
 					 }
-					 
+
 					 // Calcula o valor da parcela de acordo com o tipo de calculo utilizado
 					 if ($tipo_de_calculo == 0) {
 					   $valor_total = ($preco_numero * pow(1+($juros/100), $qtd_parcelas));
@@ -260,11 +296,11 @@
 					   if ($max_parcelas < $qtd_parcelas) { $qtd_parcelas = $max_parcelas; }
 					   $valor_parcela = $valor_total/(1-(1/(pow(1+($juros/100), $qtd_parcelas))));
 					 }
-					 
+
 					 // Exibe as frases de parcelamento
 					 echo 'ou <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $qtd_parcelas . 'x</span> de <span style="font-size: 22px; font-weight: bold; color: #F7B04A;">' . $moeda_da_loja . number_format($valor_parcela, 2, ',', '.');
 					 if ($juros == 0) { echo '</span> s/ juros'; } else { echo '</span> com juros de ' . $juros . '% ao m&ecirc;s'; }
-					 
+
 					 ?>
 
 
@@ -285,7 +321,7 @@
 						<?php if ($reward) { ?>
 						<li><?php echo $text_reward; ?> <span><?php echo $reward; ?></span></li>
 						<?php } ?>
-						<li><?php echo $text_stock; ?> 
+						<li><?php echo $text_stock; ?>
 							<?php if ($stock == 'Indisponível') { ?>
 								<span class="nogreen"><?php echo $stock; ?></span>
 							<?php } else { ?>
@@ -294,7 +330,7 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<div id="product">
 
 					<!-- Product options -->
@@ -332,15 +368,7 @@
 													<?php } ?>
 												<?php } ?>
 
-													<div class="naotem">
-														<div class="naotemlabel">PP</div>
-														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
-													</div>
 
-													<div class="naotem">
-														<div class="naotemlabel">GG</div>
-														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
-													</div>
 											</div>
 										</div>
 									</div>
@@ -461,7 +489,7 @@
 							</div>
 						<?php } ?>
 					</div>
-				
+
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
 						<div class="form-group" style="padding-left: 15px;">
@@ -473,8 +501,8 @@
 								<input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
 							</div>
 						</div>
-						
-						<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+
+						<input type="hidden" name="product_id" id="product_id" value="<?php echo $product_id; ?>" />
 						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add">Adicionar ao carrinho</button>
 						<button type="button" id="button-cart-finish" data-loading-text="Comprar agora" class="btn btn-add-finish">Comprar agora</button>
 					</div>
@@ -482,7 +510,7 @@
 					<ul class="product-buttons">
 						<li><button class="btn btn-icon" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i> </button></li>
 						<li><button type="button" class="btn btn-icon" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button></li>
-					</ul>					
+					</ul>
 
 					<?php if ($tags) { ?>
 					<!-- Product tags -->
@@ -500,8 +528,8 @@
 					<div class="product-share">
 						<!-- AddThis Button BEGIN -->
 						<div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" ></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
-					<!-- AddThis Button END --> 
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+					<!-- AddThis Button END -->
 					</div>
 
 					<?php if ($minimum > 1) { ?>
@@ -511,7 +539,7 @@
 
 			</div>
 		</div>
-		
+
 		<!-- Product description -->
 		<div id="tab-description" class="product-desc product-section">
 			<h3 class="product-section_title"><?php echo $tab_description; ?></h3>
@@ -544,14 +572,14 @@
 		<?php } ?>
 
 		<!-- Product reviews -->
-		<?php if ($review_status) { ?>			
+		<?php if ($review_status) { ?>
 		<div id="tab-review" class="product-reviews product-section">
 			<h3 class="product-section_title"><?php echo $tab_review; ?></h3>
 			<form class="form-horizontal">
-				
+
 				<!-- Reviews list -->
 				<div id="review"></div>
-				
+
 				<!-- Review form -->
 				<div class="review-form-title">
 					<h3 class="product-section_title" id="reviews_form_title"><?php echo $text_write; ?></h3>
@@ -566,7 +594,7 @@
 						</div>
 						<div class="form-group required">
 							<label class="control-label col-sm-3" for="input-review"><?php echo $entry_review; ?></label>
-							<div class="col-sm-9">						
+							<div class="col-sm-9">
 								<textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
 								<div class="help-block"><?php echo $text_note; ?></div>
 							</div>
@@ -594,8 +622,8 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-9 col-sm-offset-3"> 
-								<img src="index.php?route=tool/captcha" alt="" id="captcha" /> 
+							<div class="col-sm-9 col-sm-offset-3">
+								<img src="index.php?route=tool/captcha" alt="" id="captcha" />
 								<div class="pull-right">
 									<button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
 								</div>
@@ -611,12 +639,12 @@
 		<?php } ?>
 
 		<!-- Related products -->
-		<?php if ($products) { ?>		
+		<?php if ($products) { ?>
 		<div class="related-products product-section">
 			<h3 class="product-section_title"><?php echo $text_related; ?></h3>
-			<div class="related-slider">				
+			<div class="related-slider">
 				<?php foreach ($products as $product) { ?>
-				
+
 				<div>
 					<div class="product-thumb transition">
 						<div class="image" style="position: relative;">
@@ -628,7 +656,7 @@
 						<div class="caption">
 							<div class="name name-product"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 							<div class="description"><?php echo mb_substr($product['description'],0,26,'UTF-8').'...'; ?></div>
-							
+
 							<?php if ($product['rating']) { ?>
 							<div class="rating">
 								<?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -649,7 +677,7 @@
 									<?php } else { ?>
 										<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
 									<?php } ?>
-									
+
 									<?php if ($product['tax']) { ?>
 										<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 									<?php } ?>
@@ -658,7 +686,7 @@
 							<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme533/parcelamento.php'; ?>
 						</div>
 						<div style="display: none;">
-							<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button> 
+							<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
 							<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
 							<button class="btn btn-icon" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></button>
 						</div>
@@ -700,10 +728,10 @@ function getChar(event) {
 
   if (event.which!=0 && event.charCode!=0) {
     if (event.which < 32) return null;
-    return String.fromCharCode(event.which)   
+    return String.fromCharCode(event.which)
   }
 
-  return null; 
+  return null;
 }
 	jQuery('#reviews_form_title').addClass('close-tab');
 	jQuery('#reviews_form_title').on("click", function(){
@@ -726,7 +754,7 @@ function getChar(event) {
 			},
 			success: function(json) {
 				$('.alert, .text-danger').remove();
-				
+
 				if (json['success']) {
 					$('#recurring-description').html(json['success']);
 				}
@@ -734,7 +762,7 @@ function getChar(event) {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <?php /* Redirect ao selecionar a opcao
 <script type="text/javascript"><!--
@@ -745,7 +773,7 @@ $(document).ready(function() {
 
 });
 //-->
-</script> 
+</script>
 */ ?>
 
 <script type="text/javascript"><!--
@@ -769,7 +797,7 @@ $(document).ready(function() {
 					if (json['error']['option']) {
 						for (i in json['error']['option']) {
 							var element = $('#input-option' + i.replace('_', '-'));
-							
+
 							if (element.parent().hasClass('input-group')) {
 								element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
 							} else {
@@ -777,22 +805,22 @@ $(document).ready(function() {
 							}
 						}
 					}
-					
+
 					if (json['error']['recurring']) {
 						$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
 					}
-					
+
 					// Highlight any found errors
 					$('.text-danger').parent().addClass('has-error');
 				}
-				
+
 				if (json['success']) {
 					$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-					
-					
-					
+
+
+
 					<!--$('html, body').animate({ scrollTop: 0 }, 'slow');-->
-					
+
 					$('#cart').load('index.php?route=common/cart/info #cart');
 					setTimeout(function() {$('.alert').fadeOut(1000)},3000);
 
@@ -806,7 +834,7 @@ $(document).ready(function() {
 		window.location.href = "/index.php?route=checkout/cart";
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript"><!--
 	$('.date').datetimepicker({
@@ -824,13 +852,13 @@ $(document).ready(function() {
 
 	$('button[id^=\'button-upload\']').on('click', function() {
 		var node = this;
-		
+
 		$('#form-upload').remove();
-		
+
 		$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
-		
+
 		$('#form-upload input[name=\'file\']').trigger('click');
-		
+
 		$('#form-upload input[name=\'file\']').on('change', function() {
 			$.ajax({
 				url: 'index.php?route=tool/upload',
@@ -848,14 +876,14 @@ $(document).ready(function() {
 				},
 				success: function(json) {
 					$('.text-danger').remove();
-					
+
 					if (json['error']) {
 						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
 					}
-					
+
 					if (json['success']) {
 						alert(json['success']);
-						
+
 						$(node).parent().find('input').attr('value', json['code']);
 					}
 				},
@@ -866,7 +894,7 @@ $(document).ready(function() {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript"><!--
 	$('#review').delegate('.pagination a', 'click', function(e) {
@@ -897,14 +925,14 @@ $(document).ready(function() {
 			},
 			success: function(json) {
 				$('.alert-success, .alert-danger').remove();
-				
+
 				if (json['error']) {
 					$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
 				}
-				
+
 				if (json['success']) {
 					$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-					
+
 					$('input[name=\'name\']').val('');
 					$('textarea[name=\'text\']').val('');
 					$('input[name=\'rating\']:checked').prop('checked', false);
@@ -924,7 +952,7 @@ $(document).ready(function() {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -940,4 +968,3 @@ $(document).ready(function() {
 </script>
 
 <?php echo $footer; ?>
-

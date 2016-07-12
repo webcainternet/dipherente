@@ -6,6 +6,8 @@ final class Action {
 	private $args = array();
 
 	public function __construct($route, $args = array()) {
+$route = ($route == 'account/upload') ? 'myoc/copu/customer' : $route;
+		$route = ($route == 'account/upload') ? 'myoc/copu/customer' : $route;
 		$path = '';
 
 		// Break apart the route

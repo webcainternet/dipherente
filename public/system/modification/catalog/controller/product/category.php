@@ -183,7 +183,14 @@ class ControllerProductCategory extends Controller {
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
 			foreach ($results as $result) {
-				if ($result['image']) {
+			 	$mmos_thumb = $this->model_catalog_product->getProductImages($result['product_id']);
+                    if (($mmos_thumb) && ($mmos_thumb[0]) && ($mmos_thumb[0]['image'])) {
+                        $mmos_image_thumb = $this->model_tool_image->resize($mmos_thumb[0]['image'],  $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                    } else {
+                        $mmos_image_thumb = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                    }
+
+                if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -215,6 +222,7 @@ class ControllerProductCategory extends Controller {
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
+					'mmos_thumb' => $mmos_image_thumb,
 					'thumb'       => $image,
 					'name'        => $result['name'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',

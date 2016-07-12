@@ -878,6 +878,8 @@
 	}
 	.product-thumb {
 		margin-bottom: 20px;
+		min-width: 300px;
+    	max-height: 470px;
 	}
 	.product-thumb .button-group button, .product-thumb .button-group button + button {
 		width: 33.33%;
