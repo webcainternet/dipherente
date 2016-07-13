@@ -91,7 +91,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/4.jpg">
+          <img src="/image/catalog/dicas/5.jpg">
         </div>
         <div class="item-col2">
           <h3>Alvejamento</h3>
@@ -101,7 +101,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/5.jpg">
+          <img src="/image/catalog/dicas/4.jpg">
         </div>
         <div class="item-col2">
           <h3>Secagem</h3>
