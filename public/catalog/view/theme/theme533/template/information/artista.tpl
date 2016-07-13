@@ -77,6 +77,13 @@
         <button type="button" id="button1" data-loading-text="Carregando..." class="btn btn-add">Ver mais</button>
       </div>
 
+      <div class="itemartista">
+        <img src="/image/catalog/artistas/artista5.jpg">
+        <h3>Elias Martins</h3>
+        é um artista que desenha Histórias em Quadrinhos para editoras americanas e europeias desde 2008. Zenescope, Grayhaven Comics e OortCloud Comics estão entre as editoras que publicaram seus trabalho. Em 2010, com a perda de seu pai em um acidente de transito... <!-- , ele resolveu escrever uma HQ que tem como pano de fundo os acidentes de transito. Em 2014 esse projeto (Pare!) Foi vencedor do PROAC (Programa de incentivo do Governo do Estado de São Paulo para produção de HQs) onde foi viabilizado o seu lançamento. Atualmente, além de desenhar HQs, ele atua como ilustrador na agência ZIATO Comunicação.-->
+        <button type="button" id="button1" data-loading-text="Carregando..." class="btn btn-add">Ver mais</button>
+      </div>
+
     </div>
 
 
