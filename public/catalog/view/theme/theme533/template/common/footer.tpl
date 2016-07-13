@@ -9,6 +9,7 @@
 			<div class="footer_box">
 				<h5><?php echo $text_information; ?></h5>
 				<ul class="list-unstyled">
+					<li><a href="/index.php?route=information/dicas">Dicas Importantes</a></li>
 				<?php foreach ($informations as $information) { ?>
 				<li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
 				<?php } ?>
@@ -49,13 +50,13 @@
 		</div>
 
 
-		<div class="col-sm-4">	
+		<div class="col-sm-4">
 			<h5>Siga-nos</h5>
 
 			<div class="fb-page" data-href="https://www.facebook.com/lojavirtual.digital/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lojavirtual.digital/"><a href="https://www.facebook.com/lojavirtual.digital/">LojaVirtual .digital</a></blockquote></div></div>
 
 <?php /*
-		<div class="col-sm-4">	
+		<div class="col-sm-4">
 
 			<h5>Formas de Pagamento</h5>
 			<ul class="list-unstyled">
@@ -75,14 +76,14 @@
 				<li class="fax"><?php echo $fax; ?></li>
 			</ul>
 			<ul class="list-unstyled social">
-				<li><a data-toggle="tooltip" title="<?php echo $text_fb; ?>" href="https://www.facebook.com/login/"><i class="fa fa-facebook"></i></a></li>	
+				<li><a data-toggle="tooltip" title="<?php echo $text_fb; ?>" href="https://www.facebook.com/login/"><i class="fa fa-facebook"></i></a></li>
 				<li><a data-toggle="tooltip" title="<?php echo $text_twi; ?>" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
 				<li><a data-toggle="tooltip" title="<?php echo $text_rss; ?>" href=""><i class="fa fa-rss"></i></a></li>
 			</ul>
 
 		</div>
 */ ?>
-	
+
 		</div>
 
 		<div style="float: left; width: 800px; margin-left: 15px;">
@@ -101,7 +102,7 @@
 		</div>
 
 	</div>
-	
+
   </div>
 	<div class="copyright" style="margin-top: 35px;">
 		<div class="container">
@@ -125,7 +126,7 @@
 				<span style="font-weight:bold; font-size:7pt">SSL</span></a>
 
 			</div>
-		</div> 
+		</div>
 
 	</div>
 </footer>
