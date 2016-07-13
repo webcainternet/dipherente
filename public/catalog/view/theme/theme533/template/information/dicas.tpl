@@ -60,7 +60,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/1.jpg">
+          <img src="/image/catalog/dicas/6.jpg">
         </div>
         <div class="item-col2">
           <h3>Lavagem</h3>
@@ -71,7 +71,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/2.jpg">
+          <img src="/image/catalog/dicas/1.jpg">
         </div>
         <div class="item-col2">
           <h3>Centrifugação</h3>
@@ -81,7 +81,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/6.jpg">
+          <img src="/image/catalog/dicas/2.jpg">
         </div>
         <div class="item-col2">
           <h3>Lavagem a seco</h3>
