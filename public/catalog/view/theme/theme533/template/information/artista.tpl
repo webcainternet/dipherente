@@ -64,16 +64,16 @@
       </div>
 
       <div class="itemartista">
-        <img src="/image/catalog/artistas/artista2.jpg">
-        <h3>Rodisley Jose da Silva</h3>
-        Filho de desenhista, desde muito cedo sempre esteve envolvido com arte música. Na adolescência conheceu os quadrinhos e foi paixão arrebatadora, ali ele conheceu suas maiores influências e que até hoje de alguma forma molda seus traços. Com o advento da internet, programas gráficos como photoshop, corel draw, 3D max... <!-- alguns dos programas com quais trabalha para fazer sua arte, foi possível ampliar seus métodos de criação. <!-- Trabalhou por 15 anos dentro do universo da serigráfia, hoje trabalha como freelance criando estampas e identidade visual e tendo seu trabalho reconhecido em vários meios de comunicação no brasil e no exterior. -->
+        <img src="/image/catalog/artistas/artista3.jpg">
+        <h3>Diego Machuca</h3>
+        Ilustrador e diretor de arte, desde 2009 trabalha como diretor de arte em agências de propaganda e ilustrador freelancer. Amante de estampas de camisetas e viciado em quadrinhos desde pequeno. Encontrou na ilustração o meio para expor tudo que passa pela sua ...
         <button type="button" id="button1" data-loading-text="Carregando..." class="btn btn-add">Ver mais</button>
       </div>
 
       <div class="itemartista">
-        <img src="/image/catalog/artistas/artista1.jpg">
-        <h3>Dani Mota</h3>
-        Ilustradora e designer, atualmente trabalha como freelancer desenvolvendo estampas, trabalhos para publicidade e colorização de HQs, faz bacharelado em Design e é formada em Desenho e Arte Digital pela Quanta Academia de Artes. Ama desenvolver infográficos, branding, pintar e escrever livros nas horas vagas. Desde pequena... <!-- gostava de desenhar sereias e fadas, mas hoje zumbis e pin-ups é que dominam suas artes. -->
+        <img src="/image/catalog/artistas/artista4.jpg">
+        <h3>Leo Gibran</h3>
+        Artista gráfico paulista, formado arquiteto pela FAU-USP. Trabalha com ilustração a mais de 20 anos. Já animou, programou, modelou em 3D, trabalhou com design, projetou sites... Mas, principalmente, já ilustrou diversas revistas, jornais e peças publicitárias.
         <button type="button" id="button1" data-loading-text="Carregando..." class="btn btn-add">Ver mais</button>
       </div>
 
