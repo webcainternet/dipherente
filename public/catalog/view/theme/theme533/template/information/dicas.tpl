@@ -120,6 +120,23 @@
         </div>
       </div>
 
+      <div class="itemdicas">
+        <div class="item-col1" style="padding-right: 30px;">
+          <h3>ATENÇÃO</h3>
+        </div>
+        <div class="item-col2">
+          Leia a etiqueta que vem com a camiseta. Nela há recomendações básicas dos cuidados que você deve ter, mas provavelmente você não irá ler essas informações de imediato, já que estará muito ocupado provando sua nova camiseta DIPHERENTE.
+        </div>
+      </div>
+
+      <div class="itemdicas">
+        <div class="item-col1" style="padding-right: 30px;">
+          <h3>IMPORTANTE</h3>
+        </div>
+        <div class="item-col2">
+          Caso seja identificado que o defeito foi ocasionado por mau uso do produto, a troca não será realizada e o produto será devolvido ao cliente.
+        </div>
+      </div>
 
     </div>
 
