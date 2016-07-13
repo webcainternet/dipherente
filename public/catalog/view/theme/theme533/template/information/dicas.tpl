@@ -81,7 +81,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/3.jpg">
+          <img src="/image/catalog/dicas/6.jpg">
         </div>
         <div class="item-col2">
           <h3>Lavagem a seco</h3>
@@ -112,7 +112,7 @@
 
       <div class="itemdicas">
         <div class="item-col1">
-          <img src="/image/catalog/dicas/6.jpg">
+          <img src="/image/catalog/dicas/3.jpg">
         </div>
         <div class="item-col2">
           <h3>Passadoria</h3>
