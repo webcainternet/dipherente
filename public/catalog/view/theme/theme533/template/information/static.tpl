@@ -4,10 +4,16 @@
     background: #F7B04A;
     color: #FFF;
     border-color: #FFF;
-    margin: 10px 0px 50px;
+    margin: 0px 0px 50px;
   }
   #button-masculino:hover,#button-feminino:hover,#button-moletom:hover {
     background: #131622;
+  }
+
+  .caption .name {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
   }
 </style>
 
@@ -228,6 +234,14 @@ $(document).ready(function(){
 
   }
 
+  .selecioneacor {
+    position: relative;
+    top: 330px;
+    left: 0px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 0px 10px;
+  }
+
 </style>
 
 <style type="text/css">
@@ -242,6 +256,7 @@ $(document).ready(function(){
     font-family:Arial;
     font-size:16px;
     border: solid 2px #FFF;
+    border-radius: 10px;
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
@@ -249,141 +264,124 @@ $(document).ready(function(){
 }
 .radio-masculino1 { background-color:#FAFAFA; } .radio-feminino1 { background-color:#FAFAFA; } .radio-moletom1 { background-color:#FAFAFA; }
 .radio-masculino2 { background-color:#2d2d2d; } .radio-feminino2 { background-color:#2d2d2d; } .radio-moletom2 { background-color:#2d2d2d; }
-.radio-masculino3 { background-color:#5277d1; } .radio-feminino3 { background-color:#5277d1; } .radio-moletom3 { background-color:#5277d1; }
-.radio-masculino4 { background-color:#cfc66c; } .radio-feminino4 { background-color:#cfc66c; } .radio-moletom4 { background-color:#cfc66c; }
-.radio-masculino5 { background-color:#d5534b; } .radio-feminino5 { background-color:#d5534b; } .radio-moletom5 { background-color:#d5534b; }
-.radio-masculino6 { background-color:#8fd061; } .radio-feminino6 { background-color:#8fd061; } .radio-moletom6 { background-color:#8fd061; }
+.radio-masculino3 { background-color:#117ae3; } .radio-feminino3 { background-color:#117ae3; } .radio-moletom3 { background-color:#117ae3; }
+.radio-masculino4 { background-color:#f4d400; } .radio-feminino4 { background-color:#f4d400; } .radio-moletom4 { background-color:#f4d400; }
+.radio-masculino5 { background-color:#ed2622; } .radio-feminino5 { background-color:#ed2622; } .radio-moletom5 { background-color:#ed2622; }
+.radio-masculino6 { background-color:#33c16f; } .radio-feminino6 { background-color:#33c16f; } .radio-moletom6 { background-color:#33c16f; }
 
 </style>
 
+<!-- Masculino -->
 <div class="customcampos" style="height: 450px;">
   <div class="customimage customimage1" id="customimage1">
-    &nbsp;
+    <div class="selecioneacor">
+      Selecione a cor:
+      <div class="radio-toolbar">
+          <input onclick="masculinoalterabg('1');" type="radio" id="radio-masculino1" name="radios-masculino" value="1" checked>
+          <label class="radio-masculino1" for="radio-masculino1">&nbsp;</label>
+
+          <input onclick="masculinoalterabg('2');" type="radio" id="radio-masculino2" name="radios-masculino" value="2">
+          <label class="radio-masculino2" for="radio-masculino2">&nbsp;</label>
+
+          <input onclick="masculinoalterabg('3');" type="radio" id="radio-masculino3" name="radios-masculino" value="3">
+          <label class="radio-masculino3" for="radio-masculino3">&nbsp;</label>
+
+          <input onclick="masculinoalterabg('4');" type="radio" id="radio-masculino4" name="radios-masculino" value="4">
+          <label class="radio-masculino4" for="radio-masculino4">&nbsp;</label>
+
+          <input onclick="masculinoalterabg('5');" type="radio" id="radio-masculino5" name="radios-masculino" value="5">
+          <label class="radio-masculino5" for="radio-masculino5">&nbsp;</label>
+
+          <input onclick="masculinoalterabg('6');" type="radio" id="radio-masculino6" name="radios-masculino" value="6">
+          <label class="radio-masculino6" for="radio-masculino6">&nbsp;</label>
+      </div>
+    </div>
   </div>
 
-Selecione a cor:
-    <div class="radio-toolbar">
-        <input onclick="masculinoalterabg('1');" type="radio" id="radio-masculino1" name="radios-masculino" value="1" checked>
-        <label class="radio-masculino1" for="radio-masculino1">&nbsp;</label>
-
-        <input onclick="masculinoalterabg('2');" type="radio" id="radio-masculino2" name="radios-masculino" value="2">
-        <label class="radio-masculino2" for="radio-masculino2">&nbsp;</label>
-
-        <input onclick="masculinoalterabg('3');" type="radio" id="radio-masculino3" name="radios-masculino" value="3">
-        <label class="radio-masculino3" for="radio-masculino3">&nbsp;</label>
-
-        <input onclick="masculinoalterabg('4');" type="radio" id="radio-masculino4" name="radios-masculino" value="4">
-        <label class="radio-masculino4" for="radio-masculino4">&nbsp;</label>
-
-        <input onclick="masculinoalterabg('5');" type="radio" id="radio-masculino5" name="radios-masculino" value="5">
-        <label class="radio-masculino5" for="radio-masculino5">&nbsp;</label>
-
-        <input onclick="masculinoalterabg('6');" type="radio" id="radio-masculino6" name="radios-masculino" value="6">
-        <label class="radio-masculino6" for="radio-masculino6">&nbsp;</label>
+  <div class="caption">
+    <div class="name">
+      <a href="#">Camiseta Masculina</a>
+      <div class="price price-product">R$ 99,00</div>
     </div>
-
-      <div class="caption">
-        <div class="name"><a href="http://dipherente.lojavirtual.local/index.php?route=product/product&amp;product_id=34">Camiseta Masculina</a></div>
-        <!--<div class="description">Fashion has always been so temporary and uncertain. Obviously there is nothing wrong about it because fashion satisfies our willingness to be attractive. And also fashion is the detector of prosperity..</div>-->
-                <div class="rating">
-                        <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                        </div>
-
-        <div class="price price-product">
-                    R$ 99,00                           </div>
-
-                    <button type="button" id="button-masculino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
-      </div>
+    <button type="button" id="button-masculino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+  </div>
 </div>
 
+
+
+
+<!-- Feminino -->
 <div class="customcampos" style="height: 450px;">
   <div class="customimage customimage2" id="customimage2">
-    &nbsp;
-  </div>
-Selecione a cor:
-    <div class="radio-toolbar">
-        <input onclick="femininoalterabg('1');" type="radio" id="radio-feminino1" name="radios-feminino" value="1" checked>
-        <label class="radio-feminino1" for="radio-feminino1">&nbsp;</label>
+    <div class="selecioneacor">
+      Selecione a cor:
+      <div class="radio-toolbar">
+          <input onclick="femininoalterabg('1');" type="radio" id="radio-feminino1" name="radios-feminino" value="1" checked>
+          <label class="radio-feminino1" for="radio-feminino1">&nbsp;</label>
 
-        <input onclick="femininoalterabg('2');" type="radio" id="radio-feminino2" name="radios-feminino" value="2">
-        <label class="radio-feminino2" for="radio-feminino2">&nbsp;</label>
+          <input onclick="femininoalterabg('2');" type="radio" id="radio-feminino2" name="radios-feminino" value="2">
+          <label class="radio-feminino2" for="radio-feminino2">&nbsp;</label>
 
-        <input onclick="femininoalterabg('3');" type="radio" id="radio-feminino3" name="radios-feminino" value="3">
-        <label class="radio-feminino3" for="radio-feminino3">&nbsp;</label>
+          <input onclick="femininoalterabg('3');" type="radio" id="radio-feminino3" name="radios-feminino" value="3">
+          <label class="radio-feminino3" for="radio-feminino3">&nbsp;</label>
 
-        <input onclick="femininoalterabg('4');" type="radio" id="radio-feminino4" name="radios-feminino" value="4">
-        <label class="radio-feminino4" for="radio-feminino4">&nbsp;</label>
+          <input onclick="femininoalterabg('4');" type="radio" id="radio-feminino4" name="radios-feminino" value="4">
+          <label class="radio-feminino4" for="radio-feminino4">&nbsp;</label>
 
-        <input onclick="femininoalterabg('5');" type="radio" id="radio-feminino5" name="radios-feminino" value="5">
-        <label class="radio-feminino5" for="radio-feminino5">&nbsp;</label>
+          <input onclick="femininoalterabg('5');" type="radio" id="radio-feminino5" name="radios-feminino" value="5">
+          <label class="radio-feminino5" for="radio-feminino5">&nbsp;</label>
 
-        <input onclick="femininoalterabg('6');" type="radio" id="radio-feminino6" name="radios-feminino" value="6">
-        <label class="radio-feminino6" for="radio-feminino6">&nbsp;</label>
-    </div>
-
-      <div class="caption">
-        <div class="name"><a href="http://dipherente.lojavirtual.local/index.php?route=product/product&amp;product_id=34">Camiseta Feminina</a></div>
-        <!--<div class="description">Fashion has always been so temporary and uncertain. Obviously there is nothing wrong about it because fashion satisfies our willingness to be attractive. And also fashion is the detector of prosperity..</div>-->
-                <div class="rating">
-                        <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                        </div>
-
-        <div class="price price-product">
-                    R$ 99,00                           </div>
-
-                    <button type="button" id="button-feminino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+          <input onclick="femininoalterabg('6');" type="radio" id="radio-feminino6" name="radios-feminino" value="6">
+          <label class="radio-feminino6" for="radio-feminino6">&nbsp;</label>
       </div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <div class="name">
+      <a href="#">Camiseta Feminino</a>
+      <div class="price price-product">R$ 99,00</div>
+    </div>
+    <button type="button" id="button-feminino" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+  </div>
 </div>
 
+
+
+<!-- Moletom -->
 <div class="customcampos" style="height: 450px;">
   <div class="customimage customimage3" id="customimage3">
-    &nbsp;
-  </div>
-Selecione a cor:
-    <div class="radio-toolbar">
-        <input onclick="moletomalterabg('1');" type="radio" id="radio-moletom1" name="radios-moletom" value="1" checked>
-        <label class="radio-moletom1" for="radio-moletom1">&nbsp;</label>
+    <div class="selecioneacor">
+      Selecione a cor:
+      <div class="radio-toolbar">
+          <input onclick="moletomalterabg('1');" type="radio" id="radio-moletom1" name="radios-moletom" value="1" checked>
+          <label class="radio-moletom1" for="radio-moletom1">&nbsp;</label>
 
-        <input onclick="moletomalterabg('2');" type="radio" id="radio-moletom2" name="radios-moletom" value="2">
-        <label class="radio-moletom2" for="radio-moletom2">&nbsp;</label>
+          <input onclick="moletomalterabg('2');" type="radio" id="radio-moletom2" name="radios-moletom" value="2">
+          <label class="radio-moletom2" for="radio-moletom2">&nbsp;</label>
 
-        <input onclick="moletomalterabg('3');" type="radio" id="radio-moletom3" name="radios-moletom" value="3">
-        <label class="radio-moletom3" for="radio-moletom3">&nbsp;</label>
+          <input onclick="moletomalterabg('3');" type="radio" id="radio-moletom3" name="radios-moletom" value="3">
+          <label class="radio-moletom3" for="radio-moletom3">&nbsp;</label>
 
-        <input onclick="moletomalterabg('4');" type="radio" id="radio-moletom4" name="radios-moletom" value="4">
-        <label class="radio-moletom4" for="radio-moletom4">&nbsp;</label>
+          <input onclick="moletomalterabg('4');" type="radio" id="radio-moletom4" name="radios-moletom" value="4">
+          <label class="radio-moletom4" for="radio-moletom4">&nbsp;</label>
 
-        <input onclick="moletomalterabg('5');" type="radio" id="radio-moletom5" name="radios-moletom" value="5">
-        <label class="radio-moletom5" for="radio-moletom5">&nbsp;</label>
+          <input onclick="moletomalterabg('5');" type="radio" id="radio-moletom5" name="radios-moletom" value="5">
+          <label class="radio-moletom5" for="radio-moletom5">&nbsp;</label>
 
-        <input onclick="moletomalterabg('6');" type="radio" id="radio-moletom6" name="radios-moletom" value="6">
-        <label class="radio-moletom6" for="radio-moletom6">&nbsp;</label>
-    </div>
-
-      <div class="caption">
-        <div class="name"><a href="http://dipherente.lojavirtual.local/index.php?route=product/product&amp;product_id=34">Moletom</a></div>
-        <!--<div class="description">Fashion has always been so temporary and uncertain. Obviously there is nothing wrong about it because fashion satisfies our willingness to be attractive. And also fashion is the detector of prosperity..</div>-->
-                <div class="rating">
-                        <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star active fa-stack-2x"></i></span>
-                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                        </div>
-
-        <div class="price price-product">
-                    R$ 180,00                           </div>
-
-                    <button type="button" id="button-moletom" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+          <input onclick="moletomalterabg('6');" type="radio" id="radio-moletom6" name="radios-moletom" value="6">
+          <label class="radio-moletom6" for="radio-moletom6">&nbsp;</label>
       </div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <div class="name">
+      <a href="#">Camiseta Moletom</a>
+      <div class="price price-product">R$ 180,00</div>
+    </div>
+    <button type="button" id="button-moletom" data-loading-text="Carregando..." class="btn btn-add">Personalizar</button>
+  </div>
 </div>
 
 
