@@ -185,7 +185,7 @@ $(document).ready(function(){
       <h1><?php echo $heading_title; ?></h1>
 
       <div style="margin-bottom: 30px;">
-        Texto explicativo aqui nesta area superior, ou utilizar um banner com uma imagem grande, Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a.
+        BE DIPHERENTE:  Bem vindo ao BE DIPHERENTE, aqui você poderá confeccionar sua camiseta ainda mais personalizada, mandando sua imagem com a especificações exigidas você poderá ter sua ilustração na camiseta ou, utilizar nosso banco de imagens não exclusivas mas com lindas estampas, veja as especificações e regulamento.
       </div>
 
 <style type="text/css">
