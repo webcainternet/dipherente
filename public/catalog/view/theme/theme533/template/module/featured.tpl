@@ -18,7 +18,7 @@ $(document).ready(function() {
 		navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
 		rewindNav : false,
 		scrollPerPage : false,
-	 
+
 		//Pagination
 		pagination : false,
 		paginationNumbers: false,
@@ -27,7 +27,7 @@ $(document).ready(function() {
 		baseClass : "owl-carousel",
 		theme : "owl-theme",
 
-	});	
+	});
 		$(".quickview").fancybox({
 			maxWidth	: 800,
 			maxHeight	: 600,
@@ -38,7 +38,7 @@ $(document).ready(function() {
 			closeClick	: false,
 			openEffect	: 'elastic',
 			closeEffect	: 'elastic',
-			
+
 		});
 	});
 */
@@ -67,8 +67,8 @@ $(document).ready(function() {
 		<div class="">
 		<?php $f=0; foreach ($products as $product) { $f++ ?>
 		<div>
-			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%; height: 650px;">
-				
+			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
+
 			<?php if ($product['special']) { ?>
 				<div class="sale">Promoção</div>
 			<?php } ?>
@@ -100,7 +100,7 @@ $(document).ready(function() {
 						<?php } else { ?>
 							<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
 						<?php } ?>
-						
+
 						<?php if ($product['tax']) { ?>
 							<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 						<?php } ?>
@@ -113,14 +113,14 @@ $(document).ready(function() {
 				  <?php if (!$product['special']) { ?>
 				  <?php echo $product['price']; ?>
 				  <?php } else { ?>
-				  <span class="price-old">De: <?php echo $product['price']; ?></span> Por: <span class="price-new"><?php echo $product['special']; ?></span> 
+				  <span class="price-old">De: <?php echo $product['price']; ?></span> Por: <span class="price-new"><?php echo $product['special']; ?></span>
 				  <?php } ?>
 				  <?php if ($product['tax']) { ?>
 				  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 				  <?php } ?>
 				</div>
 			</div>
-			<?php /* 
+			<?php /*
 			<div class="cart-button">
 				<button class="btn btn-add" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');">
 					<span><?php echo $button_cart; ?></span>
