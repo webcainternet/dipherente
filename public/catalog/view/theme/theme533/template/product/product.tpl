@@ -97,15 +97,15 @@
 								<ul id="image-additional">
 
 									<?php if (!empty($thumb)) { ?>
-									<li style="width: 135px !important; max-width: 135px !important;" >
+									<li style="width: 136px !important; max-width: 136px !important;" >
 										<a class="active" href="#" data-image="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>">
-											<img style="width: 135px;" src="<?php echo $thumb; ?>" alt="" />
+											<img style="width: 136px;" src="<?php echo $thumb; ?>" alt="" />
 										</a>
 									</li>
 									<?php } ?>
 									<?php foreach ($images as $image) { ?>
-									<li style="width: 135px !important; max-width: 135px !important;" >
-										<a href="#" data-image="<?php echo $image['popup']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"> <img style="width: 135px;" src="<?php echo $image['thumb']; ?>" alt="" /> </a>
+									<li style="width: 136px !important; max-width: 136px !important;" >
+										<a href="#" data-image="<?php echo $image['popup']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"> <img style="width: 136px;" src="<?php echo $image['thumb']; ?>" alt="" /> </a>
 									</li>
 									<?php } ?>
 
