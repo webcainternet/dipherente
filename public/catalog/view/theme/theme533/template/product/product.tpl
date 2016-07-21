@@ -93,7 +93,7 @@
 							<?php } ?>
 
 							<?php if ($images|| $thumb) { ?>
-							<div class="image-thumb" style="width: 150px; margin-left: 10px !important; ">
+							<div class="image-thumb" style="width: 155px; margin-left: 10px !important; ">
 								<ul id="image-additional">
 
 									<?php if (!empty($thumb)) { ?>
