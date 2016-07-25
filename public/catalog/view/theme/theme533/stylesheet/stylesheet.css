@@ -329,6 +329,8 @@ ul.soc-icon li i {
 }
 #cart .btn {
 	margin-bottom: 2px;
+	font-size: 12px !important;
+  padding: 4px 8px 5px !important;
 }
 #cart tr:first-child td {
 	border-top:0;
