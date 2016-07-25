@@ -797,6 +797,16 @@ footer .social li a:hover i{
 	padding:14px 18px 15px;
 	box-shadow:none;
 }
+
+.btn-finalizar {
+	color:#2b2e39 !important;
+	background:#fff !important;
+}
+.btn-finalizar:hover {
+	color:#F7B04A !important;
+	background:#fff !important;
+}
+
 .btn-icon {
 	padding-left:15px;
 	padding-right:15px;
