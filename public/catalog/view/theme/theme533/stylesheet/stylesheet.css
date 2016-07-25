@@ -329,8 +329,8 @@ ul.soc-icon li i {
 }
 #cart .btn {
 	margin-bottom: 2px;
-	padding: 4px 8px 5px !important;
-	font-size: 12px !important; 
+	font-size: 12px !important;
+  padding: 4px 8px 5px !important;
 }
 #cart tr:first-child td {
 	border-top:0;
@@ -2137,7 +2137,7 @@ aside .box .owl-carousel .owl-buttons .owl-next {
 	margin-bottom: 0;
 }
 .general_info {
-	margin-bottom:20px;
+	margin-bottom:0px;
 }
 .fancybox-skin .rating {
 	margin:10px 0
@@ -2146,7 +2146,6 @@ aside .box .owl-carousel .owl-buttons .owl-next {
 .general_info .price-section {
 	margin:0 0 5px;
 	padding-bottom:10px;
-	border-bottom:1px solid #dddddd;
 }
 .box-subcat {
 	padding:0;
@@ -3620,4 +3619,7 @@ html[lang="ru"] a.addthis_button_tweet {
 .btn-add-finish:hover {
 	color: #2b2e39;
 	background-color: #FFF;
+}
+.textopor {
+	padding: 2px 15px 10px;
 }
