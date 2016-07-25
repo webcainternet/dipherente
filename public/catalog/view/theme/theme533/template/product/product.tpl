@@ -455,7 +455,7 @@
 
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
-						<div class="form-group" style="padding-left: 15px;">
+						<div class="form-group" style="padding-top: 15px; padding-left: 15px; padding-bottom: 15px;">
 							<a href="/medidas">Ver medidas</a>
 						</div>
 						<div class="form-group" style="display: none;">
