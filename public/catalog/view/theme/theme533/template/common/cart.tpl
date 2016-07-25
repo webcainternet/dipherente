@@ -1,7 +1,7 @@
 <div class="box-cart">
 <div id="cart">
 	<button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">
-		<i class="fa fa-shopping-cart"></i> 
+		<i class="fa fa-shopping-cart"></i>
 		<strong>Meu Carrinho<br></strong>
 		<span id="cart-total">Itens: <?php echo $text_items; ?></span>
 		<?php if (isset($text_items2)) { ?><span id="cart-total2"><?php echo $text_items2; ?></span><?php } ?>
@@ -20,7 +20,7 @@
 			<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 			<?php if ($product['option']) { ?>
 			<?php foreach ($product['option'] as $option) { ?>
-			
+
 			- <small><?php echo $option['name']; ?> <?php echo $option['value']; ?></small>
 			<?php } ?>
 			<?php } ?>
@@ -30,7 +30,7 @@
 			<?php } ?>
 			<div> x <?php echo $product['quantity']; ?>  <span class="price-cart"><?php echo $product['total']; ?></span></div>
 			</td>
-		  
+
 		  <td class="text-right"></td>
 		  <td class="text-center"><button type="button" onclick="cart.remove('<?php echo $product['key']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
 		</tr>
@@ -59,7 +59,7 @@
 		</table>
 		<p class="text-right">
 			<a class="btn btn-primary" href="<?php echo $cart; ?>"><!--<i class="fa fa-shopping-cart"></i>--> <?php echo $text_cart; ?></a>
-			<a class="btn btn-primary" href="<?php echo $checkout; ?>"><!--<i class="fa fa-share"></i>--> <?php echo $text_checkout; ?></a></p>
+			<a class="btn btn-primary btn-finalizar" href="<?php echo $checkout; ?>"><!--<i class="fa fa-share"></i>--> <?php echo $text_checkout; ?></a></p>
 	  </div>
 	</li>
 	<?php } else { ?>
