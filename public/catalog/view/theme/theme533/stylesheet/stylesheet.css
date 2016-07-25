@@ -799,12 +799,12 @@ footer .social li a:hover i{
 }
 
 .btn-finalizar {
-	color:#2b2e39 !important;
-	background:#fff !important;
+	color:#FFF !important;
+	background:#2b2e39 !important;
 }
 .btn-finalizar:hover {
-	color:#F7B04A !important;
-	background:#fff !important;
+	color:#FFF !important;
+	background:#F7B04A !important;
 }
 
 .btn-icon {
