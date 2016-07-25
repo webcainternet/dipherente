@@ -152,7 +152,11 @@
 			<div class="<?php echo $content_right; ?> product_page-right">
 				<div class="general_info product-info">
 
-					<h1 class="product-title"><?php echo $heading_title; ?></h1>
+					<h1 class="product-title" style="display: inline-block"><?php echo $heading_title; ?></h1>
+
+          <?php if ($manufacturer) { ?>
+          <div class="textopor" style="display: inline-block"><a href="<?php echo $manufacturers; ?>">By <?php echo $manufacturer; ?></a></div>
+          <?php } ?>
 
 					<!-- Prodyuct rating status -->
 					<div class="rating-section product-rating-status">
@@ -230,7 +234,7 @@
 					   1 = Tabela Price (PagSeguro e outros)
 					 */
 
-					 $qtd_parcelas = 5;
+					 $qtd_parcelas = 3;
 					 $juros = 0;
 					 $moeda_da_loja = 'R$ ';
 					 $tipo_de_calculo = 0;
@@ -272,30 +276,21 @@
 					</div>
 					<?php } ?>
 
-					<ul class="list-unstyled product-section">
-						<?php if ($manufacturer) { ?>
-						<li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
-						<?php } ?>
-						<li><?php echo $text_model; ?> <span><?php echo $model; ?></span></li>
-						<?php if ($reward) { ?>
-						<li><?php echo $text_reward; ?> <span><?php echo $reward; ?></span></li>
-						<?php } ?>
-						<li><?php echo $text_stock; ?>
-							<?php if ($stock == 'Indisponível') { ?>
-								<span class="nogreen"><?php echo $stock; ?></span>
-							<?php } else { ?>
-								<span class="green"><?php echo $stock; ?></span>
-							<?php } ?>
-						</li>
-					</ul>
 				</div>
 
 				<div id="product">
 
+          <!-- Product description -->
+          <div id="tab-description" class="product-desc product-section">
+            <h3 style="text-align: left; color: #131622;" class="product-section_title"><?php echo $tab_description; ?></h3>
+            <?php echo $description; ?>
+            <div class="clearfix"></div>
+          </div>
+
 					<!-- Product options -->
-					<div class="product-options form-horizontal">
+					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px;">
 						<?php if ($options) { ?>
-							<h3><?php echo $text_option; ?></h3>
+							<?php /* <h3><?php echo $text_option; ?></h3> */ ?>
 							<?php foreach ($options as $option) { ?>
 								<?php if ($option['type'] == 'select') { ?>
 									<div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
@@ -455,8 +450,8 @@
 
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
-						<div class="form-group" style="padding-top: 15px; padding-left: 15px; padding-bottom: 15px;">
-							<a href="/medidas">Ver medidas</a>
+						<div class="form-group" style="padding-left: 15px; padding-top: 15px; padding-bottom: 15px;">
+							<a href="/medidas"><i class="fa fa-arrows" aria-hidden="true"></i> Ver medidas</a>
 						</div>
 						<div class="form-group" style="display: none;">
 							<label class="control-label col-sm-4" for="input-quantity"><?php echo $entry_qty; ?></label>
@@ -464,6 +459,7 @@
 								<input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
 							</div>
 						</div>
+
 
 						<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add">Adicionar ao carrinho</button>
@@ -474,6 +470,8 @@
 						<li><button class="btn btn-icon" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i> </button></li>
 						<li><button type="button" class="btn btn-icon" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button></li>
 					</ul>
+
+
 
 					<?php if ($tags) { ?>
 					<!-- Product tags -->
@@ -503,12 +501,25 @@
 			</div>
 		</div>
 
-		<!-- Product description -->
-		<div id="tab-description" class="product-desc product-section">
-			<h3 class="product-section_title"><?php echo $tab_description; ?></h3>
-			<?php echo $description; ?>
-			<div class="clearfix"></div>
-		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<?php if ($attribute_groups) { ?>
 		<!-- Product specifications -->
