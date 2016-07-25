@@ -20,21 +20,21 @@
 .camera_wrap table,
 .camera_wrap tbody,
 .camera_wrap tfoot,
-.camera_wrap thead, 
+.camera_wrap thead,
 .camera_wrap tr,
-.camera_wrap th, 
+.camera_wrap th,
 .camera_wrap td
 .camera_thumbs_wrap a,
-.camera_thumbs_wrap img, 
+.camera_thumbs_wrap img,
 .camera_thumbs_wrap ol,
 .camera_thumbs_wrap ul,
 .camera_thumbs_wrap li,
 .camera_thumbs_wrap table,
-.camera_thumbs_wrap tbody, 
-.camera_thumbs_wrap tfoot, 
-.camera_thumbs_wrap thead, 
-.camera_thumbs_wrap tr, 
-.camera_thumbs_wrap th, 
+.camera_thumbs_wrap tbody,
+.camera_thumbs_wrap tfoot,
+.camera_thumbs_wrap thead,
+.camera_thumbs_wrap tr,
+.camera_thumbs_wrap th,
 .camera_thumbs_wrap td {
 	background: none;
 	border: 0;
@@ -131,6 +131,8 @@
 .camera_loader {
 	background: #fff url(../image/camera-loader.gif) no-repeat center;
 	background: rgba(255, 255, 255, 0.9) url(../image/camera-loader.gif) no-repeat center;
+	-webkit-filter: grayscale(1);
+ filter: grayscale(1);
 	border: 1px solid #ffffff;
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
@@ -153,7 +155,7 @@
 	top: 0;
 	z-index: 3;
 }
-.camera_thumbs_wrap.camera_left .camera_bar, 
+.camera_thumbs_wrap.camera_left .camera_bar,
 .camera_thumbs_wrap.camera_right .camera_bar {
 	height: 100%;
 	position: absolute;
@@ -473,7 +475,7 @@
     border-top-color: #e6e6e6;
 }
 .camera_prevThumbs, .camera_nextThumbs, .camera_prev, .camera_next, .camera_commands, .camera_thumbs_cont {
-	
+
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	background: #b7b7b7;
