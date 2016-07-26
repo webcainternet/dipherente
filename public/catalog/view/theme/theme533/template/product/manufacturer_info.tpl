@@ -1,3 +1,23 @@
+<?php
+	switch ($_GET['manufacturer_id']) {
+		case 5:
+		    header('Location: http://dipherente.com/elias-martins/');
+		    break;
+		case 11:
+		    header('Location: http://dipherente.com/dani-mota/');
+		    break;
+		case 12:
+				header('Location: http://dipherente.com/rondisley-jose-da-silva/');
+				break;
+		case 13:
+		    header('Location: http://dipherente.com/diego-machuca/');
+		    break;
+		case 14:
+		    header('Location: http://dipherente.com/leo-gibran/');
+		    break;
+	}
+?>
+
 <?php echo $header; ?>
 
 <style type="text/css">
@@ -72,7 +92,7 @@
 			</div>
 		</div>
 	  <br />
-	  <div class="row">      
+	  <div class="row">
 		<?php foreach ($products as $product) { ?>
 		<div class="product-layout product-list col-xs-12">
 		  <div class="product-thumb">
@@ -104,7 +124,7 @@
 						<?php } else { ?>
 							<span style="color: #777; font-size: 12px;">De:</span> <span class="price-old"><?php echo $product['price']; ?></span> <span style="color: #777; font-size: 12px;">Por:</span> <span class="price-new"><?php echo $product['special']; ?></span>
 						<?php } ?>
-						
+
 						<?php if ($product['tax']) { ?>
 							<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 						<?php } ?>
@@ -112,7 +132,7 @@
 				<?php } ?>
 				<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme533/parcelamento.php'; ?>
 			</div>
-				<div style="display: none;" class="cart-button">					
+				<div style="display: none;" class="cart-button">
 					<span class="block-icon block-icon">
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
@@ -137,4 +157,4 @@
 	  <?php echo $content_bottom; ?></div>
 	<?php echo $column_right; ?></div>
 </div>
-<?php echo $footer; ?> 
+<?php echo $footer; ?>
