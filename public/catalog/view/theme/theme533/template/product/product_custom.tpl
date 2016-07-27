@@ -86,26 +86,6 @@ position: absolute;
     width: 240px;
     height: 300px;
     z-index: 1;
-    <?php
-      switch ($_GET['product_id']) {
-          case "69":
-            echo "top: 210px;";
-          case "68":
-            echo "top: 210px;";
-          case "66":
-            echo "top: 210px;";
-          case "65":
-            echo "top: 210px;";
-          case "67":
-            echo "top: 210px;";
-          case "70":
-            echo "top: 210px;";
-          case "71":
-            echo "top: 210px;";
-          default:
-            echo "top: 155px;";
-      }
-    ?>
     left: 227px;
     border: dashed 3px #555;
     background-size: cover;
@@ -161,7 +141,27 @@ $(document).ready(function(){
 					<?php if ($thumb || $images) { ?>
 							<?php if ($thumb) { ?>
 								<div class="image" style="border: 1px solid #dddddd;">
-									<div class="mascara" id="mascara">
+									<div class="mascara" id="mascara" style="<?php
+                        $prodid = $_GET['product_id'];
+                        switch ($prodid) {
+                            case "69":
+                              echo "top: 210px;";
+                            case "68":
+                              echo "top: 210px;";
+                            case "66":
+                              echo "top: 210px;";
+                            case "65":
+                              echo "top: 210px;";
+                            case "67":
+                              echo "top: 210px;";
+                            case "70":
+                              echo "top: 210px;";
+                            case "71":
+                              echo "top: 210px;";
+                            default:
+                              echo "top: 155px;";
+                        }
+                      ?>">
 										<table>
 											<tr>
 												<td class="preview2" id="previewimg2"/>
