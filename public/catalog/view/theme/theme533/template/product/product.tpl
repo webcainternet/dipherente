@@ -630,7 +630,7 @@
 						<div class="caption">
 							<div class="name name-product"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 							<?php /* <div class="description"><?php echo mb_substr($product['description'],0,26,'UTF-8').'...'; ?></div> */ ?>
-              <div class="textopor" style="display: inline-block; padding: 2px 0px 10px !important;"><a href="<?php echo $manufacturers; ?>">By <?php echo $manufacturer; ?></a></div>
+							<div class="textopor" style="display: inline-block; padding: 2px 0px 10px !important;"><a href="<?php echo $manufacturers; ?>">By <?php echo $manufacturer; ?></a></div>
 
 							<?php if ($product['rating']) { ?>
 							<div class="rating">
