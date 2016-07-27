@@ -87,15 +87,15 @@ position: absolute;
     height: 300px;
     z-index: 1;
     <?php
-      if    ($_GET['product_id'] == 65) {echo "top: 210px;";}
-      elsif ($_GET['product_id'] == 69) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 68) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 66) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 65) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 67) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 70) {echo "top: 210px;";} 
-      elsif ($_GET['product_id'] == 71) {echo "top: 210px;";} 
-      else {echo "top: 155px;";} 
+      if ($_GET['product_id'] == 65) {echo "top: 210px;";}
+      elseif ($_GET['product_id'] == 69) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 68) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 66) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 65) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 67) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 70) {echo "top: 210px;";} 
+      elseif ($_GET['product_id'] == 71) {echo "top: 210px;";} 
+      else {echo "top: 155px;";}
     ?>
     left: 227px;
     border: dashed 3px #555;
@@ -332,7 +332,7 @@ $(document).ready(function(){
 						<li><?php echo $text_reward; ?> <span><?php echo $reward; ?></span></li>
 						<?php } ?>
 						<li><?php echo $text_stock; ?>
-							<?php if ($stock == 'Indisponível') { ?>
+							<?php if ($stock == 'IndisponÃ­vel') { ?>
 								<span class="nogreen"><?php echo $stock; ?></span>
 							<?php } else { ?>
 								<span class="green"><?php echo $stock; ?></span>
@@ -503,7 +503,7 @@ $(document).ready(function(){
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
 						<div class="form-group" style="padding-left: 15px;">
-							<a href="/medidas">Ver medidas</a>
+							<a href="/medidas"><i class="fa fa-arrows" aria-hidden="true"></i> Ver medidas</a>
 						</div>
 						<div class="form-group" style="display: none;">
 							<label class="control-label col-sm-4" for="input-quantity"><?php echo $entry_qty; ?></label>
