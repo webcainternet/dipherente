@@ -87,15 +87,24 @@ position: absolute;
     height: 300px;
     z-index: 1;
     <?php
-      if ($_GET['product_id'] == 65) {echo "top: 210px;";}
-      elseif ($_GET['product_id'] == 69) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 68) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 66) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 65) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 67) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 70) {echo "top: 210px;";} 
-      elseif ($_GET['product_id'] == 71) {echo "top: 210px;";} 
-      else {echo "top: 155px;";}
+      switch ($_GET['product_id']) {
+          case 69:
+            echo "top: 210px;";
+          case 68:
+            echo "top: 210px;";
+          case 66:
+            echo "top: 210px;";
+          case 65:
+            echo "top: 210px;";
+          case 67:
+            echo "top: 210px;";
+          case 70:
+            echo "top: 210px;";
+          case 71:
+            echo "top: 210px;";
+          default:
+            echo "top: 155px;";
+      }
     ?>
     left: 227px;
     border: dashed 3px #555;
