@@ -141,27 +141,7 @@ $(document).ready(function(){
 					<?php if ($thumb || $images) { ?>
 							<?php if ($thumb) { ?>
 								<div class="image" style="border: 1px solid #dddddd;">
-									<div class="mascara" id="mascara" style="<?php
-                        $prodid = $_GET['product_id'];
-                        switch ($prodid) {
-                            case "69":
-                              echo "top: 210px;";
-                            case "68":
-                              echo "top: 210px;";
-                            case "66":
-                              echo "top: 210px;";
-                            case "65":
-                              echo "top: 210px;";
-                            case "67":
-                              echo "top: 210px;";
-                            case "70":
-                              echo "top: 210px;";
-                            case "71":
-                              echo "top: 210px;";
-                            default:
-                              echo "top: 155px;";
-                        }
-                      ?>">
+									<div class="mascara" id="mascara" style="<?php if ($_GET['product_id'] == 69 || $_GET['product_id'] == 68 || $_GET['product_id'] == 66 || $_GET['product_id'] == 65 || $_GET['product_id'] == 67 || $_GET['product_id'] == 70 || $_GET['product_id'] == 71 ) { echo "top: 210px;"; } else { echo "top: 155px;"; } ?>">
 										<table>
 											<tr>
 												<td class="preview2" id="previewimg2"/>
