@@ -47,15 +47,15 @@ $(document).ready(function() {
 
 <div class="box_html top-banners">
 <div class="banners-html row">
-<div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-1b.jpg"><div class="s-desc"><span>Bonés</span></div>
+<div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-1b.jpg"><div class="s-desc"><span>BonÃ©s</span></div>
 </a></div>
-<div class="col-sm-4 banner-2"><a href="index.php?route=product/category&amp;path=32"><img src="image/catalog/banner-2b.jpg"><div class="s-desc"><span>Masculino</span></div>
+<div class="col-sm-4 banner-2"><a href="index.php?route=product/category&amp;path=33"><img src="image/catalog/banner-2b.jpg"><div class="s-desc"><span>Masculino</span></div>
 </a></div>
-<div class="col-sm-5 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-3b.jpg"><div class="s-desc"><span>Feminino</span></div>
+<div class="col-sm-5 banner-1"><a href="index.php?route=product/category&amp;path=25"><img src="image/catalog/banner-3b.jpg"><div class="s-desc"><span>Feminino</span></div>
 </a></div>
-<div class="col-sm-9 banner-3"><a href="index.php?route=product/category&amp;path=25"><img src="image/catalog/banner-4b.jpg"><div class="s-desc"><span>Novidades</span></div>
+<div class="col-sm-9 banner-3"><a href="index.php?route=product/category&amp;path=37"><img src="image/catalog/banner-4b.jpg"><div class="s-desc"><span>Novidades</span></div>
 </a></div>
-<div class="col-sm-3 banner-4"><a href="index.php?route=product/category&amp;path=30"><img src="image/catalog/banner-5b.jpg"><div class="s-desc">Acessórios</div>
+<div class="col-sm-3 banner-4"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-5b.jpg"><div class="s-desc">AcessÃ³rios</div>
 </a></div>
 </div></div>
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
 			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
 
 			<?php if ($product['special']) { ?>
-				<div class="sale">Promoção</div>
+				<div class="sale">PromoÃ§Ã£o</div>
 			<?php } ?>
 			<div class="image" style="position: relative;">
                         <a href="<?php echo $product['href']; ?>">
@@ -79,7 +79,7 @@ $(document).ready(function() {
                         </a>
                     </div>
 			<div class="caption">
-				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a><br><div class="textopor" style="display: inline-block; padding-left: 0px; color: #F7B04A;"><a href="http://dipherente.com/index.php?route=product/manufacturer/info&amp;manufacturer_id=5">By Elias Martins</a></div></div>
 				<!--<div class="description"><?php echo $product['description']; ?></div>-->
 				<?php if ($product['rating']) { ?>
 				<div class="rating">
