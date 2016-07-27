@@ -86,7 +86,17 @@ position: absolute;
     width: 240px;
     height: 300px;
     z-index: 1;
-    top: 155px;
+    <?php
+      if    ($_GET['product_id'] == 65) {echo "top: 210px;";}
+      elsif ($_GET['product_id'] == 69) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 68) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 66) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 65) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 67) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 70) {echo "top: 210px;";} 
+      elsif ($_GET['product_id'] == 71) {echo "top: 210px;";} 
+      else {echo "top: 155px;";} 
+    ?>
     left: 227px;
     border: dashed 3px #555;
     background-size: cover;
