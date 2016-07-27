@@ -88,19 +88,19 @@ position: absolute;
     z-index: 1;
     <?php
       switch ($_GET['product_id']) {
-          case 69:
+          case "69":
             echo "top: 210px;";
-          case 68:
+          case "68":
             echo "top: 210px;";
-          case 66:
+          case "66":
             echo "top: 210px;";
-          case 65:
+          case "65":
             echo "top: 210px;";
-          case 67:
+          case "67":
             echo "top: 210px;";
-          case 70:
+          case "70":
             echo "top: 210px;";
-          case 71:
+          case "71":
             echo "top: 210px;";
           default:
             echo "top: 155px;";
