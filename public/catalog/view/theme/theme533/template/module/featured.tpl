@@ -79,7 +79,7 @@ $(document).ready(function() {
                         </a>
                     </div>
 			<div class="caption">
-				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a><br><div class="textopor" style="display: inline-block; padding-left: 0px; color: #F7B04A;"><a href="http://dipherente.com/index.php?route=product/manufacturer/info&amp;manufacturer_id=5">By Elias Martins</a></div></div>
+				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a><br><div class="textopor" style="display: inline-block; padding-left: 0px; color: #F7B04A;"><a style="color: #F7B04A;font-size: 13px;" href="http://dipherente.com/index.php?route=product/manufacturer/info&amp;manufacturer_id=5">By Elias Martins</a></div></div>
 				<!--<div class="description"><?php echo $product['description']; ?></div>-->
 				<?php if ($product['rating']) { ?>
 				<div class="rating">
