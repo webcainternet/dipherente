@@ -31,7 +31,9 @@
 			<div class="footer_box">
 				<h5><?php echo $text_extra; ?></h5>
 				<ul class="list-unstyled">
-				<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+				<li><a href="/produtos-em-promocao">Produtos em promoção</a></li>
+
+
 				<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
 				<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
 				</ul>
@@ -112,7 +114,6 @@
 			</div>
 
 			<div style="width: 40%; float: left; text-align: right;">
-
 				<a href="https://lojavirtual.digital/" target="_blank">
 						<img style="background-color: #FFF; border: 0px; margin-right: 20px; padding: 5px; border: solid 1px #EFD6B3;" src="/image/LOGO-LOJAVIRTUAL-300px.png" alt="Loja Virtual .digital" height="40">
 				</a>
