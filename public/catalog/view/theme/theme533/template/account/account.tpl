@@ -14,15 +14,15 @@ h2 {
   font-size: 18px;
 }
 .account-cubo:hover {
-  color: #f3f3f4;
-  background: #2b2e39;
+  color: #f3f3f4 !important;
+  background: #2b2e39 !important;
 }
 .account-cubo:hover a {
-  color: #f3f3f4;
+  color: #f3f3f4 !important;
 }
 
 .account-cubo a {
-  color: #2b2e39;
+  color: #2b2e39 !important;
 }
 .icongrande {
   font-size: 64px;
