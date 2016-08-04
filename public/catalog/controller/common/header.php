@@ -65,6 +65,8 @@ class ControllerCommonHeader extends Controller {
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
 
+		$data['customer_firstname'] = $this->customer->getFirstName();
+
 		$status = true;
 
 		if (isset($this->request->server['HTTP_USER_AGENT'])) {
@@ -92,10 +94,10 @@ class ControllerCommonHeader extends Controller {
                     $data['outhover'] = 'fadeIn("slow")';
                 }elseif ($mmos_image_effect['effect'] == 'bounce'){
                     $data['inhover'] = 'toggle( "bounce", { times: 1 }, "slow" )';
-                    $data['outhover'] = 'toggle( "bounce", { times: 1 }, "slow" )'; 
+                    $data['outhover'] = 'toggle( "bounce", { times: 1 }, "slow" )';
                 }elseif ($mmos_image_effect['effect'] == 'clip'){
                     $data['inhover'] = 'toggle( "clip", { times: 1 }, "slow" )';
-                    $data['outhover'] = 'toggle( "clip", { times: 1 }, "slow" )';   
+                    $data['outhover'] = 'toggle( "clip", { times: 1 }, "slow" )';
                 }elseif ($mmos_image_effect['effect'] == 'drop'){
                     $data['inhover'] = 'toggle( "drop", { times: 1 }, "slow" )';
                     $data['outhover'] = 'toggle( "drop", { times: 1 }, "slow" )';
@@ -108,7 +110,7 @@ class ControllerCommonHeader extends Controller {
                 }elseif ($mmos_image_effect['effect'] == 'puff'){
                     $data['inhover'] = 'toggle( "puff", { times: 1 }, "slow" )';
                     $data['outhover'] = 'toggle( "puff", { times: 1 }, "slow" )';
-                }   
+                }
 
         $this->load->model('catalog/category');
 

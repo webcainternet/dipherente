@@ -193,7 +193,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 		<div class="log-button">
 			<?php if ($logged) { ?>
 			<a href="<?php echo $logout; ?>"><i class="fa fa-sign-out"></i><span><?php echo $text_logout; ?></span></a>
-      <a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>"><i class="fa fa-user"></i><span>Olá, <?php echo $text_logged; ?></span></a>
+      <a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>"><i class="fa fa-user"></i><span>Olá, <?php echo $customer_firstname; ?></span></a>
 			<?php } else { ?>
 			<a href="<?php echo $login; ?>"><i class="fa fa-unlock-alt"></i><span><?php echo $text_login; ?></span></a>
       <a href="<?php echo $register; ?>" title="<?php echo $text_register; ?>"><i class="fa fa-user"></i><span><?php echo $text_register; ?></span></a>
