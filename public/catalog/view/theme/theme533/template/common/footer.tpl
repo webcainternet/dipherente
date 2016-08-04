@@ -108,12 +108,12 @@
   </div>
 	<div class="copyright" style="margin-top: 35px;">
 		<div class="container">
-			<div style="width: 60%; float: left; padding-top: 5px;">
+			<div style="width: 60%; float: left; padding-top: 5px; min-width: 370px;">
 				<div>USE K Comércio de Roupas e Acessórios - ME / CNPJ: 25.013.537/0001-17 © 2016 Todos os direitos reservados</div>
 				<div>Alameda Chopin, 159 - Jardim Aquarius I - São José dos Campos - SP - CEP: 12242-030</div>
 			</div>
 
-			<div style="width: 40%; float: left; text-align: right;">
+			<div style="width: 40%; float: left; text-align: right; min-width: 370px;">
 				<a href="https://lojavirtual.digital/" target="_blank">
 						<img style="background-color: #FFF; border: 0px; margin-right: 20px; padding: 5px; border: solid 1px #EFD6B3;" src="/image/LOGO-LOJAVIRTUAL-300px.png" alt="Loja Virtual .digital" height="40">
 				</a>
