@@ -28,6 +28,10 @@ h2 {
   font-size: 64px;
   margin-bottom: 15px;
 }
+a, a:visited {
+    color: #131622;
+    outline: none;
+}
 </style>
 
 <div class="container">
