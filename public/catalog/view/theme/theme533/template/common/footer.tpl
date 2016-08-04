@@ -35,7 +35,7 @@
 
 
 				<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
-				<li><a href="<?php echo $special; ?>">Mais vendidos</a></li>
+				<li><a href="/mais-vendidos">Mais vendidos</a></li>
 				</ul>
 			</div>
 		</div>

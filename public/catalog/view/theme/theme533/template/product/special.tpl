@@ -64,8 +64,8 @@
 				</a>
 			</div>
 		</div>
-	  <div class="row">  
-		<?php foreach ($products as $product) { ?>     
+	  <div class="row">
+		<?php foreach ($products as $product) { ?>
 		<div class="product-layout product-list col-xs-12">
 			<div class="product-thumb">
 				<div class="image" style="position: relative;">
@@ -102,7 +102,7 @@
 				</p>
 				<?php } ?>
 				</div>
-				<div class="cart-button">					
+				<div class="cart-button">
 					<span class="block-icon block-icon">
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
 						<button class="btn btn-icon" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>

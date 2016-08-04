@@ -409,3 +409,7 @@
 2016-07-27 21:00:38 - Módulo Correios :: produto com dimensões e peso inválidos (Kite surf). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
 2016-07-27 21:00:38 - Módulo Correios :: produto com dimensões e peso inválidos (Kite surf). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
 2016-07-27 21:00:38 - Módulo Correios :: produto com dimensões e peso inválidos (Kite surf). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2016-08-02 18:42:35 - PHP Warning:  fopen(/srv/httpd/dipherente.com.br/public/system/logs/ocmod.log): failed to open stream: Permission denied in /srv/httpd/dipherente.com.br/dipherente/public/system/library/log.php on line 6
+2016-08-02 18:42:35 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /srv/httpd/dipherente.com.br/dipherente/public/system/library/log.php on line 10
+2016-08-02 19:02:26 - PHP Warning:  fopen(/srv/httpd/dipherente.com.br/public/system/logs/ocmod.log): failed to open stream: Permission denied in /srv/httpd/dipherente.com.br/dipherente/public/system/library/log.php on line 6
+2016-08-02 19:02:26 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /srv/httpd/dipherente.com.br/dipherente/public/system/library/log.php on line 10
