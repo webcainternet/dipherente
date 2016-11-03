@@ -46,19 +46,60 @@ $(document).ready(function() {
 
 <div id="bannerssuperiores" class="box_html top-banners">
 <div class="banners-html row">
-<div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-1b.jpg"><div class="s-desc"><span>Bonés</span></div>
-</a></div>
-<div class="col-sm-4 banner-2"><a href="index.php?route=product/category&amp;path=33"><img src="image/catalog/banner-2b.jpg"><div class="s-desc"><span>Masculino</span></div>
-</a></div>
-<div class="col-sm-5 banner-1"><a href="index.php?route=product/category&amp;path=25"><img src="image/catalog/banner-3b.jpg"><div class="s-desc"><span>Feminino</span></div>
-</a></div>
-<div class="col-sm-9 banner-3"><a href="index.php?route=product/category&amp;path=37"><img src="image/catalog/banner-4b.jpg"><div class="s-desc"><span>Novidades</span></div>
-</a></div>
-<div class="col-sm-3 banner-4"><a href="index.php?route=product/category&amp;path=18"><img src="image/catalog/banner-5b.jpg"><div class="s-desc">Acessórios</div>
-</a></div>
-</div></div>
 
 
+<?php
+	//Conexão com o banco
+	$mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+	//Consulta
+	$sql = utf8_decode("SELECT bi.link, bi.image, bid.description, bi.sort_order FROM oc_banner_image bi INNER JOIN oc_banner_image_description bid on bi.banner_image_id = bid.banner_image_id WHERE bi.banner_id = 16 ORDER BY bi.sort_order LIMIT 5");
+
+	$arrAtivos = array();
+
+	if ($result = $mysqli->query($sql)) { 
+
+		$row_cnt = $result->num_rows;
+
+		if ($row_cnt > 0) {
+
+			$row_num = 1;
+
+			while($obj = $result->fetch_object()){
+				
+				<?php if ($row_num == 1) { ?>
+				<div class="col-sm-3 banner-1"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				</a></div>
+				<?php } ?>
+
+				<?php if ($row_num == 2) { ?>
+				<div class="col-sm-4 banner-2"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				</a></div>
+				<?php } ?>
+
+				<?php if ($row_num == 3) { ?>
+				<div class="col-sm-5 banner-1"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				</a></div>
+				<?php } ?>
+
+				<?php if ($row_num == 4) { ?>
+				<div class="col-sm-9 banner-3"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				</a></div>
+				<?php } ?>
+
+				<?php if ($row_num == 5) { ?>
+				<div class="col-sm-3 banner-4"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><?php echo utf8_encode($obj->description); ?></div>
+				</a></div>
+				<?php } ?>
+
+				$row_num = $row_num + 1;
+			}
+		}
+	}
+?>
+
+</div>
+</div>
 
 <div class="box featured">
 	<div class="box-heading"><h3><?php echo $heading_title; ?></h3></div>
