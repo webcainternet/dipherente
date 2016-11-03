@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 			$row_num = 1;
 
-			while($obj = $result->fetch_object()){
+			while($obj = $result->fetch_object()){ ?>
 				
 				<?php if ($row_num == 1) { ?>
 				<div class="col-sm-3 banner-1"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
@@ -92,7 +92,7 @@ $(document).ready(function() {
 				</a></div>
 				<?php } ?>
 
-				$row_num = $row_num + 1;
+				<?php $row_num = $row_num + 1;
 			}
 		}
 	}
