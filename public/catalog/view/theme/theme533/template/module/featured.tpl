@@ -73,12 +73,12 @@ $(document).ready(function() {
 				<?php } ?>
 
 				<?php if ($row_num == 2) { ?>
-				<div class="col-sm-4 banner-2"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				<div class="col-sm-5 banner-1"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
 				</a></div>
 				<?php } ?>
 
 				<?php if ($row_num == 3) { ?>
-				<div class="col-sm-5 banner-1"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
+				<div class="col-sm-4 banner-2"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div class="s-desc"><span><?php echo utf8_encode($obj->description); ?></span></div>
 				</a></div>
 				<?php } ?>
 
