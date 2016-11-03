@@ -1,4 +1,29 @@
 <?php
+function linkmanufacturer($prodid) {
+	$conn=mysql_connect("localhost","dipherente","rj328fewuh");
+	$seldb=mysql_select_db("dipherente",$conn);
+	$query = 'SELECT p.product_id, p.manufacturer_id, m.name FROM oc_product p INNER JOIN oc_manufacturer m on (p.manufacturer_id = m. manufacturer_id)  WHERE p.product_id = '.$prodid;
+
+	$result = mysql_query($query, $conn);
+	if (!$result) {
+		echo 'Não foi possível executar a consulta: ' . mysql_error();
+		//exit;
+	}
+
+	$num_rows = mysql_num_rows($result);
+	if ($num_rows == 0) {
+		$retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/">By Dipherente</a>';
+	} else {
+		$row = mysql_fetch_row($result);
+		if ($row[2] == false) {
+			$row[2] = 'Dipherente';
+		}
+		$retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/index.php?route=product/manufacturer/info&manufacturer_id='.$row[1].'">By '.$row[2].'</a>';
+	}
+	$retorno = utf8_encode($retorno);
+	return $retorno;
+}
+
 // Error Reporting
 error_reporting(E_ALL);
 
@@ -56,7 +81,7 @@ function modification($filename) {
 	if (substr($filename, 0, strlen(DIR_SYSTEM)) == DIR_SYSTEM) {
 		$file = DIR_MODIFICATION . 'system/' . substr($filename, strlen(DIR_SYSTEM));
 	}
-	
+
 	if (file_exists($file)) {
 		return $file;
 	} else {

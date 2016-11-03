@@ -14,19 +14,23 @@ h2 {
   font-size: 18px;
 }
 .account-cubo:hover {
-  color: #f3f3f4;
-  background: #2b2e39;
+  color: #f3f3f4 !important;
+  background: #2b2e39 !important;
 }
 .account-cubo:hover a {
-  color: #f3f3f4;
+  color: #f3f3f4 !important;
 }
 
 .account-cubo a {
-  color: #2b2e39;
+  color: #2b2e39 !important;
 }
 .icongrande {
   font-size: 64px;
   margin-bottom: 15px;
+}
+a, a:visited {
+    color: #131622;
+    outline: none;
 }
 </style>
 
@@ -50,50 +54,50 @@ h2 {
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h2><?php echo $text_my_account; ?></h2>
 
-        <div class="account-cubo">
+        <a href="<?php echo $edit; ?>"><div class="account-cubo">
           <i class="fa fa-users icongrande"></i><br>
-          <a href="<?php echo $edit; ?>"><?php echo $text_edit; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_edit; ?></div></a>
+        <a href="<?php echo $password; ?>"><div class="account-cubo">
           <i class="fa fa-unlock-alt icongrande"></i><br>
-          <a href="<?php echo $password; ?>"><?php echo $text_password; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_password; ?></div></a>
+        <a href="<?php echo $address; ?>"><div class="account-cubo">
           <i class="fa fa-map-marker icongrande"></i><br>
-          <a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_address; ?></div></a>
+        <a href="<?php echo $wishlist; ?>"><div class="account-cubo">
           <i class="fa fa-gift icongrande"></i><br>
-          <a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></div>
+          <?php echo $text_wishlist; ?></div></a>
 <?php if($copu_customer) { ?>
 					<li><a href="<?php echo $copu_customer; ?>"><?php echo $text_copu_customer; ?></a></li>
 				<?php } ?>
 
       <h2 style="margin-top: 30px;"><?php echo $text_my_orders; ?></h2>
 
-        <div class="account-cubo">
+        <a href="<?php echo $order; ?>"><div class="account-cubo">
           <i class="fa fa-history icongrande"></i><br>
-          <a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_order; ?></div></a>
+        <a href="<?php echo $download; ?>"><div class="account-cubo">
           <i class="fa fa-download icongrande"></i><br>
-          <a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></div>
+          <?php echo $text_download; ?></div></a>
         <?php if ($reward) { ?>
-        <div class="account-cubo">
+        <a href="<?php echo $reward; ?>"><div class="account-cubo">
           <i class="fa fa-bookmark icongrande"></i><br>
-          <a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></div>
+          <?php echo $text_reward; ?></div></a>
         <?php } ?>
-        <div class="account-cubo">
+        <a href="<?php echo $return; ?>"><div class="account-cubo">
           <i class="fa fa-ban icongrande"></i><br>
-          <a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_return; ?></div></a>
+        <a href="<?php echo $transaction; ?>"><div class="account-cubo">
           <i class="fa fa-tasks icongrande"></i><br>
-          <a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></div>
-        <div class="account-cubo">
+          <?php echo $text_transaction; ?></div></a>
+        <a href="<?php echo $recurring; ?>"><div class="account-cubo">
           <i class="fa fa-circle-o-notch icongrande"></i><br>
-          <a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></div>
+          <?php echo $text_recurring; ?></div></a>
 
       <h2 style="margin-top: 30px;"><?php echo $text_my_newsletter; ?></h2>
 
-        <div class="account-cubo">
+        <a href="<?php echo $newsletter; ?>"><div class="account-cubo">
           <i class="fa fa-envelope icongrande"></i><br>
-          <a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></div>
+          <?php echo $text_newsletter; ?></div></a>
 
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

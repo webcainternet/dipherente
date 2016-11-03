@@ -7,7 +7,7 @@
 		    header('Location: http://dipherente.com/dani-mota/');
 		    break;
 		case 12:
-				header('Location: http://dipherente.com/rondisley-jose-da-silva/');
+				header('Location: http://dipherente.com/rodisley-jose-da-silva/');
 				break;
 		case 13:
 		    header('Location: http://dipherente.com/diego-machuca/');

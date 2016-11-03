@@ -1,4 +1,41 @@
 <?php
+function linkmanufacturer($prodid) {
+	$mysqli = mysqli_connect("172.17.0.1", "dipherente", "nqwhuf7w36d", "dipherente");
+
+	if (!$mysqli) {
+	    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+	    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+	    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+	    exit;
+	}
+
+	$query = 'SELECT p.product_id, p.manufacturer_id, m.name FROM oc_product p INNER JOIN oc_manufacturer m on (p.manufacturer_id = m. manufacturer_id)  WHERE p.product_id = '.$prodid;
+	if ($result = $mysqli->query($query)) {
+		if (mysqli_num_rows($result) == 0) {
+        	        $retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/">By Dipherente</a>';
+	        } else {
+			while ($row = $result->fetch_row()) {
+				if ($row[2] == false) {
+                        		$row[2] = 'Dipherente';
+                		}
+		                $retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/index.php?route=product/manufacturer/info&manufacturer_id='.$row[1].'">By '.$row[2].'</a>';
+
+    			}
+			$result->close();
+		}
+	}
+
+	if (!$result) {
+		echo 'Não foi possível executar a consulta: ' . mysql_error();
+		exit;
+	}
+
+	$retorno = utf8_encode($retorno);
+
+	$mysqli->close();
+	return $retorno;
+}
+
 // Error Reporting
 error_reporting(E_ALL);
 
@@ -56,7 +93,7 @@ function modification($filename) {
 	if (substr($filename, 0, strlen(DIR_SYSTEM)) == DIR_SYSTEM) {
 		$file = DIR_MODIFICATION . 'system/' . substr($filename, strlen(DIR_SYSTEM));
 	}
-	
+
 	if (file_exists($file)) {
 		return $file;
 	} else {

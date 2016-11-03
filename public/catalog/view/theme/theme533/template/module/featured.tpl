@@ -44,8 +44,7 @@ $(document).ready(function() {
 */
 </script>
 
-
-<div class="box_html top-banners">
+<div id="bannerssuperiores" class="box_html top-banners">
 <div class="banners-html row">
 <div class="col-sm-3 banner-1"><a href="index.php?route=product/category&amp;path=20"><img src="image/catalog/banner-1b.jpg"><div class="s-desc"><span>Bonés</span></div>
 </a></div>
@@ -60,12 +59,23 @@ $(document).ready(function() {
 </div></div>
 
 
+
 <div class="box featured">
 	<div class="box-heading"><h3><?php echo $heading_title; ?></h3></div>
 	<div class="box-content">
 		<div class="product-layout">
 		<div class="">
-		<?php $f=0; foreach ($products as $product) { $f++ ?>
+
+			<?php
+				srand((float)microtime()*1000000);
+				shuffle($products);
+			?>
+
+		<?php $f=0; foreach ($products as $product) {
+			if ($f < 6) {
+				$f++;
+		?>
+
 		<div>
 			<div class="product-thumb transition" style="float: left; padding: 10px 15px; width: 33%;">
 
@@ -79,7 +89,9 @@ $(document).ready(function() {
                         </a>
                     </div>
 			<div class="caption">
-				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a><br><div class="textopor" style="display: inline-block; padding-left: 0px; color: #F7B04A;"><a style="color: #F7B04A;font-size: 13px;" href="http://dipherente.com/index.php?route=product/manufacturer/info&amp;manufacturer_id=5">By Elias Martins</a></div></div>
+				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a><br><div class="textopor" style="display: inline-block; padding-left: 0px; color: #F7B04A;">
+            <?php echo linkmanufacturer($product['product_id']); ?>
+        </div></div>
 				<!--<div class="description"><?php echo $product['description']; ?></div>-->
 				<?php if ($product['rating']) { ?>
 				<div class="rating">
@@ -130,6 +142,7 @@ $(document).ready(function() {
 				<div class="clear"></div>
 			</div>
 			</div>
+		<?php } ?>
 		<?php } ?>
 			</div>
 		</div>

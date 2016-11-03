@@ -123,9 +123,12 @@
 			</div>
 		</div> */ ?>
 	  <div class="row">
+
+
+
 		<?php foreach ($products as $product) { ?>
 		<?php /* <div class="product-layout product-list col-xs-12"> */ ?>
-		 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="height: 600px;">
+		 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 		  <div class="product-thumb">
 			<div class="image" style="position: relative;">
                         <a href="<?php echo $product['href']; ?>">
@@ -138,7 +141,9 @@
 				<div class="name name-product"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 				<div class="description1"><?php echo $product['description']; ?></div>
 				<?php /* <div class="description"><?php echo mb_substr($product['description'],0,26,'UTF-8').'...'; ?></div> */ ?>
-				<div class="textopor" style="display: inline-block; padding: 2px 0px 10px !important;"><a href="/elias-martins/">By Elias Martins</a></div>
+				<div class="textopor" style="display: inline-block; padding: 2px 0px 10px !important;">
+					<?php echo linkmanufacturer($product['product_id']); ?>
+				</div>
 
 				<?php if ($product['rating']) { ?>
 				<div class="rating">
