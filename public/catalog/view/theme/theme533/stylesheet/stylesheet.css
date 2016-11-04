@@ -3184,7 +3184,7 @@ html[lang="ru"] a.addthis_button_tweet {
     position: relative; }
     .box_html.top-banners .banners-html > div .s-desc {
       position: absolute;
-      left: 30px;
+      right: 30px;
       bottom: 26px;
       font: 300 19px/23px 'Handlee', cursive;
       letter-spacing: 1.2px;
