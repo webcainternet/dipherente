@@ -3190,6 +3190,15 @@ html[lang="ru"] a.addthis_button_tweet {
       letter-spacing: 1.2px;
       color: #fff;
       text-transform: uppercase; }
+
+	.box_html.top-banners .banners-html > div .s-desc1 {
+	  position: absolute;
+	  left: 30px;
+	  top: 26px;
+	  font: 300 19px/23px 'Handlee', cursive;
+	  letter-spacing: 1.2px;
+	  color: #fff;
+	  text-transform: uppercase; }
       .box_html.top-banners .banners-html > div .s-desc span {
         display: inline-block;
         letter-spacing: 1.8px;
