@@ -3328,6 +3328,17 @@ html[lang="ru"] a.addthis_button_tweet {
       line-height: 33px;
       letter-spacing: .5px; }
 
+   .box_html.top-banners .banners-html > div .s-desc1 {
+    letter-spacing: 0;
+    bottom: 21px;
+    font-size: 15px;
+    line-height: 18px;
+    left: 24px; }
+    .box_html.top-banners .banners-html > div .s-desc1 span {
+      font-size: 29px;
+      line-height: 33px;
+      letter-spacing: .5px; }
+
   .box_html.bottom-banners .banner-1, .box_html.bottom-banners .banner-6 {
     height: 243px;
     width: 414px; }
