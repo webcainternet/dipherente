@@ -73,7 +73,7 @@ $(document).ready(function() {
 				<?php } ?>
 
 				<?php if ($row_num == 2) { ?>
-				<div class="col-sm-5 banner-1b"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div class="s-desc1"><?php echo utf8_encode($obj->description); ?></div>
+				<div class="col-sm-5 banner-1b"><a href="<?php echo utf8_encode($obj->link); ?>"><img src="image/<?php echo utf8_encode($obj->image); ?>"><div style="font-size: 36px; padding-top: 10px; padding-bottom: 5px;"><?php echo utf8_encode($obj->description); ?></div>
 				</a></div>
 				<?php } ?>
 
