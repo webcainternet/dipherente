@@ -34,6 +34,8 @@
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: #f7b04a;
     color: #FFF;
+    border: solid 4px #00BCD4;
+    padding: 6px 11px;
 }
 
 
@@ -288,7 +290,7 @@
           </div>
 
 					<!-- Product options -->
-					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px;">
+					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px; padding-bottom: 15px;">
 						<?php if ($options) { ?>
 							<?php /* <h3><?php echo $text_option; ?></h3> */ ?>
 							<?php foreach ($options as $option) { ?>
@@ -311,12 +313,14 @@
 								<?php } ?>
 								<?php if ($option['type'] == 'radio') { ?>
 									<div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+										
+									<?php if ( $option['name'] == 'Tamanho' ) { ?>
 										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
 										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
 											<div class="radio-toolbar">
 												<?php foreach ($option['product_option_value'] as $option_value) { ?>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-													<label for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
+													<label style="min-width: 40px; height: 41px;" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -333,6 +337,46 @@
 													</div> */ ?>
 											</div>
 										</div>
+									<?php } ?>
+
+									<?php if ( $option['name'] == 'Cores' ) { ?>
+										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
+										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
+											<div class="radio-toolbar">
+												<?php foreach ($option['product_option_value'] as $option_value) { ?>
+													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
+													<label for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" style="min-width: 40px; height: 41px; background-color: <?php
+
+													if ($option_value['name'] == 'Branco') {
+														echo "#FFF";
+													}
+													if ($option_value['name'] == 'Vermelho') {
+														echo "#9e1f24";
+													}
+													if ($option_value['name'] == 'Preto') {
+														echo "#2d2d2d";
+													}
+													if ($option_value['name'] == 'Verde') {
+														echo "#497a56";
+													}
+													if ($option_value['name'] == 'Cinza') {
+														echo "#8e8e8e";
+													}
+													if ($option_value['name'] == 'Azul Escuro') {
+														echo "#2e374d";
+													}
+													if ($option_value['name'] == 'Amarelo') {
+														echo "#dba834";
+													}
+
+													?>;">&nbsp;</label>
+													<?php if ($option_value['price']) { ?>
+													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+													<?php } ?>
+												<?php } ?>
+											</div>
+										</div>
+									<?php } ?>
 									</div>
 								<?php } ?>
 								<?php if ($option['type'] == 'checkbox') { ?>
