@@ -322,7 +322,7 @@
 													<?php } ?>
 												<?php } ?>
 
-													<div class="naotem">
+													<?php /* <div class="naotem">
 														<div class="naotemlabel">PP</div>
 														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
 													</div>
@@ -330,7 +330,7 @@
 													<div class="naotem">
 														<div class="naotemlabel">GG</div>
 														<span class="naotemtext"><a style="color: #333;" href="/catalog/view/theme/theme533/quero.php?information_id=5" class="agree"><b>Quero!</b></a></span>
-													</div>
+													</div> */ ?>
 											</div>
 										</div>
 									</div>
