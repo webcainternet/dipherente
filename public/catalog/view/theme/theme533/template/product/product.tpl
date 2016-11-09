@@ -341,6 +341,21 @@
 										</div>
 									<?php } ?>
 
+									<?php if ( $option['name'] == 'Tamanho Boné' ) { ?>
+										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
+										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
+											<div class="radio-toolbar">
+												<?php foreach ($option['product_option_value'] as $option_value) { ?>
+													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
+													<label style="min-width: 40px; height: 41px;" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
+													<?php if ($option_value['price']) { ?>
+													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+													<?php } ?>
+												<?php } ?>
+											</div>
+										</div>
+									<?php } ?>
+
 									<?php if ( $option['name'] == 'Cores' ) { ?>
 										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
 										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
