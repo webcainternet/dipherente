@@ -264,10 +264,10 @@ $(document).ready(function(){
 }
 .radio-masculino1 { background-color:#FAFAFA; } .radio-feminino1 { background-color:#FAFAFA; } .radio-moletom1 { background-color:#FAFAFA; }
 .radio-masculino2 { background-color:#2d2d2d; } .radio-feminino2 { background-color:#2d2d2d; } .radio-moletom2 { background-color:#2d2d2d; }
-.radio-masculino3 { background-color:#117ae3; } .radio-feminino3 { background-color:#117ae3; } .radio-moletom3 { background-color:#117ae3; }
-.radio-masculino4 { background-color:#f4d400; } .radio-feminino4 { background-color:#f4d400; } .radio-moletom4 { background-color:#f4d400; }
-.radio-masculino5 { background-color:#ed2622; } .radio-feminino5 { background-color:#ed2622; } .radio-moletom5 { background-color:#ed2622; }
-.radio-masculino6 { background-color:#33c16f; } .radio-feminino6 { background-color:#33c16f; } .radio-moletom6 { background-color:#33c16f; }
+.radio-masculino3 { background-color:#2e374d; } .radio-feminino3 { background-color:#2e374d; } .radio-moletom3 { background-color:#2e374d; }
+.radio-masculino4 { background-color:#dba834; } .radio-feminino4 { background-color:#dba834; } .radio-moletom4 { background-color:#dba834; }
+.radio-masculino5 { background-color:#9e1f24; } .radio-feminino5 { background-color:#9e1f24; } .radio-moletom5 { background-color:#9e1f24; }
+.radio-masculino6 { background-color:#497a56; } .radio-feminino6 { background-color:#497a56; } .radio-moletom6 { background-color:#497a56; }
 
 </style>
 
