@@ -639,3 +639,4 @@
 2016-10-31 14:16:03 - PHP Notice:  Undefined index: description in /var/www/html/dipherente/public/system/modification/admin/controller/design/banner.php on line 388
 2016-10-31 14:16:03 - PHP Notice:  Undefined index: description in /var/www/html/dipherente/public/system/modification/admin/controller/design/banner.php on line 388
 2016-10-31 14:16:03 - PHP Notice:  Undefined index: description in /var/www/html/dipherente/public/system/modification/admin/controller/design/banner.php on line 388
+2016-11-09 14:52:54 - PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '172.17.0.1' (111) in /var/www/html/public/system/startup.php on line 3

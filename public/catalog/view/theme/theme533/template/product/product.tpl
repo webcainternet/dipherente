@@ -290,7 +290,7 @@
           </div>
 
 					<!-- Product options -->
-					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px; padding-bottom: 15px;">
+					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px; padding-bottom: 15px; margin-bottom: 15px;">
 						<?php if ($options) { ?>
 							<?php /* <h3><?php echo $text_option; ?></h3> */ ?>
 							<?php foreach ($options as $option) { ?>
@@ -315,7 +315,9 @@
 									<div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
 										
 									<?php if ( $option['name'] == 'Tamanho' ) { ?>
-										<label class="control-label col-sm-4"><?php echo $option['name']; ?></label>
+										<label class="control-label col-sm-4"><?php echo $option['name']; ?><br>
+											<a href="/medidas" style="font-size: 11px; text-decoration: underline;"> Ver medidas</a>
+										</label>
 										<div id="input-option<?php echo $option['product_option_id']; ?>" class="col-sm-8">
 											<div class="radio-toolbar">
 												<?php foreach ($option['product_option_value'] as $option_value) { ?>
@@ -494,9 +496,6 @@
 
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
-						<div class="form-group" style="padding-left: 15px; padding-top: 15px; padding-bottom: 15px;">
-							<a href="/medidas"><i class="fa fa-arrows" aria-hidden="true"></i> Ver medidas</a>
-						</div>
 						<div class="form-group" style="display: none;">
 							<label class="control-label col-sm-4" for="input-quantity"><?php echo $entry_qty; ?></label>
 							<div class="col-sm-2">
