@@ -113,7 +113,7 @@ $(document).ready(function() {
 			?>
 
 		<?php $f=0; foreach ($products as $product) {
-			if ($f < 6) {
+			if ($f < 15) {
 				$f++;
 		?>
 
