@@ -701,10 +701,16 @@
 								if ($result = $mysqli->query($sql)) { 
 									$row_cnt = $result->num_rows;
 									if ($row_cnt > 0) {
-										while($obj = $result->fetch_object()){ ?>
-											<a href="<?php echo utf8_encode($obj->manufacturer_id); ?>">
-												By <?php echo utf8_encode($obj->autor); ?>
-											</a>
+										while($obj = $result->fetch_object()){ 
+											if (isset($obj->manufacturer_id) && isset($obj->autor)) { ?>
+												<a href="/index.php?route=product/manufacturer/info&manufacturer_id=<?php echo utf8_encode($obj->manufacturer_id); ?>">
+													By <?php echo utf8_encode($obj->autor); ?>
+												</a>
+											<?php }	else { ?>
+												<a href="/index.php?route=information/artista">
+													By Dipherente
+												</a>
+											<? } ?>	
 										<? } ?>
 									<? } ?>
 								<? } ?>
