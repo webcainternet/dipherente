@@ -1,7 +1,6 @@
 <?php
 	//Conexão com o banco
 	$mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-	echo "DB_HOSTNAME:".DB_HOSTNAME; exit;
 ?>
 
 <?php echo $header; ?>
