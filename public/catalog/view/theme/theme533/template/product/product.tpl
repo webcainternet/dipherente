@@ -675,7 +675,7 @@
 		<div class="related-products product-section">
 			<h3 class="product-section_title"><?php echo $text_related; ?></h3>
 			<div class="related-slider">
-				<?php foreach ($products as $product) { ?>
+				<?php foreach ($products as $product) { var_dump($product); exit; ?>
 
 				<div>
 					<div class="product-thumb transition">
