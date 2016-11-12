@@ -696,14 +696,19 @@
 							<div class="textopor" style="display: inline-block; padding: 2px 0px 10px !important;">
 
 							<?php
-								$query = $mysqli->query("SELECT oc_manufacturer.name as autor, oc_product.* FROM oc_product  left join oc_manufacturer on oc_product.manufacturer_id =  oc_manufacturer.manufacturer_id WHERE product_id = ".$product['product_id']);
+								$query = "SELECT oc_manufacturer.name as autor, oc_product.* FROM oc_product  left join oc_manufacturer on oc_product.manufacturer_id =  oc_manufacturer.manufacturer_id WHERE product_id = ".$product['product_id'];
 
-								foreach ($query->rows as $resultautor) { ?>
-									<a href="<?php echo $resultautor['manufacturer_id']; ?>">
-										By <?php echo $resultautor['autor']; ?>
-									</a>
-							<? } ?>
-
+								if ($result = $mysqli->query($sql)) { 
+									$row_cnt = $result->num_rows;
+									if ($row_cnt > 0) {
+										while($obj = $result->fetch_object()){ ?>
+											<a href="<?php echo utf8_encode($obj->manufacturer_id); ?>">
+												By <?php echo utf8_encode($obj->autor); ?>
+											</a>
+										<? } ?>
+									<? } ?>
+								<? } ?>
+								
 							</div>
 
 							<?php if ($product['rating']) { ?>
