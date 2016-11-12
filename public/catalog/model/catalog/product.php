@@ -377,7 +377,69 @@ class ModelCatalogProduct extends Model {
 		//$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN " . DB_PREFIX . "product p ON (pr.related_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pr.product_id = '" . (int)$product_id . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
 
 
-		$query = $this->db->query("(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 18 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 20 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 18 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1) UNION (SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id FROM oc_product  INNER JOIN oc_product_to_category ON oc_product.product_id = oc_product_to_category.product_id WHERE oc_product_to_category.category_id = 20 AND oc_product.status = 1 AND quantity > 0 ORDER BY rand() LIMIT 1)");
+		$query = $this->db->query("(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 18 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 20 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 18 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)
+UNION
+(SELECT oc_product.product_id as related_id, oc_product.*, 0 as store_id
+FROM oc_product 
+INNER JOIN oc_product_to_category
+ON oc_product.product_id = oc_product_to_category.product_id
+WHERE oc_product_to_category.category_id = 20 AND oc_product.status = 1 AND quantity > 0
+ORDER BY rand()
+LIMIT 1)");
 
 		foreach ($query->rows as $result) {
 			$product_data[$result['related_id']] = $this->getProduct($result['related_id']);
