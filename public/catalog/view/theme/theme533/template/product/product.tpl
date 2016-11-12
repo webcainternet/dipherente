@@ -1,3 +1,8 @@
+<?php
+	//Conexão com o banco
+	$mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+?>
+
 <?php echo $header; ?>
 
 <style type="text/css">
