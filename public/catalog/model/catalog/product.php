@@ -381,7 +381,7 @@ class ModelCatalogProduct extends Model {
 FROM oc_product 
 INNER JOIN oc_product_to_category
 ON oc_product.product_id = oc_product_to_category.product_id
-WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+WHERE oc_product_to_category.category_id = 33 AND oc_product.status = 1 AND quantity > 0
 ORDER BY rand()
 LIMIT 1)
 UNION
@@ -413,7 +413,7 @@ UNION
 FROM oc_product 
 INNER JOIN oc_product_to_category
 ON oc_product.product_id = oc_product_to_category.product_id
-WHERE oc_product_to_category.category_id = 25 AND oc_product.status = 1 AND quantity > 0
+WHERE oc_product_to_category.category_id = 33 AND oc_product.status = 1 AND quantity > 0
 ORDER BY rand()
 LIMIT 1)
 UNION
