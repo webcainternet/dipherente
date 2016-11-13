@@ -469,6 +469,18 @@ if($this->config->get('copu_customer_status') && $this->config->get('copu_custom
 		return !$this->error;
 	}
 
+
+					public function estado_autocompletar() {
+						$this->load->model('localisation/zone');
+						$code = $this->model_localisation_zone->getZonesByEstado($this->request->get['estado']);
+						if ($code != '') {
+							$output = $code;
+						}else{
+							$output = '';
+						}
+						$this->response->setOutput($output);
+					}
+				
 	public function customfield() {
 		$json = array();
 

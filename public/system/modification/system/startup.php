@@ -1,26 +1,38 @@
 <?php
 function linkmanufacturer($prodid) {
-	$conn=mysql_connect("localhost","dipherente","rj328fewuh");
-	$seldb=mysql_select_db("dipherente",$conn);
-	$query = 'SELECT p.product_id, p.manufacturer_id, m.name FROM oc_product p INNER JOIN oc_manufacturer m on (p.manufacturer_id = m. manufacturer_id)  WHERE p.product_id = '.$prodid;
+	$mysqli = mysqli_connect("172.17.0.1", "dipherente", "nqwhuf7w36d", "dipherente");
 
-	$result = mysql_query($query, $conn);
+	if (!$mysqli) {
+	    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+	    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+	    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+	    exit;
+	}
+
+	$query = 'SELECT p.product_id, p.manufacturer_id, m.name FROM oc_product p INNER JOIN oc_manufacturer m on (p.manufacturer_id = m. manufacturer_id)  WHERE p.product_id = '.$prodid;
+	if ($result = $mysqli->query($query)) {
+		if (mysqli_num_rows($result) == 0) {
+        	        $retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/">By Dipherente</a>';
+	        } else {
+			while ($row = $result->fetch_row()) {
+				if ($row[2] == false) {
+                        		$row[2] = 'Dipherente';
+                		}
+		                $retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/index.php?route=product/manufacturer/info&manufacturer_id='.$row[1].'">By '.$row[2].'</a>';
+
+    			}
+			$result->close();
+		}
+	}
+
 	if (!$result) {
 		echo 'Não foi possível executar a consulta: ' . mysql_error();
-		//exit;
+		exit;
 	}
 
-	$num_rows = mysql_num_rows($result);
-	if ($num_rows == 0) {
-		$retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/">By Dipherente</a>';
-	} else {
-		$row = mysql_fetch_row($result);
-		if ($row[2] == false) {
-			$row[2] = 'Dipherente';
-		}
-		$retorno = '<a style="color: #F7B04A;font-size: 13px;" href="/index.php?route=product/manufacturer/info&manufacturer_id='.$row[1].'">By '.$row[2].'</a>';
-	}
 	$retorno = utf8_encode($retorno);
+
+	$mysqli->close();
 	return $retorno;
 }
 
