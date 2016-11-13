@@ -429,8 +429,8 @@ public function products_insert() {
 	public function ParametersReturnOrder(array $params = null){
 		$results = $params;
 		foreach ($results as $result) {
-			$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
-			$voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
+			//$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
+			//$voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
 			$products = $this->model_account_order->getProductOrderId($result['order_id']);
 			$couponDiscount =  $this->model_account_order->getCouponByOrder($result['order_id']);
 

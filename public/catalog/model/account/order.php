@@ -106,6 +106,15 @@ class Modelaccountorder extends Model {
 		return $query->rows;
 	}
 
+	//CRIADO POR FERNANDO
+	public function getTotalOrderProductsByOrderId($order_id){
+		$query = $this->db->query("SELECT o.order_product_id, o.product_id, o.order_id, o.name, o.model, o.quantity, o.price, o.total, o.tax, o.reward, p.sku
+					   FROM `" . DB_PREFIX . "order_product` o LEFT JOIN " . DB_PREFIX . "product p ON (o.product_id = p.product_id) 
+					   WHERE `order_id` = '".$order_id."'"
+					);
+		return $query->rows;
+	}
+
 	//Get products variations in order
 	public function getVariation($parameters){
 		$query = $this->db->query("SELECT op.name as variationName, oo.name as nomeTipoVariacao, oo.value as tipoVariacao, opov.price as precoVaricao,  opov.price_prefix as prefixPrecoVaricao,  opov.weight as pesoVaricao, opov.weight_prefix as prefixPesoVaricao
