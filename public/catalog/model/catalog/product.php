@@ -4,7 +4,7 @@
 	################  COMPLEMENTO BLING #############
 	#################################################
 	
-	public function getAllProduct(){
+	function getAllProduct(){
 		$query = $this->db->query("SELECT pd.product_id, pd.name, pd.description, p.model, p.sku, p.quantity, p.price, p.weight, p.length, p.width, p.height,p.date_added, pa.text AS attribute 					
 								   FROM " . DB_PREFIX . "product p LEFT JOIN  " . DB_PREFIX . "product_description pd ON pd.product_id = p.product_id LEFT JOIN  " . DB_PREFIX . "product_attribute pa ON  pa.product_id = p.product_id"
 							      );
@@ -12,7 +12,7 @@
 	}
 	
 	//Products by filters
-	public function getAllProductFilters($filters){
+	function getAllProductFilters($filters){
 		$filters = urldecode($filters);
 		$filter = explode('|', $filters);
 		$startDate = $filter[0];
@@ -34,13 +34,13 @@
 	
 	
 	//Products by filters
-	public function getCountProduct(){
+	function getCountProduct(){
 		$query = $this->db->query("SELECT COUNT(product_id) as NrProducts FROM " . DB_PREFIX . "product ");
 		return $query->rows;
 	}
 	
 	//Insert products
-	public function insert_oc_products($parameter){
+	function insert_oc_products($parameter){
 			if(strlen($parameter->descricaoComplementar) > 64){
 				$parameter->descricaoComplementar = substr($parameter->descricaoComplementar, 0, 64);
 			}
@@ -58,12 +58,12 @@
 			}
 	}			
 	
-	public function update_oc_description($parameter, $id){
+	function update_oc_description($parameter, $id){
 		$sql = $this->db->query("UPDATE " . DB_PREFIX . "product_description SET `name` =  '".strip_tags($parameter->nome)."', `description` = '".htmlentities($parameter->descricaoComplementar)."' WHERE `product_id` = '".$id."'");
 		return $sql;
 	}
 	
-	public function insert_oc_description($parameter, $id){
+	function insert_oc_description($parameter, $id){
 		$sql = $this->db->query("INSERT INTO " . DB_PREFIX . "product_description (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`)
 			   		 VALUES('".$id."','". (int)$this->config->get('config_language_id')."','".strip_tags($parameter->nome)."','".htmlentities($parameter->descricaoComplementar)."','','','','')");
 		
@@ -71,13 +71,13 @@
 		return $query->rows;
 	}
 
-	public function delete_oc_products($id){
+	function delete_oc_products($id){
 		$del = $this->db->query("DELETE FROM `" . DB_PREFIX . "product` WHERE product_id = '".$id."'");
 		return true;
 	}
 
 	//Get products variations
-	public function getVariation($parameters){
+	function getVariation($parameters){
 
 		$query = $this->db->query("SELECT pd.name as variationName, od.name as nomeTipoVariacao,  ovd.name as tipoVariacao, pov.quantity as quantidadeVariacao, pov.price as precoVaricao, pov.price_prefix as prefixPrecoVaricao,  pov.weight as   pesoVaricao, pov.weight_prefix as prefixPesoVaricao, pov.product_option_value_id as idVariation
 					   FROM " . DB_PREFIX . "option_description od 
@@ -88,7 +88,7 @@
 				return $query->rows;
 	}
 	
-	public function update_stock_product($id, $qtd){
+	function update_stock_product($id, $qtd){
 		$up = $this->db->query("UPDATE `" . DB_PREFIX . "product` SET `quantity`= '" . $qtd . "' WHERE  `product_id` = '" . $id . "'");
 		if($up){
 			return true;
@@ -97,7 +97,7 @@
 		}	
 	}
 	
-	public function update_stock_variation($id, $qtd){
+	function update_stock_variation($id, $qtd){
 		$up = $this->db->query("UPDATE `" . DB_PREFIX . "product_option_value` SET `quantity`= '" . $qtd . "' WHERE  `product_option_value_id` = '" . $id . "' ");
 		if($up){
 			return true;
