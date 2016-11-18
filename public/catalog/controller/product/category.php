@@ -180,6 +180,12 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
+			// Random products
+			srand((float)microtime() * 1000000);
+			shuffle($results); 
+			$results = array_slice($results, 0, $data['limit']);
+			// FIM Random products
+
 			foreach ($results as $result) {
 			 	$mmos_thumb = $this->model_catalog_product->getProductImages($result['product_id']);
                     if (($mmos_thumb) && ($mmos_thumb[0]) && ($mmos_thumb[0]['image'])) {
