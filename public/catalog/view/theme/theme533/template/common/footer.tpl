@@ -55,7 +55,7 @@
 		<div class="col-sm-4">
 			<h5>Siga-nos</h5>
 
-			<div class="fb-page" data-href="https://www.facebook.com/lojavirtual.digital/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/lojavirtual.digital/"><a href="https://www.facebook.com/lojavirtual.digital/">LojaVirtual .digital</a></blockquote></div></div>
+			<div class="fb-page" data-href="https://www.facebook.com/Dipherente-209630636153059/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Dipherente-209630636153059/"><a href="https://www.facebook.com/Dipherente-209630636153059/">Dipherente</a></blockquote></div></div>
 
 <?php /*
 		<div class="col-sm-4">
@@ -93,7 +93,7 @@
 			<img src="/image/pagseguro-line.png" style="width: 700px;" width="700">
 		</div>
 
-		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px;" class="social1">
+		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px; display: none;" class="social1">
 			<i class="fa fa-facebook-square" aria-hidden="true"></i>
 			<i class="fa fa-instagram" aria-hidden="true"></i>
 			<i class="fa fa-linkedin-square" aria-hidden="true"></i>

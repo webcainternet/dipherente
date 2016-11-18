@@ -390,6 +390,18 @@
 													if ($option_value['name'] == 'Amarelo') {
 														echo "#dba834";
 													}
+													if ($option_value['name'] == 'Mosquetão Dourado') {
+														echo "#b3b272";
+													}
+													if ($option_value['name'] == 'Mosquetão Prata') {
+														echo "#c0c7c0";
+													}
+													if ($option_value['name'] == 'Mosquetão Rosa') {
+														echo "#a9548f";
+													}
+													if ($option_value['name'] == 'Mosquetão Azul') {
+														echo "#0a70ba";
+													}
 
 													?>;">&nbsp;</label>
 													<?php if ($option_value['price']) { ?>
