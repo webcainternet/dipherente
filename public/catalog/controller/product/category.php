@@ -183,7 +183,7 @@ class ControllerProductCategory extends Controller {
 			// Random products
 			srand((float)microtime() * 1000000);
 			shuffle($results); 
-			$results = array_slice($results, 0, $data['limit']);
+			$results = array_slice($results, 0, $filter_data['limit']);
 			// FIM Random products
 
 			foreach ($results as $result) {
