@@ -790,8 +790,8 @@ footer .social li a:hover i{
 	font-size: 17px;
 	line-height:20px;
 	text-transform:uppercase;
-	color:#2b2e39;
-	background:#fff;
+    color: #fff;
+    background: #f7b04a;
 	border: 1px solid #e4e4e6;
 	position:relative;
 	padding:14px 18px 15px;
