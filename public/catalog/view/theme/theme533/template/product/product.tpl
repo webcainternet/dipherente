@@ -891,6 +891,7 @@ $(document).ready(function() {
 	});
 
 	$('#button-cart-finish').on('click', function() {
+		$('#button-cart').trigger("click");
 		window.location.href = "/index.php?route=checkout/cart";
 	});
 	//-->
