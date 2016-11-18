@@ -10,12 +10,13 @@
 }
 
 .itemartista {
-  background-color: #F0F0F0;
-  margin: 0px 15px 30px 15px;
-  padding: 30px;
-  width: 554px;
-  float: left;
-  height: 318px;
+    background-color: #F0F0F0;
+    margin: 0px 15px 30px 15px;
+    padding: 30px;
+    width: 554px;
+    float: left;
+    min-height: 318px;
+    max-width: 90%;
 }
 .itemartista:hover {
   background-color: #DDD;
@@ -24,7 +25,9 @@
   max-width: 200px;
   float: left;
   margin-right: 30px;
+  margin-bottom: 30px;
 }
+
 </style>
 
 <div class="container">
