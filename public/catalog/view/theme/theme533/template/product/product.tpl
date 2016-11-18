@@ -58,6 +58,10 @@
 .naotemtext {
 	text-decoration: underline;
 }
+
+.form-group .col-sm-8 {
+    width: 100%;
+}
 </style>
 
 <div class="container">
@@ -295,7 +299,7 @@
           </div>
 
 					<!-- Product options -->
-					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px; padding-bottom: 15px; margin-bottom: 15px;">
+					<div class="product-options form-horizontal" style="background-color: #F6F6F6; padding-top: 10px; padding-bottom: 15px; margin-bottom: 15px; padding-left: 15px;">
 						<?php if ($options) { ?>
 							<?php /* <h3><?php echo $text_option; ?></h3> */ ?>
 							<?php foreach ($options as $option) { ?>
