@@ -1,0 +1,24 @@
+MÓDULO FRETE POR CEP
+---------------------
+Módulo para cálculo especial de frete, por faixa ou CEP específico.
+
+# Compatilibidade com versões Opencart
+--------------------
+2.0.0.0 - 2.0.1.0 - 2.0.1.1 - 2.0.2.0 - 2.0.3.1 - 2.1.0.1 - 2.1.0.2
+
+# Instalação manual:
+---------------
+1 - Utilize o Instalador do painel admin para instalar este módulo. Para procedimento manual, extraia e envie os arquivos da pasta "upload" para a raiz do servidor da loja.
+
+2 - Configure as opções do módulo no painel de administração em Extensões->Formas de envio.
+
+# Configurando:
+-----------------
+Os CEPs podem ser adicionados individualmente ou uma faixa específica separada por ":"(dois pontos).
+Exemplos:
+CEP individual: 13786897
+Faixa de CEP: 13786897:13908254
+
+---------------------------
+Em caso de eventualidades no funcionamento do módulo, relatar para atendimento@joseanmatias.com.br.
+---------------------------
