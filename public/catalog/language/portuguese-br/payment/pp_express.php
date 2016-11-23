@@ -4,7 +4,7 @@ $_['express_text_title']	  = 'Confirmar pedido';
 
 // Text
 $_['text_title']			  = 'PayPal Express Checkout';
-$_['button_continue']		  = 'Continuar';
+$_['button_continue']		  = 'Continuar na loja';
 $_['text_cart']				  = 'Carrinho de compras';
 $_['text_shipping_updated']	  = 'Serviço de envio atualizado';
 $_['text_trial']			  = '%s a cada %s %s repetido por %s vez(es) ';

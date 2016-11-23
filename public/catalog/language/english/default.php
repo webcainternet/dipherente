@@ -22,7 +22,7 @@ $_['text_loading']          = 'Carregando...';
 // Buttons
 $_['button_address_add']    = 'Adicionar endereço';
 $_['button_back']           = 'Voltar';
-$_['button_continue']       = 'Continuar';
+$_['button_continue']       = 'Continuar na loja';
 $_['button_cart']           = 'Comprar';
 $_['button_cancel']         = 'Cancelar';
 $_['button_compare']        = 'Comparar este produto';
@@ -43,7 +43,7 @@ $_['button_update']         = 'Atualizar';
 $_['button_remove']         = 'Remover';
 $_['button_reorder']        = 'Comprar novamente';
 $_['button_return']         = 'Solicitar devolução';
-$_['button_shopping']       = 'Continuar';
+$_['button_shopping']       = 'Continuar na loja';
 $_['button_search']         = 'Pesquisar';
 $_['button_shipping']       = 'Utilizar frete';
 $_['button_submit']         = 'Enviar';

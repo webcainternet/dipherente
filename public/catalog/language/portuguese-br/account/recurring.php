@@ -1,6 +1,6 @@
 <?php
 $_['heading_title']              = 'Assinaturas';
-$_['button_continue']            = 'Continuar';
+$_['button_continue']            = 'Continuar na loja';
 $_['button_view']                = 'Exibir';
 $_['text_empty']                 = 'Nenhum pedido associado a assinaturas foi confirmado até o momento.';
 $_['text_product']               = 'Produto: ';
