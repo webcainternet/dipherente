@@ -18,6 +18,16 @@
 		background-color: #f1bcbc;
 	    padding: 10px 15px;
 	}
+	.radio-toolbar label {
+	    display:inline-block;
+	    background-color:#ddd;
+	    padding: 10px 15px;
+	    font-size:16px;
+	    float: left;
+	    margin-right: 3px;
+	    min-width: 41px;
+	    height: 40px;
+	}
 }
 @media (max-width: 767px) {
 	.form-group  .col-sm-8 {
@@ -27,10 +37,15 @@
 	    width: 100%;
 	}
 	.radio-toolbar label {
+	    display:inline-block;
+	    background-color:#ddd;
+	    float: left;
+	    margin-right: 3px;
 		font-size: 11px !important;
 	    max-height: 30px !important;
 	    padding: 5px 10px !important;
 	    text-align: center !important;
+	    min-width: 30px;
 	}
 	.naotemlabel {
 		background-color: #f1bcbc;
@@ -55,14 +70,6 @@
     display:none;
 }
 
-.radio-toolbar label {
-    display:inline-block;
-    background-color:#ddd;
-    padding: 10px 15px;
-    font-size:16px;
-    float: left;
-    margin-right: 3px;
-}
 
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: #f7b04a;
