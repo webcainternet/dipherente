@@ -7,8 +7,15 @@
 
 <style type="text/css">
 
-.form-group  .col-sm-8 {
-    width: 75%;
+@media (min-width: 768px) {
+	.form-group .col-sm-8 {
+	    width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	.form-group  .col-sm-8 {
+	    width: 75%;
+	}
 }
 
 .form-group  .col-sm-4 {
@@ -59,9 +66,9 @@
 	text-decoration: underline;
 }
 
-.form-group .col-sm-8 {
-    width: 100%;
-}
+
+
+
 </style>
 
 <div class="container">
