@@ -33,6 +33,7 @@
 	    text-align: center !important;
 	}
 	.naotemlabel {
+		background-color: #f1bcbc;
 		font-size: 11px !important;
 	    max-height: 30px !important;
 	    padding: 5px 10px !important;
@@ -354,7 +355,7 @@
 											<div class="radio-toolbar">
 												<?php foreach ($option['product_option_value'] as $option_value) { ?>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-													<label style="min-width: 40px; height: 41px;" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
+													<label style="" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -379,7 +380,7 @@
 											<div class="radio-toolbar">
 												<?php foreach ($option['product_option_value'] as $option_value) { ?>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-													<label style="min-width: 40px; height: 41px;" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
+													<label style="" for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></label>
 													<?php if ($option_value['price']) { ?>
 													(<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
 													<?php } ?>
@@ -394,7 +395,7 @@
 											<div class="radio-toolbar">
 												<?php foreach ($option['product_option_value'] as $option_value) { ?>
 													<input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" id="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" value="<?php echo $option_value['product_option_value_id']; ?>" />
-													<label for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" style="min-width: 40px; height: 41px; background-color: <?php
+													<label for="optionr<?php echo $option['product_option_id']; ?>-<?php echo $option_value['product_option_value_id']; ?>" style=" background-color: <?php
 
 													if ($option_value['name'] == 'Branco') {
 														echo "#FFF";
