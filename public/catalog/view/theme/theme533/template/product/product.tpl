@@ -9,12 +9,12 @@
 
 @media (min-width: 768px) {
 	.form-group .col-sm-8 {
-	    width: 100%;
+	    width: 75%;
 	}
 }
 @media (max-width: 767px) {
 	.form-group  .col-sm-8 {
-	    width: 75%;
+	    width: 100%;
 	}
 }
 
