@@ -14,6 +14,10 @@
 	.form-group  .col-sm-4 {
 	    width: 25%;
 	}
+	.naotemlabel {
+		background-color: #f1bcbc;
+	    padding: 10px 15px;
+	}
 }
 @media (max-width: 767px) {
 	.form-group  .col-sm-8 {
@@ -23,16 +27,16 @@
 	    width: 100%;
 	}
 	.radio-toolbar label {
-		font-size: 11px;
-	    max-height: 30px;
-	    padding: 5px 10px;
-	    text-align: center;
+		font-size: 11px !important;
+	    max-height: 30px !important;
+	    padding: 5px 10px !important;
+	    text-align: center !important;
 	}
 	.naotemlabel {
-		font-size: 11px;
-	    max-height: 30px;
-	    padding: 5px 10px;
-	    text-align: center;
+		font-size: 11px !important;
+	    max-height: 30px !important;
+	    padding: 5px 10px !important;
+	    text-align: center !important;
 	}
 }
 
@@ -72,10 +76,6 @@
     float: left;
     margin-right: 3px;
     text-align: center;
-}
-.naotemlabel {
-	background-color: #f1bcbc;
-    padding: 10px 15px;
 }
 
 .naotemtext {
