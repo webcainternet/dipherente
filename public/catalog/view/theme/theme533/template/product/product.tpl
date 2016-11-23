@@ -11,16 +11,20 @@
 	.form-group .col-sm-8 {
 	    width: 75%;
 	}
+	.form-group  .col-sm-4 {
+	    width: 25%;
+	}
 }
 @media (max-width: 767px) {
 	.form-group  .col-sm-8 {
 	    width: 100%;
 	}
+	.form-group .col-sm-4 {
+	    width: 100%;
+	}
 }
 
-.form-group  .col-sm-4 {
-    width: 25%;
-}
+
 
 .form-group  .img-thumbnail {
     border: solid 1px #DDD;
