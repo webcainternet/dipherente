@@ -22,6 +22,18 @@
 	.form-group .col-sm-4 {
 	    width: 100%;
 	}
+	.radio-toolbar label {
+		font-size: 11px;
+	    max-height: 30px;
+	    padding: 5px 10px;
+	    text-align: center;
+	}
+	.naotemlabel {
+		font-size: 11px;
+	    max-height: 30px;
+	    padding: 5px 10px;
+	    text-align: center;
+	}
 }
 
 
