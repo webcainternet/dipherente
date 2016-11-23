@@ -35,7 +35,7 @@
                 </form>
 
             </div>
-            <a href="#" id="newsletter-popup-close-btn" class="newsletter-popup-close-btn material-design-close47"></a>
+            <a href="#" id="newsletter-popup-close-btn" class="newsletter-popup-close-btn material-design-close47"><i class="fa fa-times" aria-hidden="true"></i></a>
             <a href='#' id="newsletter-popup-dont-show" class="newsletter-popup-dont-show">
                 <?php echo $text_dont;?>
             </a>
