@@ -3,6 +3,7 @@
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
+        <td class="text-center"><?php echo $column_image; ?></td>
         <td class="text-left"><?php echo $column_name; ?></td>
         <td class="text-left"><?php echo $column_model; ?></td>
         <td class="text-right"><?php echo $column_quantity; ?></td>
@@ -13,6 +14,9 @@
     <tbody>
       <?php foreach ($products as $product) { ?>
       <tr>
+        <td class="text-center"><?php if ($product['thumb']) { ?>
+          <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a></div>
+          <?php } ?></td>
         <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
           <?php foreach ($product['option'] as $option) { ?>
           <br />
