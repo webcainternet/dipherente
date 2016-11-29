@@ -3,7 +3,7 @@
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
-        <td class="text-center"><?php echo $column_image; ?></td>
+        <td class="text-center">Imagem</td>
         <td class="text-left"><?php echo $column_name; ?></td>
         <td class="text-left"><?php echo $column_model; ?></td>
         <td class="text-right"><?php echo $column_quantity; ?></td>
@@ -45,7 +45,7 @@
     <tfoot>
       <?php foreach ($totals as $total) { ?>
       <tr>
-        <td colspan="4" class="text-right"><strong><?php echo $total['title']; ?>:</strong></td>
+        <td colspan="5" class="text-right"><strong><?php echo $total['title']; ?>:</strong></td>
         <td class="text-right price"><?php echo $total['text']; ?></td>
       </tr>
       <?php } ?>
