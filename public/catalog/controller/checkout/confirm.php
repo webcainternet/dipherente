@@ -316,17 +316,25 @@ class ControllerCheckoutConfirm extends Controller {
 			$data['text_recurring_item'] = $this->language->get('text_recurring_item');
 			$data['text_payment_recurring'] = $this->language->get('text_payment_recurring');
 
+			$data['column_image'] = $this->language->get('column_image');
 			$data['column_name'] = $this->language->get('column_name');
 			$data['column_model'] = $this->language->get('column_model');
 			$data['column_quantity'] = $this->language->get('column_quantity');
 			$data['column_price'] = $this->language->get('column_price');
 			$data['column_total'] = $this->language->get('column_total');
 
+			$this->load->model('tool/image');
 			$this->load->model('tool/upload');
 
 			$data['products'] = array();
 
 			foreach ($this->cart->getProducts() as $product) {
+				if ($product['image']) {
+					$image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+				} else {
+					$image = '';
+				}
+
 				$option_data = array();
 
 				foreach ($product['option'] as $option) {
@@ -343,6 +351,7 @@ class ControllerCheckoutConfirm extends Controller {
 					}
 
 					$option_data[] = array(
+						'thumb'     => $image,
 						'name'  => $option['name'],
 						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
 					);
