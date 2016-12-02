@@ -3730,7 +3730,7 @@ html[lang="ru"] a.addthis_button_tweet {
     clear: both; }
   .newsletter-popup h2 {
     text-transform: uppercase;
-    font: 400 35px/42px "Vidaloka", serif;
+    font-size: 32px;
     letter-spacing: 2px;
     margin: 0; }
     .newsletter-popup h2:after {
