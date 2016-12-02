@@ -105,20 +105,20 @@
     text-align: center;
     margin: auto;
     margin-left: 10px;
-    padding: 10px;
+    padding: 10px 25px;
     background: #3b5998;
     margin-top: 10px;" class="social1">
-			<a href="https://www.facebook.com/Dipherente-209630636153059" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+			<a style="color: #FFF;" href="https://www.facebook.com/Dipherente-209630636153059" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
 		</div>
 
 		<div class="socialicon" style="float: left;
     text-align: center;
     margin: auto;
     margin-left: 10px;
-    padding: 10px;
+    padding: 10px 25px;
     background: #84572e;
     margin-top: 10px;" class="social1">
-			<a href="https://www.instagram.com/dipherente999/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+			<a style="color: #FFF;" href="https://www.instagram.com/dipherente999/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
 			<!--
 			
 			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
