@@ -46,7 +46,7 @@ do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cell
 <?php echo $dadosboleto["linha_digitavel"]?>
 </span></span></td>
 </tr><tbody><tr><td colspan=5><img height=2 src=system/library/boleto/bradesco/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=298 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=126 height=13>Agência/Código 
-do Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>Nosso 
+do Beneficiário</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>Nosso 
 número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=cp valign=top width=298 height=12> 
   <span class="campo"><?php echo $dadosboleto["cedente"]; ?></span></td>
 <td class=cp valign=top width=7 height=12><img height=12 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=cp valign=top width=126 height=12> 
@@ -143,7 +143,7 @@ número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 sr
     <?php echo $dadosboleto["especie_doc"]?>
   </span> 
  </div></td><td class=cp valign=top width=7 height=12><img height=12 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=34 height=12><div align=left><span class="campo">
- <?php echo $dadosboleto["aceite"]?>
+ N
  </span> 
  </div></td><td class=cp valign=top width=7 height=12><img height=12 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=82 height=12><div align=left> 
    <span class="campo">
@@ -194,7 +194,7 @@ Valor documento</td></tr><tr> <td class=cp valign=top width=7 height=12><img hei
 <tr> <td class=ct valign=top width=7 height=13><img height=13 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td></tr><tr> 
 <td class=cp valign=top width=7 height=12><img height=12 src=system/library/boleto/bradesco/imagens/1.png width=1 border=0></td></tr><tr> 
 <td valign=top width=7 height=1><img height=1 src=system/library/boleto/bradesco/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td valign=top width=468 rowspan=5><font class=ct>Instruções 
-(Texto de responsabilidade do cedente)</font><br><br><span class=cp> <FONT class=campo>
+(Texto de responsabilidade do beneficiário)</font><br><br><span class=cp> <FONT class=campo>
 <?php echo $dadosboleto["instrucoes1"]; ?><br>
 <?php echo $dadosboleto["instrucoes2"]; ?><br>
 <?php echo $dadosboleto["instrucoes3"]; ?><br>
