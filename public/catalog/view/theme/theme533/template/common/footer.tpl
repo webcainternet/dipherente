@@ -92,18 +92,29 @@
 			<img src="/image/pagseguro-line.png" style="width: 700px;" width="700">
 		</div>
 
-		<div style="float: left;
+		<style type="text/css">
+			
+		socialicon a, a:visited {
+		    color: #FFF;
+		    outline: none;
+		}
+
+		</style>
+
+		<div class="socialicon" style="float: left;
     text-align: center;
     margin: auto;
+    margin-left: 10px;
     padding: 10px;
     background: #3b5998;
     margin-top: 10px;" class="social1">
 			<a href="https://www.facebook.com/Dipherente-209630636153059" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
 		</div>
 
-		<div style="float: left;
+		<div class="socialicon" style="float: left;
     text-align: center;
     margin: auto;
+    margin-left: 10px;
     padding: 10px;
     background: #84572e;
     margin-top: 10px;" class="social1">
