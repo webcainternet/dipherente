@@ -46,7 +46,6 @@
 				<li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
 				<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
 				<li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-				<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
 				</ul>
 			</div>
 		</div>
@@ -78,9 +77,9 @@
 				<li class="fax"><?php echo $fax; ?></li>
 			</ul>
 			<ul class="list-unstyled social">
-				<li><a data-toggle="tooltip" title="<?php echo $text_fb; ?>" href="https://www.facebook.com/login/"><i class="fa fa-facebook"></i></a></li>
-				<li><a data-toggle="tooltip" title="<?php echo $text_twi; ?>" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-				<li><a data-toggle="tooltip" title="<?php echo $text_rss; ?>" href=""><i class="fa fa-rss"></i></a></li>
+				<li><a data-toggle="tooltip" title="<?php echo $text_fb; ?>" href="https://www.facebook.com/Dipherente-209630636153059"><i class="fa fa-facebook"></i></a></li>
+				<!-- <li><a data-toggle="tooltip" title="<?php echo $text_twi; ?>" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+				<li><a data-toggle="tooltip" title="<?php echo $text_rss; ?>" href=""><i class="fa fa-rss"></i></a></li> -->
 			</ul>
 
 		</div>
@@ -93,13 +92,14 @@
 			<img src="/image/pagseguro-line.png" style="width: 700px;" width="700">
 		</div>
 
-		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px; display: none;" class="social1">
+		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px;" class="social1">
 			<i class="fa fa-facebook-square" aria-hidden="true"></i>
+			<!--
 			<i class="fa fa-instagram" aria-hidden="true"></i>
 			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 			<i class="fa fa-pinterest-square" aria-hidden="true"></i>
 			<i class="fa fa-twitter-square" aria-hidden="true"></i>
-			<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+			<i class="fa fa-google-plus-square" aria-hidden="true"></i> -->
 
 		</div>
 
