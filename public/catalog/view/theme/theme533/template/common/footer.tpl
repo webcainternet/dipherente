@@ -92,14 +92,6 @@
 			<img src="/image/pagseguro-line.png" style="width: 700px;" width="700">
 		</div>
 
-		<style type="text/css">
-			
-		socialicon a, a:visited {
-		    color: #FFF;
-		    outline: none;
-		}
-
-		</style>
 
 		<div class="socialicon" style="float: left;
     text-align: center;
