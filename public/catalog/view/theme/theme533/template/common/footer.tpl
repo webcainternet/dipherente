@@ -93,9 +93,10 @@
 		</div>
 
 		<div style="float: left; width: 340px; text-align: center; margin: auto; padding-top: 15px;" class="social1">
-			<i class="fa fa-facebook-square" aria-hidden="true"></i>
+			<a href="https://www.facebook.com/Dipherente-209630636153059"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
 			<!--
-			<i class="fa fa-instagram" aria-hidden="true"></i>
+			
 			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 			<i class="fa fa-pinterest-square" aria-hidden="true"></i>
 			<i class="fa fa-twitter-square" aria-hidden="true"></i>
