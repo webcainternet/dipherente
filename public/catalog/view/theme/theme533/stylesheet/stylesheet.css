@@ -3977,3 +3977,16 @@ margin-bottom: 50px; }
 	}
 
 }
+
+
+
+
+/* Retirar sub menu */
+#menu .dropdown-menu {
+	display: none;
+}
+#menu .fa-angle-down {
+	display: none;
+}
+
+/* FIM Retirar sub menu */
