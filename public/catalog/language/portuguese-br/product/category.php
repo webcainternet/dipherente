@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_refine']       = 'Refinar busca';
+$_['text_refine']       = 'Selecione o catalogo:';
 $_['text_product']      = 'Produtos';
 $_['text_error']        = 'Departamento não encontrado!';
 $_['text_empty']        = 'Não há produtos neste departamento';
