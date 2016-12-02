@@ -573,7 +573,7 @@
 
 						<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add">Adicionar ao carrinho</button>
-						<button type="button" id="button-cart-finish" data-loading-text="Comprar agora" class="btn btn-add-finish">Comprar agora</button>
+						<button type="button" id="button-cart-finish" data-loading-text="Finalizar pedido" class="btn btn-add-finish">Finalizar pedido</button>
 					</div>
 
 					<ul class="product-buttons">
@@ -938,6 +938,8 @@ $(document).ready(function() {
 	});
 
 	$('#button-cart-finish').on('click', function() {
+		window.location.href = "/index.php?route=checkout/cart";
+		/*
 		$.ajax({
 			url: 'index.php?route=checkout/cart/add',
 			type: 'post',
@@ -987,7 +989,7 @@ $(document).ready(function() {
 					window.location.href = "/index.php?route=checkout/cart";
 				}
 			}
-		});
+		}); */
 	});
 	//-->
 </script>
