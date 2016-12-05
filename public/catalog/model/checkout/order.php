@@ -688,7 +688,7 @@ class ModelCheckoutOrder extends Model {
 					$subject = sprintf($language->get('text_new_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'), $order_id);
 
 					// HTML Mail
-					$data['text_greeting'] = $language->get('text_new_received');
+					$data['text_greeting'] = '<img src="http://dipherente.com/image/catalog/logomail.png" alt="Dipherente" style="margin-bottom:20px;border:none"><br>'.$language->get('text_new_received');
 					
 					if ($comment) {
 						if ($order_info['comment']) {
