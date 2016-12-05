@@ -811,8 +811,7 @@ class ModelCheckoutOrder extends Model {
 
 				$message .= $language->get('text_update_footer');
 
-				$html = '<img src="http://dipherente.com/image/catalog/logomail.png" alt="Dipherente" style="margin-bottom:20px;border:none"><br>' . $message;
-				$html = str_replace('\n', '<br>', $html);
+				$html = '<img src="http://dipherente.com/image/catalog/logomail.png" alt="Dipherente" style="margin-bottom:20px;border:none"><br><pre>' . $message . '</pre>';
 
 				$mail = new Mail($this->config->get('config_mail'));
 				$mail->setTo($order_info['email']);
