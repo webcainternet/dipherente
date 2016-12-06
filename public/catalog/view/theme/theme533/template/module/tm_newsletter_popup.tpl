@@ -92,6 +92,7 @@
                         success: function (result) {
                             if (!result) {
                                 $('#tm-newsletter-popup_success').html('<?php echo $success; ?>').fadeIn(300).delay(4000).fadeOut(300);
+                                $('#tm-newsletter-popup').delay(2000).fadeOut(300);
                             } else {
                                 $('#tm-newsletter-popup_error').dequeue();
                                 $('#tm-newsletter-popup_error').html(result).fadeIn(300).delay(4000).fadeOut(300);
