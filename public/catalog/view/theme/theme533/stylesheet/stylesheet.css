@@ -3990,3 +3990,9 @@ margin-bottom: 50px; }
 }
 
 /* FIM Retirar sub menu */
+
+@media (max-width: 767px) {
+	.product-section {
+	    margin-top: 30px;
+	}
+}
